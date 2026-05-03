@@ -79,6 +79,8 @@ function renderCard(p) {
 
 function buildHtml(projects, css) {
   const cards = projects.map(renderCard).join('\n');
+  const count = projects.length;
+  const specs = `${count} project${count === 1 ? '' : 's'} · hand-rolled · zero deps`;
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -86,18 +88,24 @@ function buildHtml(projects, css) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(SITE_NAME)}</title>
   <meta name="description" content="${escapeHtml(TAGLINE)}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <style>
 ${css}
   </style>
 </head>
 <body>
-  <header>
-    <h1>${escapeHtml(SITE_NAME)}</h1>
-    <p class="tagline">${escapeHtml(TAGLINE)}</p>
-  </header>
-  <main>
+  <div class="wrap">
+    <header>
+      <h1>${escapeHtml(SITE_NAME)}</h1>
+      <div><p class="tagline">${escapeHtml(TAGLINE)}</p></div>
+      <span class="specs">${escapeHtml(specs)}</span>
+    </header>
+    <main>
 ${cards}
-  </main>
+    </main>
+  </div>
 </body>
 </html>
 `;
