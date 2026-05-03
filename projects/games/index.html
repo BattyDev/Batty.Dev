@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="brutalist">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batty's Game Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600&family=VT323&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BASE LAYER — shared across all themes
+   ============================================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100vh; }
+body { transition: background 0.3s, color 0.3s; }
+.hidden { display: none !important; }
+
+/* ============================================================
+   THEME 1: BRUTALIST / TERMINAL
+   ============================================================ */
+[data-theme="brutalist"] body {
+  background: #0a0a0a;
+  color: #d0ffaa;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0;
+}
+[data-theme="brutalist"] .wrap { max-width: 1400px; margin: 0 auto; padding: 24px; }
+[data-theme="brutalist"] header { border: 2px solid #d0ffaa; padding: 20px; margin-bottom: 24px; position: relative; }
+[data-theme="brutalist"] header::before {
+  content: "// SYSTEM.LIBRARY.MANIFEST"; position: absolute; top: -12px; left: 16px;
+  background: #0a0a0a; padding: 0 10px; font-size: 11px; letter-spacing: 0.15em; color: #ffaa33;
+}
+[data-theme="brutalist"] h1 {
+  font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700;
+  letter-spacing: -0.02em; color: #ffffff; text-transform: uppercase;
+}
+[data-theme="brutalist"] h1::before { content: "> "; color: #ffaa33; }
+[data-theme="brutalist"] h1::after { content: "_"; color: #d0ffaa; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+[data-theme="brutalist"] .sub { color: #888; font-size: 12px; margin-top: 6px; letter-spacing: 0.1em; text-transform: uppercase; }
+[data-theme="brutalist"] .specs { color: #ffaa33; font-size: 11px; margin-top: 12px; padding-top: 12px; border-top: 1px dashed #444; }
+[data-theme="brutalist"] .specs::before { content: "[hardware] "; color: #666; }
+[data-theme="brutalist"] .stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  border: 2px solid #d0ffaa; margin-top: 16px;
+}
+[data-theme="brutalist"] .stat {
+  border-right: 2px solid #d0ffaa; padding: 14px 18px;
+}
+[data-theme="brutalist"] .stat:last-child { border-right: none; }
+[data-theme="brutalist"] .stat-num { font-size: 32px; font-weight: 700; color: #ffffff; line-height: 1; }
+[data-theme="brutalist"] .stat-label { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.15em; margin-top: 6px; }
+[data-theme="brutalist"] .stat-runs .stat-num { color: #5fff5f; }
+[data-theme="brutalist"] .stat-play .stat-num { color: #ffaa33; }
+[data-theme="brutalist"] .stat-skip .stat-num { color: #ff5555; }
+
+[data-theme="brutalist"] .controls {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+  padding: 16px; border: 2px solid #d0ffaa; align-items: center;
+}
+[data-theme="brutalist"] .search {
+  flex: 1; min-width: 220px; background: #000; border: 1px solid #d0ffaa;
+  color: #d0ffaa; padding: 8px 12px; font-family: inherit; font-size: 13px;
+}
+[data-theme="brutalist"] .search::placeholder { color: #555; }
+[data-theme="brutalist"] .search:focus { outline: none; border-color: #ffaa33; box-shadow: 0 0 0 1px #ffaa33; }
+[data-theme="brutalist"] .filter-group { display: flex; gap: 0; flex-wrap: wrap; }
+[data-theme="brutalist"] .chip {
+  background: transparent; border: 1px solid #d0ffaa; color: #d0ffaa;
+  padding: 6px 12px; font-family: inherit; font-size: 12px; cursor: pointer;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  border-radius: 0; margin-left: -1px;
+}
+[data-theme="brutalist"] .chip:hover { background: #d0ffaa11; }
+[data-theme="brutalist"] .chip.active { background: #d0ffaa; color: #000; }
+[data-theme="brutalist"] .chip.tier-runs.active { background: #5fff5f; border-color: #5fff5f; color: #000; }
+[data-theme="brutalist"] .chip.tier-play.active { background: #ffaa33; border-color: #ffaa33; color: #000; }
+[data-theme="brutalist"] .chip.tier-skip.active { background: #ff5555; border-color: #ff5555; color: #000; }
+
+[data-theme="brutalist"] .tier { margin-bottom: 32px; }
+[data-theme="brutalist"] .tier-head {
+  display: flex; align-items: baseline; gap: 16px; margin-bottom: 16px;
+  padding: 10px 16px; border-left: 4px solid;
+}
+[data-theme="brutalist"] .tier-runs .tier-head { border-left-color: #5fff5f; background: #5fff5f0a; }
+[data-theme="brutalist"] .tier-play .tier-head { border-left-color: #ffaa33; background: #ffaa330a; }
+[data-theme="brutalist"] .tier-skip .tier-head { border-left-color: #ff5555; background: #ff55550a; }
+[data-theme="brutalist"] .tier-head h2 { font-family: inherit; font-size: 16px; font-weight: 700; text-transform: uppercase; color: #fff; letter-spacing: 0.05em; }
+[data-theme="brutalist"] .tier-head h2::before { content: "## "; color: #666; }
+[data-theme="brutalist"] .tier-head .desc { color: #888; font-size: 12px; flex: 1; }
+[data-theme="brutalist"] .tier-head .count { color: #ffaa33; font-size: 12px; }
+[data-theme="brutalist"] .tier-head .count::before { content: "["; }
+[data-theme="brutalist"] .tier-head .count::after { content: " items]"; }
+
+[data-theme="brutalist"] .grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1px;
+  background: #d0ffaa; border: 2px solid #d0ffaa;
+}
+[data-theme="brutalist"] .card {
+  background: #0a0a0a; padding: 0; display: flex; flex-direction: column;
+  position: relative; border-radius: 0;
+}
+[data-theme="brutalist"] .card:hover { background: #1a1a1a; }
+[data-theme="brutalist"] .cover {
+  aspect-ratio: 460/215; background: #000 center/cover no-repeat;
+  filter: contrast(1.1) saturate(0.7);
+  border-bottom: 1px solid #d0ffaa;
+}
+[data-theme="brutalist"] .cover.no-img {
+  display: flex; align-items: center; justify-content: center;
+  background: repeating-linear-gradient(45deg, #0a0a0a, #0a0a0a 10px, #1a1a1a 10px, #1a1a1a 11px);
+}
+[data-theme="brutalist"] .cover.no-img::after {
+  content: attr(data-letter); font-family: inherit; font-size: 48px; font-weight: 700; color: #d0ffaa;
+}
+[data-theme="brutalist"] .card-body { padding: 8px 10px 10px; gap: 4px; display: flex; flex-direction: column; flex: 1; }
+[data-theme="brutalist"] .name {
+  font-size: 12px; font-weight: 500; color: #fff; line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+[data-theme="brutalist"] .meta { display: flex; gap: 4px; flex-wrap: wrap; margin-top: auto; }
+[data-theme="brutalist"] .src { font-size: 9px; padding: 1px 5px; font-family: inherit; font-weight: 700; letter-spacing: 0.05em; }
+[data-theme="brutalist"] .src-steam { background: #66c0f4; color: #000; }
+[data-theme="brutalist"] .src-epic { background: #fff; color: #000; }
+[data-theme="brutalist"] .src-gog { background: #b478e8; color: #000; }
+[data-theme="brutalist"] .src-gamepass { background: #5fff5f; color: #000; }
+[data-theme="brutalist"] .note { font-size: 10.5px; color: #888; line-height: 1.4; padding-top: 4px; border-top: 1px dashed #333; }
+[data-theme="brutalist"] .badge-tier { display: none; }
+[data-theme="brutalist"] .card::before {
+  content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0; z-index: 2;
+  border-style: solid; border-width: 0 16px 16px 0;
+}
+[data-theme="brutalist"] .card[data-tier="runs"]::before { border-color: transparent #5fff5f transparent transparent; }
+[data-theme="brutalist"] .card[data-tier="play"]::before { border-color: transparent #ffaa33 transparent transparent; }
+[data-theme="brutalist"] .card[data-tier="skip"]::before { border-color: transparent #ff5555 transparent transparent; }
+
+[data-theme="brutalist"] footer {
+  margin-top: 48px; padding: 16px; border: 1px dashed #444;
+  color: #666; font-size: 11px; text-align: center; text-transform: uppercase; letter-spacing: 0.1em;
+}
+
+/* ============================================================
+   THEME 2: MAGAZINE / EDITORIAL
+   ============================================================ */
+[data-theme="magazine"] body {
+  background: #f4f1ea;
+  color: #1a1815;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+[data-theme="magazine"] .wrap { max-width: 1280px; margin: 0 auto; padding: 48px 32px 80px; }
+[data-theme="magazine"] header {
+  border-bottom: 3px double #1a1815; padding-bottom: 32px; margin-bottom: 40px;
+  position: relative;
+}
+[data-theme="magazine"] header::before {
+  content: "VOL. I — ISSUE 01"; position: absolute; top: 0; right: 0;
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 13px; letter-spacing: 0.2em; color: #8b6f47;
+}
+[data-theme="magazine"] h1 {
+  font-family: 'Playfair Display', Georgia, serif; font-size: 64px; font-weight: 900;
+  letter-spacing: -0.03em; line-height: 0.95; color: #1a1815;
+  margin-top: 24px;
+}
+[data-theme="magazine"] .sub {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px;
+  color: #8b6f47; margin-top: 12px; font-weight: 400;
+}
+[data-theme="magazine"] .specs {
+  margin-top: 20px; font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.1em; color: #6b5d4a; text-transform: uppercase;
+}
+[data-theme="magazine"] .stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  margin-top: 32px; border-top: 1px solid #1a1815; border-bottom: 1px solid #1a1815;
+}
+[data-theme="magazine"] .stat { padding: 20px; border-right: 1px solid #1a1815; }
+[data-theme="magazine"] .stat:last-child { border-right: none; }
+[data-theme="magazine"] .stat-num {
+  font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 900;
+  color: #1a1815; line-height: 1;
+}
+[data-theme="magazine"] .stat-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.2em; color: #8b6f47; margin-top: 8px;
+}
+[data-theme="magazine"] .stat-runs .stat-num { color: #2d5a3f; }
+[data-theme="magazine"] .stat-play .stat-num { color: #a86b1f; }
+[data-theme="magazine"] .stat-skip .stat-num { color: #8b2926; }
+
+[data-theme="magazine"] .controls {
+  display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px;
+  padding: 20px 0; border-top: 1px solid #d4ccba; border-bottom: 1px solid #d4ccba;
+  align-items: center;
+}
+[data-theme="magazine"] .search {
+  flex: 1; min-width: 240px; background: transparent; border: none;
+  border-bottom: 1px solid #1a1815; color: #1a1815; padding: 8px 4px;
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px;
+}
+[data-theme="magazine"] .search::placeholder { color: #b5a890; }
+[data-theme="magazine"] .search:focus { outline: none; border-bottom-color: #8b2926; border-bottom-width: 2px; }
+[data-theme="magazine"] .filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
+[data-theme="magazine"] .chip {
+  background: transparent; border: 1px solid #1a1815; color: #1a1815;
+  padding: 6px 14px; border-radius: 999px; font-size: 12px; cursor: pointer;
+  font-family: inherit; font-weight: 500;
+  transition: background 0.15s;
+}
+[data-theme="magazine"] .chip:hover { background: #1a181510; }
+[data-theme="magazine"] .chip.active { background: #1a1815; color: #f4f1ea; }
+
+[data-theme="magazine"] .tier { margin-bottom: 64px; }
+[data-theme="magazine"] .tier-head {
+  display: flex; align-items: baseline; gap: 20px; margin-bottom: 32px;
+  padding-bottom: 12px; border-bottom: 1px solid #1a1815;
+}
+[data-theme="magazine"] .tier-head h2 {
+  font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900;
+  color: #1a1815; letter-spacing: -0.02em; line-height: 1;
+}
+[data-theme="magazine"] .tier-head h2::before {
+  display: inline-block; width: 14px; height: 14px; border-radius: 50%;
+  margin-right: 14px; vertical-align: middle; content: "";
+}
+[data-theme="magazine"] .tier-runs .tier-head h2::before { background: #2d5a3f; }
+[data-theme="magazine"] .tier-play .tier-head h2::before { background: #a86b1f; }
+[data-theme="magazine"] .tier-skip .tier-head h2::before { background: #8b2926; }
+[data-theme="magazine"] .tier-head .desc {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px;
+  color: #6b5d4a; flex: 1;
+}
+[data-theme="magazine"] .tier-head .count {
+  font-family: 'JetBrains Mono', monospace; font-size: 13px;
+  color: #8b6f47; font-variant-numeric: tabular-nums;
+}
+
+[data-theme="magazine"] .grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px;
+}
+[data-theme="magazine"] .card {
+  background: transparent; border-radius: 0; overflow: visible;
+  display: flex; flex-direction: column; position: relative;
+}
+[data-theme="magazine"] .cover {
+  aspect-ratio: 460/215; background: #d4ccba center/cover no-repeat;
+  border-bottom: 2px solid #1a1815;
+  filter: grayscale(0.15) contrast(1.05);
+}
+[data-theme="magazine"] .card:hover .cover { filter: grayscale(0) contrast(1.1); }
+[data-theme="magazine"] .cover.no-img {
+  display: flex; align-items: center; justify-content: center;
+  background: #e8dfc8;
+}
+[data-theme="magazine"] .cover.no-img::after {
+  content: attr(data-letter); font-family: 'Playfair Display', serif;
+  font-size: 72px; font-style: italic; font-weight: 900; color: #8b6f47;
+}
+[data-theme="magazine"] .card-body { padding: 12px 0 0; gap: 6px; display: flex; flex-direction: column; flex: 1; }
+[data-theme="magazine"] .name {
+  font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700;
+  line-height: 1.2; color: #1a1815;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+[data-theme="magazine"] .meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+[data-theme="magazine"] .src {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; padding: 2px 6px;
+  text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;
+  border: 1px solid #1a1815; color: #1a1815; background: transparent;
+}
+[data-theme="magazine"] .note {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 13px;
+  color: #6b5d4a; line-height: 1.4; margin-top: 4px;
+}
+[data-theme="magazine"] .badge-tier { display: none; }
+[data-theme="magazine"] footer {
+  margin-top: 64px; padding-top: 24px; border-top: 3px double #1a1815;
+  color: #8b6f47; font-size: 12px; text-align: center;
+  font-family: 'Playfair Display', serif; font-style: italic;
+}
+
+/* ============================================================
+   THEME 3: TRADING CARD / COLLECTION
+   ============================================================ */
+[data-theme="cards"] body {
+  background: #1a1530;
+  background-image:
+    radial-gradient(circle at 20% 10%, #4a2870 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, #2a4a70 0%, transparent 40%),
+    linear-gradient(180deg, #1a1530 0%, #0f0a20 100%);
+  background-attachment: fixed;
+  color: #f0e8ff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px; line-height: 1.5;
+}
+[data-theme="cards"] .wrap { max-width: 1400px; margin: 0 auto; padding: 32px 24px 64px; }
+[data-theme="cards"] header { padding-bottom: 24px; margin-bottom: 32px; }
+[data-theme="cards"] h1 {
+  font-family: 'Space Grotesk', sans-serif; font-size: 38px; font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffd700 0%, #ff6ec4 50%, #7873f5 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+[data-theme="cards"] .sub { color: #b8a8d8; font-size: 14px; margin-top: 4px; }
+[data-theme="cards"] .specs { color: #7d6da8; font-size: 12px; margin-top: 12px; font-family: 'JetBrains Mono', monospace; }
+[data-theme="cards"] .stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-top: 20px;
+}
+[data-theme="cards"] .stat {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 14px 18px; backdrop-filter: blur(10px);
+}
+[data-theme="cards"] .stat-num { font-size: 28px; font-weight: 700; }
+[data-theme="cards"] .stat-label { font-size: 11px; color: #b8a8d8; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+[data-theme="cards"] .stat-runs .stat-num { color: #6ee7b7; }
+[data-theme="cards"] .stat-play .stat-num { color: #fbbf24; }
+[data-theme="cards"] .stat-skip .stat-num { color: #f87171; }
+
+[data-theme="cards"] .controls {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  margin-bottom: 32px; padding: 16px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; backdrop-filter: blur(10px);
+}
+[data-theme="cards"] .search {
+  flex: 1; min-width: 220px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15);
+  color: #f0e8ff; padding: 10px 14px; border-radius: 10px; font-size: 14px; font-family: inherit;
+}
+[data-theme="cards"] .search:focus { outline: none; border-color: #ff6ec4; }
+[data-theme="cards"] .search::placeholder { color: #6b5d8c; }
+[data-theme="cards"] .filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
+[data-theme="cards"] .chip {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+  color: #d8c8f0; padding: 8px 14px; border-radius: 999px; font-size: 13px;
+  cursor: pointer; font-family: inherit; font-weight: 500;
+}
+[data-theme="cards"] .chip:hover { background: rgba(255,255,255,0.1); }
+[data-theme="cards"] .chip.active {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  border-color: transparent; color: #fff;
+}
+
+[data-theme="cards"] .tier { margin-bottom: 48px; }
+[data-theme="cards"] .tier-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px; padding: 0 4px; }
+[data-theme="cards"] .tier-head h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+[data-theme="cards"] .tier-runs .tier-head h2 { color: #6ee7b7; }
+[data-theme="cards"] .tier-play .tier-head h2 { color: #fbbf24; }
+[data-theme="cards"] .tier-skip .tier-head h2 { color: #f87171; }
+[data-theme="cards"] .tier-head .desc { color: #b8a8d8; font-size: 13px; flex: 1; }
+[data-theme="cards"] .tier-head .count {
+  background: rgba(255,255,255,0.08); padding: 4px 12px; border-radius: 999px;
+  font-size: 12px; font-family: 'JetBrains Mono', monospace; color: #d8c8f0;
+}
+
+[data-theme="cards"] .grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px;
+}
+[data-theme="cards"] .card {
+  background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border: 1.5px solid rgba(255,255,255,0.15); border-radius: 14px;
+  overflow: hidden; padding: 8px; display: flex; flex-direction: column; gap: 8px;
+  position: relative; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  backdrop-filter: blur(8px);
+}
+[data-theme="cards"] .card:hover {
+  transform: translateY(-4px) rotateX(2deg);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.3);
+}
+[data-theme="cards"] .card[data-tier="runs"] {
+  border-color: rgba(110, 231, 183, 0.4);
+  background: linear-gradient(160deg, rgba(110,231,183,0.1), rgba(255,255,255,0.02));
+}
+[data-theme="cards"] .card[data-tier="runs"]:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 24px rgba(110, 231, 183, 0.3);
+}
+[data-theme="cards"] .card[data-tier="play"] {
+  border-color: rgba(251, 191, 36, 0.35);
+}
+[data-theme="cards"] .card[data-tier="skip"] {
+  border-color: rgba(248, 113, 113, 0.3);
+  opacity: 0.85;
+}
+[data-theme="cards"] .cover {
+  aspect-ratio: 460/215; background: rgba(0,0,0,0.4) center/cover no-repeat;
+  border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);
+}
+[data-theme="cards"] .cover.no-img {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, rgba(255,110,196,0.2), rgba(120,115,245,0.2));
+}
+[data-theme="cards"] .cover.no-img::after {
+  content: attr(data-letter); font-size: 56px; font-weight: 700; color: rgba(255,255,255,0.5);
+}
+[data-theme="cards"] .card-body { padding: 0 4px 4px; gap: 6px; display: flex; flex-direction: column; flex: 1; }
+[data-theme="cards"] .name {
+  font-size: 14px; font-weight: 600; line-height: 1.25; color: #f0e8ff;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+[data-theme="cards"] .meta { display: flex; gap: 5px; flex-wrap: wrap; margin-top: auto; }
+[data-theme="cards"] .src {
+  font-size: 9px; font-weight: 600; padding: 2px 7px; border-radius: 6px;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+[data-theme="cards"] .src-steam { background: rgba(102, 192, 244, 0.2); color: #a8d8f4; border: 1px solid rgba(102, 192, 244, 0.3); }
+[data-theme="cards"] .src-epic { background: rgba(255, 255, 255, 0.1); color: #f0f0f0; border: 1px solid rgba(255, 255, 255, 0.2); }
+[data-theme="cards"] .src-gog { background: rgba(180, 120, 232, 0.2); color: #d8b8f0; border: 1px solid rgba(180, 120, 232, 0.3); }
+[data-theme="cards"] .src-gamepass { background: rgba(110, 231, 183, 0.18); color: #9eebc8; border: 1px solid rgba(110, 231, 183, 0.3); }
+[data-theme="cards"] .note { font-size: 11.5px; color: #b8a8d8; line-height: 1.4; }
+[data-theme="cards"] .badge-tier {
+  position: absolute; top: 14px; right: 14px; width: 12px; height: 12px;
+  border-radius: 50%; box-shadow: 0 0 0 2px rgba(0,0,0,0.5), 0 0 8px currentColor; z-index: 2;
+}
+[data-theme="cards"] .badge-tier.runs { background: #6ee7b7; color: #6ee7b7; }
+[data-theme="cards"] .badge-tier.play { background: #fbbf24; color: #fbbf24; }
+[data-theme="cards"] .badge-tier.skip { background: #f87171; color: #f87171; }
+[data-theme="cards"] footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); color: #7d6da8; font-size: 12px; text-align: center; }
+
+/* ============================================================
+   THEME 4: Y2K / RETRO GAMING
+   ============================================================ */
+[data-theme="y2k"] body {
+  background: #0d0a2c;
+  background-image:
+    linear-gradient(180deg, #0d0a2c 0%, #1a0f3a 50%, #2c0f4a 100%),
+    repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 3px);
+  background-attachment: fixed;
+  color: #e8f4ff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px; line-height: 1.5;
+  position: relative;
+}
+[data-theme="y2k"] body::after {
+  content: ""; position: fixed; inset: 0;
+  background: repeating-linear-gradient(0deg, transparent 0, transparent 3px, rgba(0,255,255,0.025) 3px, rgba(0,255,255,0.025) 4px);
+  pointer-events: none; z-index: 1000;
+}
+[data-theme="y2k"] .wrap { max-width: 1400px; margin: 0 auto; padding: 28px 24px 64px; position: relative; z-index: 1; }
+[data-theme="y2k"] header { padding-bottom: 20px; margin-bottom: 28px; border-bottom: 2px solid #ff00aa; }
+[data-theme="y2k"] h1 {
+  font-family: 'Press Start 2P', monospace; font-size: 28px; line-height: 1.3;
+  background: linear-gradient(180deg, #fff 0%, #00f0ff 50%, #ff00aa 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: 0 0 16px rgba(0, 240, 255, 0.5);
+  letter-spacing: -0.01em;
+}
+[data-theme="y2k"] .sub {
+  font-family: 'VT323', monospace; font-size: 22px; color: #00f0ff;
+  margin-top: 8px; text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+[data-theme="y2k"] .specs {
+  font-family: 'VT323', monospace; font-size: 18px; color: #ffaa44;
+  margin-top: 8px; text-shadow: 0 0 8px rgba(255, 170, 68, 0.4);
+}
+[data-theme="y2k"] .stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-top: 18px;
+}
+[data-theme="y2k"] .stat {
+  background: linear-gradient(180deg, rgba(255,0,170,0.1), rgba(0,240,255,0.05));
+  border: 2px solid #ff00aa; border-radius: 4px; padding: 12px 16px;
+  box-shadow: inset 0 0 12px rgba(0,240,255,0.2), 0 0 12px rgba(255,0,170,0.3);
+}
+[data-theme="y2k"] .stat-num {
+  font-family: 'Press Start 2P', monospace; font-size: 22px;
+  color: #00f0ff; text-shadow: 0 0 8px rgba(0,240,255,0.8);
+}
+[data-theme="y2k"] .stat-label {
+  font-family: 'VT323', monospace; font-size: 16px; color: #ff88dd;
+  text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;
+}
+[data-theme="y2k"] .stat-runs .stat-num { color: #00ff88; text-shadow: 0 0 8px rgba(0,255,136,0.8); }
+[data-theme="y2k"] .stat-play .stat-num { color: #ffdd44; text-shadow: 0 0 8px rgba(255,221,68,0.8); }
+[data-theme="y2k"] .stat-skip .stat-num { color: #ff4488; text-shadow: 0 0 8px rgba(255,68,136,0.8); }
+
+[data-theme="y2k"] .controls {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  margin-bottom: 28px; padding: 14px;
+  background: linear-gradient(180deg, rgba(0,240,255,0.06), rgba(255,0,170,0.06));
+  border: 2px solid #00f0ff; border-radius: 4px;
+  box-shadow: inset 0 0 16px rgba(0,240,255,0.15);
+}
+[data-theme="y2k"] .search {
+  flex: 1; min-width: 220px;
+  background: rgba(0,0,0,0.5); border: 2px solid #00f0ff; border-radius: 4px;
+  color: #00f0ff; padding: 8px 12px;
+  font-family: 'VT323', monospace; font-size: 18px;
+  text-shadow: 0 0 6px rgba(0,240,255,0.6);
+}
+[data-theme="y2k"] .search:focus { outline: none; border-color: #ff00aa; box-shadow: 0 0 12px rgba(255,0,170,0.5); }
+[data-theme="y2k"] .search::placeholder { color: #557; }
+[data-theme="y2k"] .filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
+[data-theme="y2k"] .chip {
+  background: linear-gradient(180deg, rgba(255,0,170,0.15), rgba(0,0,0,0.3));
+  border: 2px solid #ff00aa; color: #ff88dd;
+  padding: 5px 12px; font-family: 'VT323', monospace; font-size: 16px;
+  cursor: pointer; border-radius: 3px;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  text-shadow: 0 0 6px rgba(255,0,170,0.6);
+}
+[data-theme="y2k"] .chip:hover { background: rgba(255,0,170,0.25); }
+[data-theme="y2k"] .chip.active {
+  background: #ff00aa; color: #fff;
+  box-shadow: 0 0 12px rgba(255,0,170,0.8); border-color: #ff88dd;
+}
+
+[data-theme="y2k"] .tier { margin-bottom: 36px; }
+[data-theme="y2k"] .tier-head {
+  display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px;
+  padding: 10px 14px; border: 2px solid #00f0ff; border-radius: 4px;
+  background: linear-gradient(90deg, rgba(0,240,255,0.1), transparent);
+  box-shadow: inset 0 0 12px rgba(0,240,255,0.15);
+}
+[data-theme="y2k"] .tier-head h2 {
+  font-family: 'Press Start 2P', monospace; font-size: 14px; color: #00f0ff;
+  text-shadow: 0 0 8px rgba(0,240,255,0.8); line-height: 1.4;
+}
+[data-theme="y2k"] .tier-runs .tier-head { border-color: #00ff88; box-shadow: inset 0 0 12px rgba(0,255,136,0.15); }
+[data-theme="y2k"] .tier-runs .tier-head h2 { color: #00ff88; text-shadow: 0 0 8px rgba(0,255,136,0.8); }
+[data-theme="y2k"] .tier-play .tier-head { border-color: #ffdd44; box-shadow: inset 0 0 12px rgba(255,221,68,0.15); }
+[data-theme="y2k"] .tier-play .tier-head h2 { color: #ffdd44; text-shadow: 0 0 8px rgba(255,221,68,0.8); }
+[data-theme="y2k"] .tier-skip .tier-head { border-color: #ff4488; box-shadow: inset 0 0 12px rgba(255,68,136,0.15); }
+[data-theme="y2k"] .tier-skip .tier-head h2 { color: #ff4488; text-shadow: 0 0 8px rgba(255,68,136,0.8); }
+[data-theme="y2k"] .tier-head .desc { font-family: 'VT323', monospace; font-size: 16px; color: #aaccff; flex: 1; }
+[data-theme="y2k"] .tier-head .count { font-family: 'VT323', monospace; font-size: 18px; color: #ffaa44; }
+
+[data-theme="y2k"] .grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;
+}
+[data-theme="y2k"] .card {
+  background: linear-gradient(180deg, rgba(0,240,255,0.08), rgba(13,10,44,0.8));
+  border: 2px solid #00f0ff; border-radius: 4px;
+  overflow: hidden; display: flex; flex-direction: column;
+  position: relative; transition: all 0.2s;
+  box-shadow: inset 0 0 16px rgba(0,240,255,0.1);
+}
+[data-theme="y2k"] .card:hover {
+  border-color: #ff00aa; box-shadow: 0 0 20px rgba(255,0,170,0.5), inset 0 0 16px rgba(255,0,170,0.15);
+  transform: translateY(-2px);
+}
+[data-theme="y2k"] .card[data-tier="runs"] { border-color: #00ff88; box-shadow: inset 0 0 14px rgba(0,255,136,0.12); }
+[data-theme="y2k"] .card[data-tier="play"] { border-color: #ffdd44; box-shadow: inset 0 0 14px rgba(255,221,68,0.12); }
+[data-theme="y2k"] .card[data-tier="skip"] { border-color: #ff4488; opacity: 0.8; box-shadow: inset 0 0 14px rgba(255,68,136,0.12); }
+[data-theme="y2k"] .cover {
+  aspect-ratio: 460/215; background: #000 center/cover no-repeat;
+  border-bottom: 2px solid currentColor;
+  filter: saturate(1.2) contrast(1.1);
+}
+[data-theme="y2k"] .cover.no-img {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #ff00aa, #00f0ff);
+}
+[data-theme="y2k"] .cover.no-img::after {
+  content: attr(data-letter); font-family: 'Press Start 2P', monospace;
+  font-size: 36px; color: #fff; text-shadow: 2px 2px 0 #000;
+}
+[data-theme="y2k"] .card-body { padding: 8px 10px 10px; gap: 5px; display: flex; flex-direction: column; flex: 1; }
+[data-theme="y2k"] .name {
+  font-family: 'VT323', monospace; font-size: 18px; color: #fff; line-height: 1.1;
+  text-shadow: 0 0 4px rgba(255,255,255,0.4);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+[data-theme="y2k"] .meta { display: flex; gap: 4px; flex-wrap: wrap; margin-top: auto; }
+[data-theme="y2k"] .src {
+  font-family: 'VT323', monospace; font-size: 12px; padding: 0 6px;
+  text-transform: uppercase; letter-spacing: 0.06em; border-radius: 2px; font-weight: 700;
+}
+[data-theme="y2k"] .src-steam { background: #00f0ff; color: #001; }
+[data-theme="y2k"] .src-epic { background: #fff; color: #000; }
+[data-theme="y2k"] .src-gog { background: #ff88dd; color: #200; }
+[data-theme="y2k"] .src-gamepass { background: #00ff88; color: #002; }
+[data-theme="y2k"] .note { font-family: 'VT323', monospace; font-size: 13px; color: #aaccff; line-height: 1.3; }
+[data-theme="y2k"] .badge-tier { display: none; }
+[data-theme="y2k"] footer {
+  margin-top: 48px; padding: 14px; text-align: center;
+  font-family: 'Press Start 2P', monospace; font-size: 9px; color: #ff88dd;
+  border-top: 2px solid #ff00aa; line-height: 1.8;
+}
+
+/* ============================================================
+   THEME 5: RISO ZINE (Surprise Me Harder)
+   ============================================================ */
+[data-theme="zine"] body {
+  background: #f5e8d8;
+  background-image:
+    radial-gradient(circle at 12% 8%, #ff5e3a 0%, transparent 6%),
+    radial-gradient(circle at 88% 6%, #2055d8 0%, transparent 5%),
+    radial-gradient(circle at 50% 95%, #ff5e3a 0%, transparent 6%),
+    repeating-radial-gradient(circle at 30% 30%, transparent 0, transparent 1px, rgba(0,0,0,0.025) 1px, rgba(0,0,0,0.025) 2px);
+  background-attachment: fixed;
+  color: #1a1a1a;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px; line-height: 1.5;
+}
+[data-theme="zine"] .wrap { max-width: 1280px; margin: 0 auto; padding: 32px 24px 64px; }
+[data-theme="zine"] header {
+  padding: 20px; margin-bottom: 32px; position: relative;
+  background: #fffaf0;
+  border: 2px solid #1a1a1a;
+  box-shadow: 6px 6px 0 #ff5e3a, 12px 12px 0 #2055d8;
+  transform: rotate(-0.5deg);
+}
+[data-theme="zine"] h1 {
+  font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700;
+  letter-spacing: -0.04em; line-height: 0.95; color: #1a1a1a;
+  text-transform: uppercase;
+  position: relative; display: inline-block;
+}
+[data-theme="zine"] h1::before {
+  content: ""; position: absolute; left: -6px; right: -6px; top: 30%; height: 38%;
+  background: #fff36b; z-index: -1; transform: rotate(-1deg);
+}
+[data-theme="zine"] .sub {
+  font-family: 'Caveat', cursive; font-size: 28px; color: #ff5e3a;
+  margin-top: 8px; transform: rotate(-1deg); display: inline-block;
+}
+[data-theme="zine"] .specs {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: #555; margin-top: 14px; text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 4px 10px; border: 1px dashed #999; display: inline-block;
+}
+[data-theme="zine"] .stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-top: 20px;
+}
+[data-theme="zine"] .stat {
+  background: #fffaf0; border: 2px solid #1a1a1a; padding: 14px 18px;
+  box-shadow: 4px 4px 0 #1a1a1a; transform: rotate(0.3deg);
+}
+[data-theme="zine"] .stat:nth-child(2) { transform: rotate(-0.6deg); box-shadow: 4px 4px 0 #ff5e3a; }
+[data-theme="zine"] .stat:nth-child(3) { transform: rotate(0.4deg); box-shadow: 4px 4px 0 #2055d8; }
+[data-theme="zine"] .stat:nth-child(4) { transform: rotate(-0.3deg); box-shadow: 4px 4px 0 #1ea84a; }
+[data-theme="zine"] .stat-num {
+  font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700;
+  color: #1a1a1a; line-height: 1;
+}
+[data-theme="zine"] .stat-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.15em; color: #555; margin-top: 6px;
+}
+[data-theme="zine"] .stat-runs .stat-num { color: #1ea84a; }
+[data-theme="zine"] .stat-play .stat-num { color: #d97a14; }
+[data-theme="zine"] .stat-skip .stat-num { color: #c41e3a; }
+
+[data-theme="zine"] .controls {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  margin-bottom: 32px; padding: 14px;
+  background: #fffaf0; border: 2px solid #1a1a1a;
+  box-shadow: 4px 4px 0 #1a1a1a;
+}
+[data-theme="zine"] .search {
+  flex: 1; min-width: 220px; background: transparent; border: none;
+  border-bottom: 2px solid #1a1a1a; color: #1a1a1a; padding: 6px 4px;
+  font-family: 'Caveat', cursive; font-size: 22px; font-weight: 500;
+}
+[data-theme="zine"] .search::placeholder { color: #999; }
+[data-theme="zine"] .search:focus { outline: none; border-bottom-color: #ff5e3a; }
+[data-theme="zine"] .filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
+[data-theme="zine"] .chip {
+  background: #fff; border: 2px solid #1a1a1a; color: #1a1a1a;
+  padding: 4px 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  cursor: pointer; border-radius: 0;
+  text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;
+  box-shadow: 2px 2px 0 #1a1a1a;
+}
+[data-theme="zine"] .chip:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 #1a1a1a; }
+[data-theme="zine"] .chip.active { background: #1a1a1a; color: #fff36b; }
+[data-theme="zine"] .chip.tier-runs.active { background: #1ea84a; color: #fff; box-shadow: 2px 2px 0 #0a4a20; }
+[data-theme="zine"] .chip.tier-play.active { background: #d97a14; color: #fff; box-shadow: 2px 2px 0 #5a3000; }
+[data-theme="zine"] .chip.tier-skip.active { background: #c41e3a; color: #fff; box-shadow: 2px 2px 0 #5a0a18; }
+
+[data-theme="zine"] .tier { margin-bottom: 48px; }
+[data-theme="zine"] .tier-head {
+  display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;
+  padding: 10px 14px; background: #1a1a1a; color: #fff;
+  position: relative; transform: rotate(-0.3deg);
+}
+[data-theme="zine"] .tier-runs .tier-head { background: #1ea84a; }
+[data-theme="zine"] .tier-play .tier-head { background: #d97a14; }
+[data-theme="zine"] .tier-skip .tier-head { background: #c41e3a; }
+[data-theme="zine"] .tier-head h2 {
+  font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: -0.01em; color: #fff;
+}
+[data-theme="zine"] .tier-head .desc {
+  font-family: 'Caveat', cursive; font-size: 18px; color: #fff;
+  flex: 1; opacity: 0.95;
+}
+[data-theme="zine"] .tier-head .count {
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff;
+  background: rgba(0,0,0,0.25); padding: 3px 10px;
+}
+
+[data-theme="zine"] .grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 18px;
+}
+[data-theme="zine"] .card {
+  background: #fffaf0; border: 2px solid #1a1a1a; padding: 8px;
+  display: flex; flex-direction: column; gap: 8px; position: relative;
+  box-shadow: 3px 3px 0 #1a1a1a; transition: transform 0.2s, box-shadow 0.2s;
+}
+[data-theme="zine"] .card:nth-child(3n) { transform: rotate(-0.4deg); }
+[data-theme="zine"] .card:nth-child(3n+1) { transform: rotate(0.3deg); }
+[data-theme="zine"] .card:nth-child(3n+2) { transform: rotate(-0.2deg); }
+[data-theme="zine"] .card:hover {
+  transform: rotate(0deg) translate(-2px, -2px); box-shadow: 5px 5px 0 #ff5e3a;
+}
+[data-theme="zine"] .cover {
+  aspect-ratio: 460/215; background: #e8d8c0 center/cover no-repeat;
+  border: 2px solid #1a1a1a;
+  filter: contrast(1.1) saturate(1.05);
+}
+[data-theme="zine"] .cover.no-img {
+  display: flex; align-items: center; justify-content: center;
+  background: repeating-linear-gradient(45deg, #ff5e3a 0, #ff5e3a 6px, #fff 6px, #fff 12px);
+}
+[data-theme="zine"] .cover.no-img::after {
+  content: attr(data-letter); font-family: 'Space Grotesk', sans-serif;
+  font-size: 56px; font-weight: 700; color: #1a1a1a;
+  background: #fff36b; padding: 0 12px; border: 2px solid #1a1a1a;
+}
+[data-theme="zine"] .card-body { padding: 4px 6px 6px; gap: 6px; display: flex; flex-direction: column; flex: 1; }
+[data-theme="zine"] .name {
+  font-family: 'Space Grotesk', sans-serif; font-size: 14.5px; font-weight: 700;
+  color: #1a1a1a; line-height: 1.2;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+[data-theme="zine"] .meta { display: flex; gap: 4px; flex-wrap: wrap; margin-top: auto; }
+[data-theme="zine"] .src {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; padding: 1px 6px;
+  text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;
+  border: 1.5px solid #1a1a1a;
+}
+[data-theme="zine"] .src-steam { background: #2055d8; color: #fff; }
+[data-theme="zine"] .src-epic { background: #1a1a1a; color: #fff36b; }
+[data-theme="zine"] .src-gog { background: #ff5e3a; color: #fff; }
+[data-theme="zine"] .src-gamepass { background: #1ea84a; color: #fff; }
+[data-theme="zine"] .note {
+  font-family: 'Caveat', cursive; font-size: 15px; color: #555;
+  line-height: 1.25; padding-top: 4px; border-top: 1px dashed #999;
+}
+[data-theme="zine"] .badge-tier {
+  position: absolute; top: -6px; right: -6px;
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 2px solid #1a1a1a; box-shadow: 1px 1px 0 #1a1a1a;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; color: #1a1a1a;
+}
+[data-theme="zine"] .badge-tier.runs { background: #1ea84a; color: #fff; }
+[data-theme="zine"] .badge-tier.play { background: #d97a14; color: #fff; }
+[data-theme="zine"] .badge-tier.skip { background: #c41e3a; color: #fff; }
+[data-theme="zine"] .badge-tier::before { content: attr(data-letter); }
+[data-theme="zine"] footer {
+  margin-top: 48px; padding: 16px; text-align: center;
+  font-family: 'Caveat', cursive; font-size: 18px; color: #555;
+}
+
+/* ============================================================
+   THEME SWITCHER (always visible)
+   ============================================================ */
+.theme-switcher {
+  position: fixed; top: 12px; right: 12px; z-index: 9999;
+  display: flex; gap: 4px; padding: 6px;
+  background: rgba(0,0,0,0.85); border-radius: 8px; backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-family: 'JetBrains Mono', monospace;
+}
+.theme-switcher button {
+  background: transparent; border: 1px solid rgba(255,255,255,0.15);
+  color: #ddd; padding: 6px 10px; font-size: 11px;
+  cursor: pointer; border-radius: 5px;
+  font-family: inherit; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;
+  transition: all 0.15s;
+}
+.theme-switcher button:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.theme-switcher button.active { background: #fff; color: #000; border-color: #fff; }
+.theme-switcher .label {
+  color: #888; font-size: 10px; padding: 6px 8px 6px 4px;
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+@media (max-width: 720px) {
+  .theme-switcher { top: auto; bottom: 12px; right: 12px; left: 12px; justify-content: center; }
+  .theme-switcher .label { display: none; }
+}
+
+/* Search highlight (shared) */
+.empty-tier { padding: 24px; text-align: center; color: #888; font-style: italic; opacity: 0.6; }
+
+@media (max-width: 640px) {
+  [data-theme="brutalist"] .stats, [data-theme="magazine"] .stats { grid-template-columns: repeat(2, 1fr); }
+  [data-theme="magazine"] h1 { font-size: 44px; }
+  [data-theme="brutalist"] h1 { font-size: 22px; }
+  [data-theme="y2k"] h1 { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<div class="theme-switcher">
+  <span class="label">Theme</span>
+  <button data-theme-btn="brutalist" class="active">Terminal</button>
+  <button data-theme-btn="magazine">Editorial</button>
+  <button data-theme-btn="cards">Collection</button>
+  <button data-theme-btn="y2k">Y2K</button>
+  <button data-theme-btn="zine">Zine</button>
+</div>
+
+<div class="wrap">
+  <header>
+    <h1>Batty's Game Library</h1>
+    <div class="sub">Steam · GOG · Epic · PC Game Pass</div>
+    <div class="specs">Ryzen 5 7535U · Radeon 660M iGPU · 16 GB RAM</div>
+    <div class="stats">
+      <div class="stat stat-runs"><div class="stat-num" id="ct-runs">0</div><div class="stat-label">Runs Great</div></div>
+      <div class="stat stat-play"><div class="stat-num" id="ct-play">0</div><div class="stat-label">Playable</div></div>
+      <div class="stat stat-skip"><div class="stat-num" id="ct-skip">0</div><div class="stat-label">Skip</div></div>
+      <div class="stat"><div class="stat-num" id="ct-total">0</div><div class="stat-label">Total</div></div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <input type="text" class="search" id="search" placeholder="Search games…" autocomplete="off">
+    <div class="filter-group" id="src-filters">
+      <button class="chip active" data-src="all">All sources</button>
+      <button class="chip" data-src="steam">Steam</button>
+      <button class="chip" data-src="gog">GOG</button>
+      <button class="chip" data-src="epic">Epic</button>
+      <button class="chip" data-src="gamepass">Game Pass</button>
+    </div>
+    <div class="filter-group" id="tier-filters">
+      <button class="chip tier-runs active" data-tier="all">All tiers</button>
+      <button class="chip tier-runs" data-tier="runs">Runs great</button>
+      <button class="chip tier-play" data-tier="play">Playable</button>
+      <button class="chip tier-skip" data-tier="skip">Skip</button>
+    </div>
+  </div>
+
+  <main id="main"></main>
+
+  <footer>Cover art served from Steam CDN · Categorization tuned for Radeon 660M iGPU at 1080p</footer>
+</div>
+
+<script>
+// Each game: { name, sources: [...], tier: 'runs'|'play'|'skip', appid: number|null, note?: string }
+// appid is Steam appid for cover art (works even for Epic/GOG/GP titles since most exist on Steam)
+const games = [
+  // ============ STEAM (from prior conversation - 178 games, taste: MGS, Skyrim, SMITE, multiplayer) ============
+  { name: "Metal Gear Solid V: The Phantom Pain", sources: ["steam"], tier: "runs", appid: 287700, note: "Beautifully optimized — 60fps at 1080p medium-high" },
+  { name: "The Elder Scrolls V: Skyrim Special Edition", sources: ["steam"], tier: "runs", appid: 489830, note: "Runs fine; avoid 4K texture mods" },
+  { name: "SMITE", sources: ["steam"], tier: "runs", appid: 386360, note: "Scales down well" },
+  { name: "Metal Gear Rising: Revengeance", sources: ["steam"], tier: "runs", appid: 235460, note: "Top pick — runs perfect, ridiculous fun" },
+  { name: "NieR: Automata", sources: ["steam"], tier: "runs", appid: 524220, note: "Top pick — will run great" },
+  { name: "Titanfall 2", sources: ["steam"], tier: "runs", appid: 1237970, note: "Top pick — best campaign of the 2010s" },
+  { name: "DOOM Eternal", sources: ["steam"], tier: "runs", appid: 782330, note: "id Tech 7 is sorcery on weak hardware" },
+  { name: "Dishonored 2", sources: ["steam"], tier: "runs", appid: 403640, note: "Top pick" },
+  { name: "Hellblade: Senua's Sacrifice", sources: ["steam"], tier: "runs", appid: 414340, note: "Short, atmospheric, runs fine on UE4 low" },
+  { name: "Middle-earth: Shadow of Mordor", sources: ["steam"], tier: "runs", appid: 241930, note: "Ages well, runs great" },
+  { name: "Warframe", sources: ["steam"], tier: "runs", appid: 230410 },
+  { name: "Killing Floor 2", sources: ["steam"], tier: "runs", appid: 232090 },
+  { name: "Warhammer: Vermintide 2", sources: ["steam"], tier: "runs", appid: 552500 },
+  { name: "Borderlands 2", sources: ["steam", "epic"], tier: "runs", appid: 49520 },
+  { name: "Borderlands: The Pre-Sequel", sources: ["steam", "epic"], tier: "runs", appid: 261640 },
+  { name: "Portal 2", sources: ["steam"], tier: "runs", appid: 620 },
+  { name: "Half-Life 2", sources: ["steam"], tier: "runs", appid: 220 },
+  { name: "Counter-Strike 2", sources: ["steam"], tier: "runs", appid: 730 },
+  { name: "Team Fortress 2", sources: ["steam"], tier: "runs", appid: 440 },
+  { name: "Stardew Valley", sources: ["steam"], tier: "runs", appid: 413150 },
+  { name: "Hollow Knight", sources: ["steam"], tier: "runs", appid: 367520 },
+  { name: "Hades", sources: ["steam"], tier: "runs", appid: 1145360 },
+  { name: "Celeste", sources: ["steam", "epic"], tier: "runs", appid: 504230 },
+  { name: "Undertale", sources: ["steam"], tier: "runs", appid: 391540 },
+  { name: "Terraria", sources: ["steam"], tier: "runs", appid: 105600 },
+  { name: "Slay the Spire", sources: ["steam"], tier: "runs", appid: 646570 },
+  { name: "Dead Cells", sources: ["steam"], tier: "runs", appid: 588650 },
+  { name: "Cuphead", sources: ["steam"], tier: "runs", appid: 268910 },
+  { name: "Risk of Rain 2", sources: ["steam"], tier: "runs", appid: 632360 },
+  { name: "Don't Starve Together", sources: ["steam"], tier: "runs", appid: 322330 },
+  { name: "Left 4 Dead 2", sources: ["steam"], tier: "runs", appid: 550 },
+  { name: "Fallout: New Vegas", sources: ["steam"], tier: "runs", appid: 22380 },
+  { name: "Fallout 4", sources: ["steam"], tier: "runs", appid: 377160, note: "Runs at 1080p medium" },
+  { name: "Bioshock Infinite", sources: ["steam", "gog"], tier: "runs", appid: 8870 },
+  { name: "Bioshock Remastered", sources: ["steam"], tier: "runs", appid: 409710 },
+  { name: "Bioshock 2 Remastered", sources: ["steam"], tier: "runs", appid: 409720 },
+  { name: "Dishonored", sources: ["steam"], tier: "runs", appid: 205100 },
+  { name: "Dishonored: Death of the Outsider", sources: ["steam"], tier: "runs", appid: 614570 },
+  { name: "Deus Ex: Human Revolution", sources: ["steam"], tier: "runs", appid: 28050 },
+  { name: "Deus Ex: Mankind Divided", sources: ["steam", "gog"], tier: "runs", appid: 337000 },
+  { name: "Tomb Raider (2013)", sources: ["steam"], tier: "runs", appid: 203160 },
+  { name: "Rise of the Tomb Raider", sources: ["steam", "epic"], tier: "runs", appid: 391220 },
+  { name: "Skyrim Legendary Edition", sources: ["steam"], tier: "runs", appid: 72850 },
+  { name: "Mount & Blade: Warband", sources: ["steam"], tier: "runs", appid: 48700 },
+  { name: "Civilization V", sources: ["steam"], tier: "runs", appid: 8930 },
+  { name: "Civilization VI", sources: ["steam"], tier: "runs", appid: 289070 },
+  { name: "XCOM: Enemy Unknown", sources: ["steam", "gog"], tier: "runs", appid: 200510 },
+  { name: "XCOM 2", sources: ["steam", "gog"], tier: "runs", appid: 268500 },
+  { name: "Divinity: Original Sin 2", sources: ["steam"], tier: "runs", appid: 435150 },
+  { name: "Pillars of Eternity", sources: ["steam"], tier: "runs", appid: 291650 },
+  { name: "Tyranny", sources: ["steam"], tier: "runs", appid: 362960 },
+  { name: "Wasteland 2", sources: ["steam"], tier: "runs", appid: 240760 },
+  { name: "Mark of the Ninja", sources: ["steam"], tier: "runs", appid: 214560 },
+  { name: "Saints Row IV", sources: ["steam"], tier: "runs", appid: 206420 },
+  { name: "Saints Row: The Third", sources: ["steam"], tier: "runs", appid: 55230 },
+  { name: "Just Cause 3", sources: ["steam"], tier: "runs", appid: 225540 },
+  { name: "Mad Max", sources: ["steam"], tier: "runs", appid: 234140 },
+  { name: "Sniper Elite 4", sources: ["steam"], tier: "runs", appid: 312660 },
+  { name: "Wolfenstein: The New Order", sources: ["steam"], tier: "runs", appid: 201810 },
+  { name: "Wolfenstein II: The New Colossus", sources: ["steam"], tier: "runs", appid: 612880 },
+  { name: "DOOM (2016)", sources: ["steam"], tier: "runs", appid: 379720 },
+  { name: "Rocket League", sources: ["steam", "epic"], tier: "runs", appid: 252950 },
+  { name: "Among Us", sources: ["steam"], tier: "runs", appid: 945360 },
+  { name: "Garry's Mod", sources: ["steam"], tier: "runs", appid: 4000 },
+  { name: "Payday 2", sources: ["steam", "epic"], tier: "runs", appid: 218620 },
+  { name: "Borderlands GOTY Enhanced", sources: ["steam"], tier: "runs", appid: 729040 },
+  { name: "Tales from the Borderlands", sources: ["steam"], tier: "runs", appid: 261110 },
+  { name: "Brothers: A Tale of Two Sons", sources: ["steam"], tier: "runs", appid: 225080 },
+  { name: "Ori and the Blind Forest", sources: ["steam"], tier: "runs", appid: 261570 },
+  { name: "Ori and the Will of the Wisps", sources: ["steam"], tier: "runs", appid: 1057090 },
+  { name: "Inside", sources: ["steam", "epic"], tier: "runs", appid: 304430 },
+  { name: "Limbo", sources: ["steam", "epic"], tier: "runs", appid: 48000 },
+  { name: "What Remains of Edith Finch", sources: ["steam", "epic"], tier: "runs", appid: 501300 },
+  { name: "Firewatch", sources: ["steam"], tier: "runs", appid: 383870 },
+  { name: "Gone Home", sources: ["steam"], tier: "runs", appid: 232430 },
+  { name: "The Stanley Parable", sources: ["steam", "epic"], tier: "runs", appid: 221910 },
+  { name: "Outer Wilds", sources: ["steam"], tier: "runs", appid: 753640 },
+  { name: "Disco Elysium", sources: ["steam"], tier: "runs", appid: 632470 },
+  { name: "Pyre", sources: ["steam"], tier: "runs", appid: 462770 },
+  { name: "Bastion", sources: ["steam"], tier: "runs", appid: 107100 },
+  { name: "Transistor", sources: ["steam", "epic"], tier: "runs", appid: 237930 },
+
+  // STEAM - PLAYABLE
+  { name: "Grand Theft Auto V", sources: ["steam"], tier: "play", appid: 271590, note: "Original Legacy runs better than Enhanced" },
+  { name: "The Witcher 3: Wild Hunt", sources: ["steam", "gog"], tier: "play", appid: 292030, note: "1080p low ~30-45fps. Drop to 720p for smoother" },
+  { name: "Shadow of the Tomb Raider", sources: ["steam"], tier: "play", appid: 750920, note: "Low settings, ~30-40fps" },
+  { name: "Monster Hunter: World", sources: ["steam"], tier: "play", appid: 582010, note: "Low settings, 30fps target. CPU-heavy" },
+  { name: "Sea of Thieves", sources: ["steam", "gamepass"], tier: "play", appid: 1172620, note: "Playable at low — cartoony style helps" },
+  { name: "Kingdom Come: Deliverance", sources: ["steam", "epic"], tier: "play", appid: 379430, note: "Rough but doable on low" },
+  { name: "Insurgency: Sandstorm", sources: ["steam"], tier: "play", appid: 581320, note: "Low settings; competitive players need higher fps" },
+  { name: "GreedFall", sources: ["steam", "gog"], tier: "play", appid: 606880, note: "Low settings 1080p" },
+  { name: "Remnant: From the Ashes", sources: ["steam", "epic"], tier: "play", appid: 617290, note: "Low settings" },
+  { name: "Hunt: Showdown 1896", sources: ["steam"], tier: "play", appid: 594650, note: "Low settings 720p, still atmospheric" },
+  { name: "PUBG: BATTLEGROUNDS", sources: ["steam"], tier: "play", appid: 578080, note: "Runs but competitive shooters benefit from higher fps" },
+  { name: "Tom Clancy's Rainbow Six Siege", sources: ["steam"], tier: "play", appid: 359550, note: "Runs but competitive — needs higher fps" },
+  { name: "Splitgate", sources: ["steam"], tier: "play", appid: 677620, note: "Runs but competitive — needs higher fps" },
+  { name: "Black Desert", sources: ["steam"], tier: "play", appid: 582660, note: "CPU-heavy, uneven; playable in less crowded zones" },
+  { name: "The Elder Scrolls Online", sources: ["steam"], tier: "play", appid: 306130, note: "CPU-heavy, uneven" },
+
+  // STEAM - SKIP
+  { name: "Deadlock", sources: ["steam"], tier: "skip", appid: 1422450, note: "Source 2 demanding, competitive needs high fps" },
+  { name: "ARK: Survival Evolved", sources: ["steam", "epic"], tier: "skip", appid: 346110, note: "Chronically poorly optimized" },
+  { name: "Rust", sources: ["steam"], tier: "skip", appid: 252490, note: "Possible at very low, but expect a bad time" },
+  { name: "7 Days to Die", sources: ["steam"], tier: "skip", appid: 251570, note: "Playable but choppy" },
+  { name: "Beat Saber", sources: ["steam"], tier: "skip", appid: 620980, note: "VR — iGPU can't drive a headset" },
+  { name: "Pavlov VR", sources: ["steam"], tier: "skip", appid: 555160, note: "VR — iGPU can't drive a headset" },
+  { name: "GORN", sources: ["steam"], tier: "skip", appid: 578620, note: "VR — iGPU can't drive a headset" },
+  { name: "Arizona Sunshine", sources: ["steam"], tier: "skip", appid: 342180, note: "VR — iGPU can't drive a headset" },
+  { name: "Budget Cuts", sources: ["steam"], tier: "skip", appid: 400940, note: "VR — iGPU can't drive a headset" },
+  { name: "Space Pirate Trainer", sources: ["steam"], tier: "skip", appid: 418650, note: "VR — iGPU can't drive a headset" },
+  { name: "Zero Caliber VR", sources: ["steam"], tier: "skip", appid: 877200, note: "VR — iGPU can't drive a headset" },
+  { name: "VRChat", sources: ["steam"], tier: "skip", appid: 438100, note: "VR — iGPU can't drive a headset" },
+  { name: "Rec Room", sources: ["steam"], tier: "skip", appid: 471710, note: "VR-focused — iGPU can't drive a headset" },
+
+  // ============ GOG (from prior conversation - 63 games) ============
+  // GOG - RUNS GREAT
+  { name: "The Outer Worlds", sources: ["gog", "epic"], tier: "runs", appid: 578650, note: "1080p low/medium, runs great on iGPUs" },
+  { name: "Middle-earth: Shadow of War", sources: ["gog"], tier: "runs", appid: 356190, note: "1080p low ~40-50fps" },
+  { name: "Hard West 2", sources: ["gog"], tier: "runs", appid: 1282410, note: "Stylized turn-based, runs easily" },
+  { name: "Hitman: Absolution", sources: ["gog"], tier: "runs", appid: 203140 },
+  { name: "DREDGE", sources: ["gog"], tier: "runs", appid: 1562430, note: "Fishing horror, gorgeous, runs on a toaster" },
+  { name: "Stray Gods: The Roleplaying Musical", sources: ["gog"], tier: "runs", appid: 1715380, note: "Visual novel/musical, runs anywhere" },
+  { name: "En Garde!", sources: ["gog"], tier: "runs", appid: 1654660, note: "Swashbuckling action, lightweight" },
+  { name: "Cat Quest II", sources: ["gog"], tier: "runs", appid: 818470 },
+  { name: "Forager", sources: ["gog"], tier: "runs", appid: 751780 },
+  { name: "SteamWorld Quest: Hand of Gilgamech", sources: ["gog"], tier: "runs", appid: 945510 },
+  { name: "SteamWorld Heist", sources: ["gog"], tier: "runs", appid: 322190 },
+  { name: "Spelunky", sources: ["gog"], tier: "runs", appid: 239350 },
+  { name: "Overcooked! 2", sources: ["gog"], tier: "runs", appid: 728880 },
+  { name: "Midnight Fight Express", sources: ["gog"], tier: "runs", appid: 1493670 },
+  { name: "Spells & Secrets", sources: ["gog"], tier: "runs", appid: 1665230 },
+  { name: "Arcade Paradise", sources: ["gog"], tier: "runs", appid: 1413480 },
+  { name: "Thronebreaker: The Witcher Tales", sources: ["gog"], tier: "runs", appid: 909720, note: "Gorgeous CDPR card RPG, runs perfectly" },
+  { name: "Fallout", sources: ["gog"], tier: "runs", appid: 38400, note: "90s isometric, runs on anything" },
+  { name: "Fallout 2", sources: ["gog"], tier: "runs", appid: 38410 },
+  { name: "Fallout Tactics", sources: ["gog"], tier: "runs", appid: 38420 },
+  { name: "Baldur's Gate: Enhanced Edition", sources: ["gog"], tier: "runs", appid: 228280 },
+  { name: "Baldur's Gate II: Enhanced Edition", sources: ["gog"], tier: "runs", appid: 257350 },
+  { name: "Neverwinter Nights: Enhanced Edition", sources: ["gog"], tier: "runs", appid: 704450 },
+  { name: "Neverwinter Nights Diamond", sources: ["gog"], tier: "runs", appid: null },
+  { name: "The Witcher: Enhanced Edition", sources: ["gog"], tier: "runs", appid: 20900, note: "Runs great on your machine" },
+  { name: "The Witcher 2: Assassins of Kings", sources: ["gog"], tier: "runs", appid: 20920, note: "Runs at high settings even — top pick" },
+  { name: "Tomb Raider: Anniversary", sources: ["gog"], tier: "runs", appid: 8000 },
+  { name: "Tomb Raider: Legend", sources: ["gog"], tier: "runs", appid: 7820 },
+  { name: "Tomb Raider: Underworld", sources: ["gog"], tier: "runs", appid: 8140 },
+  { name: "Tomb Raider: The Last Revelation", sources: ["gog"], tier: "runs", appid: 224940 },
+  { name: "Tomb Raider: Chronicles", sources: ["gog"], tier: "runs", appid: 224960 },
+  { name: "Tomb Raider: The Angel of Darkness", sources: ["gog"], tier: "runs", appid: 224980 },
+  { name: "Star Wars: Bounty Hunter", sources: ["gog"], tier: "runs", appid: 803630 },
+  { name: "Call of Juarez: Bound in Blood", sources: ["gog"], tier: "runs", appid: 21810 },
+  { name: "Blade of Darkness", sources: ["gog"], tier: "runs", appid: 1710170 },
+  { name: "Chasm: The Rift", sources: ["gog"], tier: "runs", appid: 2061070 },
+  { name: "The Wheel of Time", sources: ["gog"], tier: "runs", appid: null },
+  { name: "Saints Row: The Third Remastered", sources: ["gog"], tier: "runs", appid: 1233570 },
+  { name: "LEGO The Hobbit", sources: ["gog"], tier: "runs", appid: 285160 },
+  { name: "LEGO Lord of the Rings", sources: ["gog"], tier: "runs", appid: 214510 },
+  { name: "LEGO Star Wars III: The Clone Wars", sources: ["gog"], tier: "runs", appid: 32440 },
+
+  // GOG - PLAYABLE
+  { name: "Cyberpunk 2077", sources: ["gog"], tier: "play", appid: 1091500, note: "720p Low + FSR Performance ~25-35fps. Playable, not enjoyable" },
+
+  // ============ EPIC (from your screenshot — only counting non-duplicates) ============
+  // EPIC - RUNS GREAT
+  { name: "Fortnite", sources: ["epic"], tier: "runs", appid: null, note: "Performance mode is great on iGPUs" },
+  { name: "Borderlands 3", sources: ["epic"], tier: "runs", appid: 397540, note: "1080p low" },
+  { name: "Dauntless", sources: ["epic"], tier: "runs", appid: 1334260 },
+  { name: "Far Cry 5", sources: ["epic"], tier: "runs", appid: 552520 },
+  { name: "Control", sources: ["epic"], tier: "runs", appid: 870780, note: "Low settings 1080p" },
+  { name: "Spellbreak", sources: ["epic"], tier: "runs", appid: null, note: "Servers may be offline as of 2024" },
+  { name: "For The King", sources: ["epic"], tier: "runs", appid: 527230 },
+  { name: "World War Z", sources: ["epic"], tier: "runs", appid: 699130 },
+  { name: "Totally Reliable Delivery Service", sources: ["epic"], tier: "runs", appid: 1011670 },
+  { name: "Subnautica", sources: ["epic"], tier: "runs", appid: 264710, note: "Underwater alien planet survival, runs well" },
+  { name: "RUINER", sources: ["epic"], tier: "runs", appid: 464060 },
+  { name: "Star Wars Jedi: Fallen Order", sources: ["epic"], tier: "runs", appid: 1172380, note: "Low settings 1080p ~40fps" },
+  { name: "Phantasy Star Online 2", sources: ["epic"], tier: "runs", appid: 1056640 },
+  { name: "Kingdom: New Lands", sources: ["epic"], tier: "runs", appid: 496300 },
+  { name: "DAEMON X MACHINA", sources: ["epic"], tier: "runs", appid: 1167450 },
+  { name: "Just Cause 4", sources: ["epic"], tier: "runs", appid: 517630, note: "Low settings 1080p" },
+  { name: "Axiom Verge", sources: ["epic"], tier: "runs", appid: 332200 },
+  { name: "City of Brass", sources: ["epic"], tier: "runs", appid: 446910 },
+  { name: "Alan Wake", sources: ["epic"], tier: "runs", appid: 108710 },
+  { name: "Dungeons 3", sources: ["epic"], tier: "runs", appid: 493900 },
+  { name: ">observer_", sources: ["epic"], tier: "runs", appid: 514900 },
+  { name: "20XX", sources: ["epic"], tier: "runs", appid: 322110 },
+  { name: "3 out of 10, EP 1", sources: ["epic"], tier: "runs", appid: 1273390 },
+  { name: "3 out of 10, EP 2", sources: ["epic"], tier: "runs", appid: 1314370 },
+  { name: "A Short Hike", sources: ["epic"], tier: "runs", appid: 1055540 },
+  { name: "ABZU", sources: ["epic"], tier: "runs", appid: 384190 },
+  { name: "AER Memories of Old", sources: ["epic"], tier: "runs", appid: 449000 },
+  { name: "Alan Wake's American Nightmare", sources: ["epic"], tier: "runs", appid: 202750 },
+  { name: "Alex Kidd in Miracle World DX", sources: ["epic"], tier: "runs", appid: 1357330 },
+  { name: "Alien: Isolation", sources: ["epic"], tier: "runs", appid: 214490, note: "Atmospheric horror, runs fine" },
+  { name: "Amnesia: The Dark Descent", sources: ["epic"], tier: "runs", appid: 57300 },
+  { name: "Amnesia: A Machine for Pigs", sources: ["epic"], tier: "runs", appid: 239200 },
+  { name: "Anodyne 2: Return to Dust", sources: ["epic"], tier: "runs", appid: 1011160 },
+  { name: "Ape Out", sources: ["epic"], tier: "runs", appid: 447150 },
+  { name: "Aztez", sources: ["epic"], tier: "runs", appid: 244910 },
+  { name: "Barony", sources: ["epic"], tier: "runs", appid: 371970 },
+  { name: "Batman: Arkham Asylum GOTY", sources: ["epic"], tier: "runs", appid: 35140 },
+  { name: "Batman: Arkham City GOTY", sources: ["epic"], tier: "runs", appid: 200260 },
+  { name: "Batman: Arkham Knight", sources: ["epic"], tier: "runs", appid: 208650, note: "Low settings 1080p" },
+  { name: "Carcassonne", sources: ["epic"], tier: "runs", appid: 598810 },
+  { name: "Cave Story+", sources: ["epic"], tier: "runs", appid: 200900 },
+  { name: "Cities: Skylines", sources: ["epic"], tier: "runs", appid: 255710, note: "Big cities will choke; medium cities fine" },
+  { name: "Close to the Sun", sources: ["epic"], tier: "runs", appid: 968870 },
+  { name: "Conarium", sources: ["epic"], tier: "runs", appid: 471950 },
+  { name: "Costume Quest", sources: ["epic"], tier: "runs", appid: 115100 },
+  { name: "Costume Quest 2", sources: ["epic"], tier: "runs", appid: 285030 },
+  { name: "Crashlands", sources: ["epic"], tier: "runs", appid: 391730 },
+  { name: "Creature in the Well", sources: ["epic"], tier: "runs", appid: 814820 },
+  { name: "Crying Suns", sources: ["epic"], tier: "runs", appid: 873940 },
+  { name: "Dandara: Trials of Fear Edition", sources: ["epic"], tier: "runs", appid: 612390 },
+  { name: "Darkest Dungeon", sources: ["epic"], tier: "runs", appid: 262060 },
+  { name: "Death Coming", sources: ["epic"], tier: "runs", appid: 705110 },
+  { name: "Deponia: The Complete Journey", sources: ["epic"], tier: "runs", appid: 270070 },
+  { name: "Drawful 2", sources: ["epic"], tier: "runs", appid: 442070 },
+  { name: "Elite Dangerous", sources: ["epic"], tier: "runs", appid: 359320, note: "Runs fine, but better with controller setup" },
+  { name: "ENDER LILIES: Quietus of the Knights", sources: ["epic"], tier: "runs", appid: 1369630 },
+  { name: "Enter the Gungeon", sources: ["epic"], tier: "runs", appid: 311690 },
+  { name: "Eternights", sources: ["epic"], tier: "runs", appid: 1763830 },
+  { name: "Everything", sources: ["epic"], tier: "runs", appid: 582270 },
+  { name: "Faeria", sources: ["epic"], tier: "runs", appid: 426530 },
+  { name: "Fallout (Classic)", sources: ["epic"], tier: "runs", appid: 38400 },
+  { name: "Fallout 2 (Classic)", sources: ["epic"], tier: "runs", appid: 38410 },
+  { name: "Fallout Tactics: Brotherhood of Steel", sources: ["epic"], tier: "runs", appid: 38420 },
+  { name: "Farming Simulator 19", sources: ["epic"], tier: "runs", appid: 787860 },
+  { name: "FTL: Faster Than Light", sources: ["epic"], tier: "runs", appid: 212680 },
+  { name: "Fez", sources: ["epic"], tier: "runs", appid: 224760 },
+  { name: "Figment", sources: ["epic"], tier: "runs", appid: 493540 },
+  { name: "For Honor", sources: ["epic"], tier: "runs", appid: 304390 },
+  { name: "Fort Triumph", sources: ["epic"], tier: "runs", appid: 731270 },
+  { name: "Genesis Alpha One", sources: ["epic"], tier: "runs", appid: 712190 },
+  { name: "Ghostbusters: The Video Game Remastered", sources: ["epic"], tier: "runs", appid: 1043220, note: "Spooky action, runs fine on iGPU" },
+  { name: "Ghostbusters: Spirits Unleashed", sources: ["epic"], tier: "runs", appid: 1183940 },
+  { name: "Gloomhaven", sources: ["epic"], tier: "runs", appid: 780290 },
+  { name: "God's Trigger", sources: ["epic"], tier: "runs", appid: 689920 },
+  { name: "Golf With Your Friends", sources: ["epic"], tier: "runs", appid: 431240 },
+  { name: "GoNNER", sources: ["epic"], tier: "runs", appid: 510780 },
+  { name: "Hand of Fate 2", sources: ["epic"], tier: "runs", appid: 456670 },
+  { name: "Hardspace: Shipbreaker", sources: ["epic"], tier: "runs", appid: 1161580 },
+  { name: "Hob", sources: ["epic"], tier: "runs", appid: 404680 },
+  { name: "Horace", sources: ["epic"], tier: "runs", appid: 953490 },
+  { name: "Hyper Light Drifter", sources: ["epic"], tier: "runs", appid: 257850 },
+  { name: "Idle Champions of the Forgotten Realms", sources: ["epic"], tier: "runs", appid: 627690 },
+  { name: "InnerSpace", sources: ["epic"], tier: "runs", appid: 408630 },
+  { name: "Into The Breach", sources: ["epic"], tier: "runs", appid: 590380 },
+  { name: "Jotun: Valhalla Edition", sources: ["epic"], tier: "runs", appid: 323580 },
+  { name: "Jurassic World Evolution", sources: ["epic"], tier: "runs", appid: 648350, note: "Large parks may chug" },
+  { name: "Ken Follett's The Pillars of the Earth", sources: ["epic"], tier: "runs", appid: 558320 },
+  { name: "KeyWe", sources: ["epic"], tier: "runs", appid: 1242980 },
+  { name: "Last Day of June", sources: ["epic"], tier: "runs", appid: 624090 },
+  { name: "Layers of Fear", sources: ["epic"], tier: "runs", appid: 391720 },
+  { name: "Layers of Fear 2", sources: ["epic"], tier: "runs", appid: 1029890 },
+  { name: "LEGO Batman 2: DC Super Heroes", sources: ["epic"], tier: "runs", appid: 502820 },
+  { name: "LEGO Batman 3: Beyond Gotham", sources: ["epic"], tier: "runs", appid: 267530 },
+  { name: "LEGO Batman: The Videogame", sources: ["epic"], tier: "runs", appid: 502810 },
+  { name: "Lifeless Planet: Premier Edition", sources: ["epic"], tier: "runs", appid: 261530 },
+  { name: "Loop Hero", sources: ["epic"], tier: "runs", appid: 1282730 },
+  { name: "Metro 2033 Redux", sources: ["epic"], tier: "runs", appid: 286690 },
+  { name: "Metro Exodus", sources: ["epic"], tier: "runs", appid: 412020, note: "Low settings 1080p ~30-40fps" },
+  { name: "Metro Exodus Enhanced Edition", sources: ["epic"], tier: "skip", appid: 1449560, note: "Requires RT-capable GPU — your iGPU can't run this" },
+  { name: "Minit", sources: ["epic"], tier: "runs", appid: 609490 },
+  { name: "Moonlighter", sources: ["epic"], tier: "runs", appid: 606150 },
+  { name: "MudRunner", sources: ["epic"], tier: "runs", appid: 675010 },
+  { name: "Mutant Year Zero: Road to Eden", sources: ["epic"], tier: "runs", appid: 760060 },
+  { name: "Mutazione", sources: ["epic"], tier: "runs", appid: 521470 },
+  { name: "Night in the Woods", sources: ["epic"], tier: "runs", appid: 481510 },
+  { name: "Nuclear Throne", sources: ["epic"], tier: "runs", appid: 242680 },
+  { name: "Offworld Trading Company", sources: ["epic"], tier: "runs", appid: 271240 },
+  { name: "Overcooked!", sources: ["epic"], tier: "runs", appid: 448510 },
+  { name: "Oxenfree", sources: ["epic"], tier: "runs", appid: 388880 },
+  { name: "Pathway", sources: ["epic"], tier: "runs", appid: 546430 },
+  { name: "Pikuniku", sources: ["epic"], tier: "runs", appid: 572890 },
+  { name: "Pine", sources: ["epic"], tier: "runs", appid: 768060 },
+  { name: "Q.U.B.E. 2", sources: ["epic"], tier: "runs", appid: 525740 },
+  { name: "RAGE 2", sources: ["epic"], tier: "runs", appid: 548570, note: "Low settings 1080p" },
+  { name: "Railway Empire", sources: ["epic"], tier: "runs", appid: 503940 },
+  { name: "Rayman Legends", sources: ["epic"], tier: "runs", appid: 242550 },
+  { name: "Rebel Galaxy", sources: ["epic"], tier: "runs", appid: 290300 },
+  { name: "RiME", sources: ["epic"], tier: "runs", appid: 493200 },
+  { name: "Rise of the Tomb Raider: 20 Year Celebration", sources: ["epic"], tier: "runs", appid: 391220 },
+  { name: "RollerCoaster Tycoon 3: Complete Edition", sources: ["epic"], tier: "runs", appid: 2197 },
+  { name: "RPG in a Box", sources: ["epic"], tier: "runs", appid: 745010 },
+  { name: "SAMURAI SHODOWN NEOGEO COLLECTION", sources: ["epic"], tier: "runs", appid: 1142950 },
+  { name: "Session: Skate Sim", sources: ["epic"], tier: "runs", appid: 861650 },
+  { name: "Shadow of the Tomb Raider: Definitive Edition", sources: ["epic"], tier: "play", appid: 750920, note: "Low settings ~30-40fps" },
+  { name: "Sherlock Holmes: Crimes and Punishments", sources: ["epic"], tier: "runs", appid: 246840 },
+  { name: "Slime Rancher", sources: ["epic"], tier: "runs", appid: 433340 },
+  { name: "SOMA", sources: ["epic"], tier: "runs", appid: 282140 },
+  { name: "Star Wars: Squadrons", sources: ["epic"], tier: "runs", appid: 1222730 },
+  { name: "Star Wars: Battlefront II", sources: ["epic"], tier: "runs", appid: null, note: "Low settings 1080p ~40fps" },
+  { name: "Stories Untold", sources: ["epic"], tier: "runs", appid: 558420 },
+  { name: "Stranger Things 3: The Game", sources: ["epic"], tier: "runs", appid: 1097760 },
+  { name: "Subnautica: Below Zero", sources: ["epic"], tier: "runs", appid: 848450 },
+  { name: "Suicide Squad: Kill the Justice League", sources: ["epic"], tier: "play", appid: 315210, note: "Demanding — low settings 720p only" },
+  { name: "Sundered: Eldritch Edition", sources: ["epic"], tier: "runs", appid: 535480 },
+  { name: "Sunless Sea", sources: ["epic"], tier: "runs", appid: 304650 },
+  { name: "Super Meat Boy", sources: ["epic"], tier: "runs", appid: 40800 },
+  { name: "Super Meat Boy Forever", sources: ["epic"], tier: "runs", appid: 1128920 },
+  { name: "Superbrothers: Sword & Sworcery EP", sources: ["epic"], tier: "runs", appid: 204060 },
+  { name: "Surviving Mars", sources: ["epic"], tier: "runs", appid: 464920 },
+  { name: "Tacoma", sources: ["epic"], tier: "runs", appid: 343860 },
+  { name: "Tales of the Neon Sea", sources: ["epic"], tier: "runs", appid: 706640 },
+  { name: "Teenage Mutant Ninja Turtles: Shredder's Revenge", sources: ["epic"], tier: "runs", appid: 1361510 },
+  { name: "The Alto Collection", sources: ["epic"], tier: "runs", appid: 1018430 },
+  { name: "The Bridge", sources: ["epic"], tier: "runs", appid: 232790 },
+  { name: "The End is Nigh", sources: ["epic"], tier: "runs", appid: 583470 },
+  { name: "The Escapists 2", sources: ["epic"], tier: "runs", appid: 641990 },
+  { name: "The First Tree", sources: ["epic"], tier: "runs", appid: 631620 },
+  { name: "The Jackbox Party Pack", sources: ["epic"], tier: "runs", appid: 331670 },
+  { name: "The Talos Principle", sources: ["epic"], tier: "runs", appid: 257510 },
+  { name: "The Walking Dead: The Final Season", sources: ["epic"], tier: "runs", appid: 1054620 },
+  { name: "The Witness", sources: ["epic"], tier: "runs", appid: 210970 },
+  { name: "The World Next Door", sources: ["epic"], tier: "runs", appid: 762160 },
+  { name: "Thimbleweed Park", sources: ["epic"], tier: "runs", appid: 569860 },
+  { name: "This War of Mine", sources: ["epic"], tier: "runs", appid: 282070 },
+  { name: "Ticket to Ride", sources: ["epic"], tier: "runs", appid: 108200 },
+  { name: "Torchlight", sources: ["epic"], tier: "runs", appid: 41500 },
+  { name: "Torchlight II", sources: ["epic"], tier: "runs", appid: 200710 },
+  { name: "Tormentor X Punisher", sources: ["epic"], tier: "runs", appid: 595770 },
+  { name: "Total War: WARHAMMER", sources: ["epic"], tier: "runs", appid: 364360, note: "Strategic battles fine; cinematic battles dip" },
+  { name: "Total War: WARHAMMER II", sources: ["epic"], tier: "play", appid: 594570, note: "Demanding — battles will stutter on low" },
+  { name: "Total War: WARHAMMER III", sources: ["epic"], tier: "skip", appid: 1142710, note: "Too demanding for the 660M" },
+  { name: "TowerFall Ascension", sources: ["epic"], tier: "runs", appid: 251470 },
+  { name: "Trek to Yomi", sources: ["epic"], tier: "runs", appid: 1772490 },
+  { name: "Watch Dogs", sources: ["epic"], tier: "play", appid: 243470, note: "Low settings 1080p — Ubisoft engine is uneven" },
+  { name: "Weird West: Definitive Edition", sources: ["epic"], tier: "runs", appid: 1097350 },
+  { name: "Wheels of Aurelia", sources: ["epic"], tier: "runs", appid: 471290 },
+  { name: "Where The Water Tastes Like Wine", sources: ["epic"], tier: "runs", appid: 447120 },
+  { name: "Wilmot's Warehouse", sources: ["epic"], tier: "runs", appid: 839870 },
+  { name: "Tom Clancy's Ghost Recon Breakpoint", sources: ["epic"], tier: "play", appid: 2231380, note: "Low settings 1080p — open world is demanding" },
+  { name: "Chivalry 2", sources: ["epic"], tier: "play", appid: 1824220, note: "Multiplayer FPS — playable but competitive needs higher fps" },
+
+  // Epic - SKIP
+  { name: "Unreal Tournament", sources: ["epic"], tier: "skip", appid: null, note: "Marked unavailable in your launcher" },
+
+  // ============ PC GAME PASS (current 2025/2026 highlights, accounting for what's also on other launchers) ============
+  // GAME PASS - RUNS GREAT
+  { name: "Forza Horizon 5", sources: ["gamepass"], tier: "runs", appid: 1551360, note: "Stunning optimization — runs at 1080p medium on iGPUs" },
+  { name: "Halo: The Master Chief Collection", sources: ["gamepass"], tier: "runs", appid: 976730 },
+  { name: "Halo Infinite", sources: ["gamepass"], tier: "runs", appid: 1240440, note: "Campaign runs at low; multiplayer benefits from higher fps" },
+  { name: "Gears 5", sources: ["gamepass"], tier: "runs", appid: 1097840, note: "Great optimization, 1080p low/medium" },
+  { name: "Pentiment", sources: ["gamepass"], tier: "runs", appid: 1205520 },
+  { name: "Grounded", sources: ["gamepass"], tier: "runs", appid: 962130 },
+  { name: "Persona 5 Royal", sources: ["gamepass"], tier: "runs", appid: 1687950 },
+  { name: "Persona 4 Golden", sources: ["gamepass"], tier: "runs", appid: 1113000 },
+  { name: "Persona 3 Reload", sources: ["gamepass"], tier: "runs", appid: 2161700 },
+  { name: "Like a Dragon: Infinite Wealth", sources: ["gamepass"], tier: "runs", appid: 2072450 },
+  { name: "Yakuza 0", sources: ["gamepass"], tier: "runs", appid: 638970 },
+  { name: "Octopath Traveler II", sources: ["gamepass"], tier: "runs", appid: 1850130 },
+  { name: "Sea of Stars", sources: ["gamepass"], tier: "runs", appid: 1244090 },
+  { name: "Pizza Tower", sources: ["gamepass"], tier: "runs", appid: 2231450 },
+  { name: "Lies of P", sources: ["gamepass"], tier: "runs", appid: 1627720, note: "Good optimization, 1080p low" },
+  { name: "Atomfall", sources: ["gamepass"], tier: "runs", appid: 2553870 },
+  { name: "Avowed", sources: ["gamepass"], tier: "play", appid: 2457220, note: "UE5 — low settings 1080p may dip below 30fps" },
+  { name: "South of Midnight", sources: ["gamepass"], tier: "play", appid: 3043470, note: "UE5 stylized — low settings" },
+  { name: "Indiana Jones and the Great Circle", sources: ["gamepass"], tier: "play", appid: 2677660, note: "id Tech engine helps, but RT requirements are an issue" },
+  { name: "Senua's Saga: Hellblade II", sources: ["gamepass"], tier: "skip", appid: 2461850, note: "UE5 with very high min specs — won't run well" },
+  { name: "Starfield", sources: ["gamepass", "steam"], tier: "skip", appid: 1716740, note: "Heavy CPU+GPU demands; your iGPU is below min spec" },
+  { name: "Microsoft Flight Simulator 2024", sources: ["gamepass"], tier: "skip", appid: 2537590, note: "Demanding even on high-end hardware" },
+  { name: "Assassin's Creed Shadows", sources: ["gamepass"], tier: "skip", appid: 3159330, note: "Modern AC engine too demanding for iGPU" },
+  { name: "Stalker 2: Heart of Chornobyl", sources: ["gamepass"], tier: "skip", appid: 1643320, note: "UE5 + open world — iGPU can't handle" },
+  { name: "Diablo IV", sources: ["gamepass"], tier: "play", appid: null, note: "Battle.net required; runs at low/medium 1080p" },
+  { name: "Hi-Fi Rush", sources: ["gamepass"], tier: "runs", appid: 1817230, note: "Stylized rhythm action, runs great" },
+  { name: "Plants vs. Zombies: Garden Warfare 2", sources: ["gamepass"], tier: "runs", appid: null },
+  { name: "Stray", sources: ["gamepass"], tier: "runs", appid: 1332010, note: "UE4 cat game — runs fine on low" },
+  { name: "Dredge", sources: ["gamepass"], tier: "runs", appid: 1562430, note: "Already in GOG library" },
+  { name: "Slay the Princess", sources: ["gamepass"], tier: "runs", appid: 1989270 },
+  { name: "Citizen Sleeper", sources: ["gamepass"], tier: "runs", appid: 1634840 },
+  { name: "Citizen Sleeper 2: Starward Vector", sources: ["gamepass"], tier: "runs", appid: 2378720 },
+  { name: "Tunic", sources: ["gamepass"], tier: "runs", appid: 553420 },
+  { name: "High on Life", sources: ["gamepass"], tier: "runs", appid: 1583230 },
+  { name: "Cocoon", sources: ["gamepass"], tier: "runs", appid: 1497440 },
+  { name: "Dave the Diver", sources: ["gamepass"], tier: "runs", appid: 1868140 },
+  { name: "Vampire Survivors", sources: ["gamepass"], tier: "runs", appid: 1794680 },
+  { name: "Brotato", sources: ["gamepass"], tier: "runs", appid: 1942280 },
+  { name: "Roboquest", sources: ["gamepass"], tier: "runs", appid: 692890 },
+  { name: "33 Immortals", sources: ["gamepass"], tier: "play", appid: 2399690, note: "30-player co-op may stutter on iGPU" },
+  { name: "The Outer Worlds 2", sources: ["gamepass"], tier: "play", appid: 2820370, note: "UE5 — expect 720p low/medium ~30fps" },
+  { name: "Clair Obscur: Expedition 33", sources: ["gamepass"], tier: "play", appid: 1903340, note: "UE5 — low settings 720p target" },
+  { name: "Towerborne", sources: ["gamepass"], tier: "runs", appid: 956580 },
+  { name: "Wuchang: Fallen Feathers", sources: ["gamepass"], tier: "play", appid: 2277560, note: "UE5 souls-like, demanding" },
+  { name: "Ninja Gaiden 4", sources: ["gamepass"], tier: "play", appid: null, note: "Action game — playable on low" },
+  { name: "Outriders", sources: ["gamepass"], tier: "play", appid: 680420, note: "UE4 looter shooter — low settings" },
+  { name: "Football Manager 25", sources: ["gamepass"], tier: "runs", appid: null, note: "Text/UI heavy, runs anywhere" },
+  { name: "Age of Mythology: Retold", sources: ["gamepass"], tier: "runs", appid: 1934680 },
+  { name: "Age of Empires II: Definitive Edition", sources: ["gamepass"], tier: "runs", appid: 813780 },
+  { name: "Age of Empires IV", sources: ["gamepass"], tier: "runs", appid: 1466860 },
+];
+
+
+const sourceLabels = { steam: "Steam", gog: "GOG", epic: "Epic", gamepass: "Game Pass" };
+const tierData = {
+  runs: { title: "Runs Great", desc: "Plays smoothly at 1080p — your laptop will handle these without breaking a sweat.", letter: "A" },
+  play: { title: "Playable", desc: "Will run with compromises — usually 720p, low settings, or 30fps target. Worth trying.", letter: "B" },
+  skip: { title: "Skip On This Machine", desc: "Either too demanding for the 660M iGPU, requires VR, or has serious performance problems.", letter: "F" }
+};
+
+function makeCover(g) {
+  if (g.appid) return `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/header.jpg`;
+  return null;
+}
+
+function renderCard(g) {
+  const cover = makeCover(g);
+  const letter = g.name.replace(/^(The|A|An) /, '').charAt(0).toUpperCase();
+  const tierLetter = tierData[g.tier].letter;
+  const coverHtml = cover
+    ? `<div class="cover" style="background-image:url('${cover}')"></div>`
+    : `<div class="cover no-img" data-letter="${letter}"></div>`;
+  const sourceBadges = g.sources.map(s => `<span class="src src-${s}">${sourceLabels[s]}</span>`).join('');
+  const note = g.note ? `<div class="note">${g.note}</div>` : '';
+  return `
+    <div class="card" data-tier="${g.tier}" data-sources="${g.sources.join(',')}" data-name="${g.name.toLowerCase()}">
+      <div class="badge-tier ${g.tier}" data-letter="${tierLetter}"></div>
+      ${coverHtml}
+      <div class="card-body">
+        <div class="name">${g.name}</div>
+        <div class="meta">${sourceBadges}</div>
+        ${note}
+      </div>
+    </div>
+  `;
+}
+
+function render() {
+  const main = document.getElementById('main');
+  const tiers = ['runs', 'play', 'skip'];
+  let html = '';
+  for (const t of tiers) {
+    const tierGames = games.filter(g => g.tier === t).sort((a, b) => a.name.localeCompare(b.name));
+    html += `
+      <section class="tier tier-${t}" data-tier-section="${t}">
+        <div class="tier-head">
+          <h2>${tierData[t].title}</h2>
+          <span class="desc">${tierData[t].desc}</span>
+          <span class="count" data-count="${t}">${tierGames.length}</span>
+        </div>
+        <div class="grid">${tierGames.map(renderCard).join('')}</div>
+      </section>
+    `;
+  }
+  main.innerHTML = html;
+
+  document.getElementById('ct-runs').textContent = games.filter(g => g.tier === 'runs').length;
+  document.getElementById('ct-play').textContent = games.filter(g => g.tier === 'play').length;
+  document.getElementById('ct-skip').textContent = games.filter(g => g.tier === 'skip').length;
+  document.getElementById('ct-total').textContent = games.length;
+
+  // Image fallback
+  document.querySelectorAll('.cover[style*="background-image"]').forEach(el => {
+    const img = new Image();
+    const url = el.style.backgroundImage.slice(5, -2);
+    img.onerror = () => {
+      el.style.backgroundImage = '';
+      el.classList.add('no-img');
+      const card = el.closest('.card');
+      const name = card.querySelector('.name').textContent;
+      const letter = name.replace(/^(The|A|An) /, '').charAt(0).toUpperCase();
+      el.setAttribute('data-letter', letter);
+    };
+    img.src = url;
+  });
+}
+
+let activeSrc = 'all';
+let activeTier = 'all';
+let searchQuery = '';
+
+function applyFilters() {
+  const cards = document.querySelectorAll('.card');
+  const visibleByTier = { runs: 0, play: 0, skip: 0 };
+  cards.forEach(card => {
+    const tier = card.dataset.tier;
+    const sources = card.dataset.sources.split(',');
+    const name = card.dataset.name;
+    const matchesSrc = activeSrc === 'all' || sources.includes(activeSrc);
+    const matchesTier = activeTier === 'all' || tier === activeTier;
+    const matchesSearch = !searchQuery || name.includes(searchQuery);
+    const visible = matchesSrc && matchesTier && matchesSearch;
+    card.classList.toggle('hidden', !visible);
+    if (visible) visibleByTier[tier]++;
+  });
+  document.querySelectorAll('[data-tier-section]').forEach(sec => {
+    const t = sec.dataset.tierSection;
+    sec.classList.toggle('hidden', visibleByTier[t] === 0);
+    sec.querySelector(`[data-count="${t}"]`).textContent = visibleByTier[t];
+  });
+}
+
+document.getElementById('search').addEventListener('input', e => {
+  searchQuery = e.target.value.trim().toLowerCase();
+  applyFilters();
+});
+document.querySelectorAll('#src-filters .chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('#src-filters .chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeSrc = chip.dataset.src;
+    applyFilters();
+  });
+});
+document.querySelectorAll('#tier-filters .chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('#tier-filters .chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeTier = chip.dataset.tier;
+    applyFilters();
+  });
+});
+
+// THEME SWITCHER
+document.querySelectorAll('.theme-switcher button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const theme = btn.dataset.themeBtn;
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-switcher button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    try { localStorage.setItem('batty-games-theme', theme); } catch(e) {}
+  });
+});
+// Restore
+try {
+  const saved = localStorage.getItem('batty-games-theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    document.querySelectorAll('.theme-switcher button').forEach(b => {
+      b.classList.toggle('active', b.dataset.themeBtn === saved);
+    });
+  }
+} catch(e) {}
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tarnished">
+<meta name="theme-color" content="#0d0907">
+<title>Path of the Tarnished</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%230d0907'/%3E%3Ctext x='90' y='118' font-family='serif' font-size='100' fill='%23c9a44c' text-anchor='middle' font-weight='900'%3E✦%3C/text%3E%3C/svg%3E">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; }
+
+  :root {
+    --gold: #c9a44c;
+    --gold-bright: #e8c878;
+    --gold-dim: #8a6f30;
+    --ember: #d4663a;
+    --blood: #6b1818;
+    --parchment: #d9c79a;
+    --ink: #1a1410;
+    --ink-deep: #0d0907;
+    --ash: #2a221b;
+    --bone: #ede0c2;
+  }
+
+  html, body {
+    background: var(--ink-deep);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.55;
+    overflow-x: hidden;
+    min-height: 100vh;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse at top, rgba(201, 164, 76, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(107, 24, 24, 0.06) 0%, transparent 60%),
+      linear-gradient(180deg, #0d0907 0%, #1a1410 100%);
+    background-attachment: fixed;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgba(255,255,255,0.008) 2px, rgba(255,255,255,0.008) 4px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 18px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 32px 0 28px;
+    border-bottom: 1px solid var(--gold-dim);
+    position: relative;
+    margin-bottom: 8px;
+  }
+  header::before, header::after {
+    content: '✦';
+    color: var(--gold);
+    font-size: 12px;
+    position: absolute;
+    bottom: -7px;
+    background: var(--ink-deep);
+    padding: 0 8px;
+  }
+  header::before { left: 30%; }
+  header::after { right: 30%; }
+
+  .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    margin-bottom: 14px;
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: clamp(26px, 7vw, 36px);
+    line-height: 1.05;
+    color: var(--gold-bright);
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 12px rgba(201, 164, 76, 0.3);
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-style: italic;
+    font-size: 16px;
+    color: var(--parchment);
+    opacity: 0.75;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* PROGRESS */
+  .progress-shell {
+    margin: 24px 0 8px;
+    padding: 16px;
+    background: linear-gradient(180deg, rgba(201,164,76,0.08), rgba(201,164,76,0.02));
+    border: 1px solid rgba(201,164,76,0.25);
+    position: relative;
+  }
+  .progress-shell::before, .progress-shell::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--gold);
+  }
+  .progress-shell::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .progress-shell::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .progress-label span:first-child {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+  }
+  .progress-label span:last-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--gold-bright);
+    font-weight: 600;
+  }
+
+  .progress-track {
+    height: 4px;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold-bright), var(--gold));
+    transition: width 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 0 8px rgba(232, 200, 120, 0.5);
+  }
+
+  /* CURRENT STATE */
+  .current-state {
+    margin: 20px 0 32px;
+    padding: 18px;
+    background: linear-gradient(135deg, rgba(212, 102, 58, 0.12), rgba(107, 24, 24, 0.05));
+    border-left: 3px solid var(--ember);
+  }
+  .current-state-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--ember);
+    margin-bottom: 8px;
+  }
+  .current-state-title {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: var(--bone);
+    margin-bottom: 6px;
+  }
+  .current-state-detail {
+    font-size: 15px;
+    color: var(--parchment);
+    opacity: 0.85;
+    line-height: 1.5;
+  }
+  .current-state-detail em {
+    color: var(--gold-bright);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* PHASES */
+  .phase {
+    margin-bottom: 28px;
+    border: 1px solid rgba(201, 164, 76, 0.18);
+    background: linear-gradient(180deg, rgba(26, 20, 16, 0.6), rgba(13, 9, 7, 0.4));
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phase.complete { opacity: 0.55; }
+  .phase.complete .phase-header::after {
+    content: '◆ COMPLETE';
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+  }
+
+  .phase-header {
+    padding: 22px 18px 18px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+    transition: background 0.3s;
+  }
+  .phase-header:active { background: rgba(201, 164, 76, 0.05); }
+
+  .phase-num {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .phase-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--bone);
+    line-height: 1.15;
+    margin-bottom: 6px;
+    padding-right: 30px;
+  }
+  .phase-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .phase-toggle {
+    position: absolute;
+    top: 22px;
+    right: 18px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 14px;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .phase.open .phase-toggle { transform: rotate(180deg); }
+  .phase.complete .phase-toggle { display: none; }
+
+  .phase-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .phase.open .phase-body { max-height: 12000px; }
+  .phase-body-inner { padding: 4px 18px 22px; }
+
+  /* SECTION */
+  .section { margin-top: 22px; }
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed rgba(201, 164, 76, 0.25);
+  }
+
+  .stat-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--parchment);
+    background: rgba(0,0,0,0.3);
+    padding: 10px 12px;
+    border-left: 2px solid var(--gold);
+    line-height: 1.7;
+  }
+  .stat-line strong { color: var(--gold-bright); font-weight: 600; }
+
+  /* ROUTE INTRO */
+  .route-intro {
+    background: rgba(201, 164, 76, 0.05);
+    border: 1px dashed rgba(201, 164, 76, 0.25);
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--parchment);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .route-intro strong { color: var(--gold-bright); font-style: normal; font-weight: 600; }
+
+  /* CHECKLIST ITEMS */
+  .checklist { list-style: none; }
+
+  .check-item {
+    border-bottom: 1px solid rgba(201, 164, 76, 0.1);
+    transition: opacity 0.3s;
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-item.done { opacity: 0.4; }
+
+  .check-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 4px 10px;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--gold-dim);
+    background: rgba(0,0,0,0.4);
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .check-item.done .checkbox {
+    border-color: var(--gold);
+    background: var(--gold);
+  }
+  .checkbox::after {
+    content: '';
+    width: 6px;
+    height: 11px;
+    border: solid var(--ink-deep);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) scale(0);
+    transition: transform 0.2s;
+    margin-bottom: 2px;
+  }
+  .check-item.done .checkbox::after { transform: rotate(45deg) scale(1); }
+
+  .check-content { flex: 1; min-width: 0; }
+  .check-name {
+    font-size: 17px;
+    color: var(--bone);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 3px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.01em;
+  }
+  .check-item.done .check-name { text-decoration: line-through; }
+
+  .check-tagline {
+    font-size: 13px;
+    color: var(--gold);
+    font-style: italic;
+    opacity: 0.75;
+  }
+
+  .expand-toggle {
+    flex-shrink: 0;
+    color: var(--gold-dim);
+    font-size: 11px;
+    margin-top: 5px;
+    transition: transform 0.3s;
+    width: 20px;
+    text-align: center;
+  }
+  .check-item.expanded .expand-toggle { transform: rotate(180deg); color: var(--gold); }
+
+  .check-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .check-item.expanded .check-detail { max-height: 1000px; }
+
+  .detail-inner {
+    padding: 4px 0 16px 34px;
+    font-size: 14.5px;
+    color: var(--parchment);
+    line-height: 1.6;
+  }
+
+  .detail-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    align-items: baseline;
+  }
+  .detail-row:last-child { margin-bottom: 0; }
+  .detail-label {
+    flex-shrink: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    width: 64px;
+    padding-top: 2px;
+  }
+  .detail-value { flex: 1; }
+  .detail-value em { color: var(--gold-bright); font-style: normal; font-weight: 600; }
+  .detail-value strong { color: var(--bone); font-weight: 600; }
+
+  .wiki-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: rgba(201, 164, 76, 0.1);
+    border: 1px solid rgba(201, 164, 76, 0.3);
+    color: var(--gold-bright);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    transition: all 0.2s;
+  }
+  .wiki-link:active {
+    background: rgba(201, 164, 76, 0.2);
+    border-color: var(--gold);
+  }
+  .wiki-link::after { content: ' ↗'; }
+
+  /* BOSS CARD */
+  .boss-card {
+    margin-top: 20px;
+    background: linear-gradient(135deg, rgba(107, 24, 24, 0.15), rgba(0,0,0,0.4));
+    border: 1px solid rgba(212, 102, 58, 0.35);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .boss-card.done { opacity: 0.5; filter: grayscale(0.6); }
+
+  .boss-emblem {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, rgba(107, 24, 24, 0.4), rgba(13, 9, 7, 0.95));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .boss-emblem::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 40%, rgba(212, 102, 58, 0.25), transparent 50%),
+      radial-gradient(circle at 70% 60%, rgba(201, 164, 76, 0.15), transparent 50%);
+  }
+  .boss-emblem-mark {
+    font-family: 'Cinzel', serif;
+    font-size: 64px;
+    color: var(--ember);
+    opacity: 0.4;
+    text-shadow: 0 0 30px rgba(212, 102, 58, 0.6);
+    z-index: 1;
+  }
+
+  .boss-content { padding: 16px 16px 18px; }
+
+  .boss-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--ember);
+    margin-bottom: 6px;
+  }
+  .boss-name {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bone);
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .boss-targets {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    flex-wrap: wrap;
+  }
+  .boss-targets span {
+    background: rgba(0,0,0,0.4);
+    padding: 4px 8px;
+    border: 1px solid rgba(201, 164, 76, 0.2);
+  }
+  .boss-tip {
+    font-size: 14px;
+    color: var(--parchment);
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 10px;
+  }
+  .boss-tip em { color: var(--gold-bright); font-style: normal; font-weight: 600; }
+  .boss-tip strong { color: var(--bone); }
+
+  .boss-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .boss-defeat-btn {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px;
+    background: linear-gradient(180deg, rgba(212, 102, 58, 0.2), rgba(107, 24, 24, 0.3));
+    border: 1px solid rgba(212, 102, 58, 0.5);
+    color: var(--bone);
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .boss-defeat-btn:active {
+    background: linear-gradient(180deg, rgba(212, 102, 58, 0.4), rgba(107, 24, 24, 0.5));
+    transform: scale(0.98);
+  }
+  .boss-card.done .boss-defeat-btn {
+    background: rgba(201, 164, 76, 0.15);
+    border-color: var(--gold);
+    color: var(--gold-bright);
+  }
+  .boss-card.done .boss-defeat-btn::before { content: '◆ '; }
+
+  /* FINAL */
+  .final-banner {
+    margin-top: 32px;
+    padding: 28px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(201, 164, 76, 0.1), rgba(212, 102, 58, 0.08));
+    border: 1px solid var(--gold);
+    position: relative;
+  }
+  .final-banner::before, .final-banner::after {
+    content: '✦';
+    position: absolute;
+    color: var(--gold);
+    font-size: 16px;
+  }
+  .final-banner::before { top: -10px; left: 50%; transform: translateX(-50%); background: var(--ink-deep); padding: 0 8px; }
+  .final-banner::after { bottom: -10px; left: 50%; transform: translateX(-50%); background: var(--ink-deep); padding: 0 8px; }
+
+  .final-banner h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: var(--gold-bright);
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+  }
+  .final-banner p {
+    font-size: 15px;
+    color: var(--parchment);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* RESET */
+  .reset-area { margin-top: 40px; text-align: center; }
+  .reset-btn {
+    background: none;
+    border: 1px solid rgba(201, 164, 76, 0.2);
+    color: rgba(201, 164, 76, 0.5);
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .reset-btn:active { border-color: var(--gold); color: var(--gold); }
+
+  /* TOAST */
+  .toast {
+    position: fixed;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    left: 50%;
+    transform: translateX(-50%) translateY(120px);
+    background: linear-gradient(180deg, var(--ash), var(--ink));
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    padding: 14px 24px;
+    z-index: 100;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6), 0 0 20px rgba(201,164,76,0.2);
+    pointer-events: none;
+    text-align: center;
+    max-width: calc(100vw - 40px);
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  @keyframes glow {
+    0%, 100% { text-shadow: 0 2px 12px rgba(201, 164, 76, 0.3); }
+    50% { text-shadow: 0 2px 20px rgba(232, 200, 120, 0.6); }
+  }
+  h1 { animation: glow 4s ease-in-out infinite; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .phase { animation: fadeUp 0.6s ease-out backwards; }
+  .phase:nth-child(1) { animation-delay: 0.1s; }
+  .phase:nth-child(2) { animation-delay: 0.15s; }
+  .phase:nth-child(3) { animation-delay: 0.2s; }
+  .phase:nth-child(4) { animation-delay: 0.25s; }
+  .phase:nth-child(5) { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="eyebrow">Elden Ring · Confessor</div>
+    <h1>Path of the<br>Tarnished</h1>
+    <p class="subtitle">A road of fire and faith, leading to the realm of shadow</p>
+  </header>
+
+  <div class="progress-shell">
+    <div class="progress-label">
+      <span>Journey</span>
+      <span id="progressText">0%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <div class="current-state">
+    <div class="current-state-label">◆ Where you stand</div>
+    <div class="current-state-title" id="currentTitle">Phase 1 — Limgrave</div>
+    <div class="current-state-detail" id="currentDetail">
+      Starting Confessor at <em>Level 10</em>. First task: dump 5 points into Vigor, then ride out and cheese the <em>Tree Sentinel</em> for the Golden Halberd.
+    </div>
+  </div>
+
+  <div id="phasesContainer"></div>
+
+  <div class="reset-area">
+    <button class="reset-btn" id="resetBtn">↺ Return to Grace</button>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // ===== DATA =====
+  const PHASES = [
+    {
+      id: 'p1',
+      title: 'Limgrave',
+      sub: 'Awakening',
+      levels: 'LV 10 → 25',
+      stats: 'Vigor → Endurance → Strength. Hit <strong>Vigor 15</strong> ASAP, then push toward Halberd reqs (16 STR / 14 DEX / 12 FAI already met).',
+      route: 'Spawn at <strong>The First Step</strong>. Ride north to meet Melina (auto-triggers), get Torrent. Then explore in this order: Church of Elleh → Gatefront Ruins → Murkwater Cave → Stormhill Shack → Limgrave Tunnels → Tree Sentinel → push to Margit.',
+      pickups: [
+        {
+          id: 'p1-1',
+          name: 'Whetstone Knife',
+          tagline: 'Unlocks Ashes of War',
+          where: 'Gatefront Ruins (central Limgrave, just north of The First Step grace).',
+          how: 'Ride north on the main road from The First Step. The ruins are the camp full of Godrick Soldiers right at the fork. Dodge or kill the soldiers, find the chest in the underground area beneath the ruins (drop down through the gap near a half-buried wagon).',
+          gives: 'Lets you change weapon Ashes of War at any Site of Grace.',
+          link: 'https://eldenring.wiki.fextralife.com/Whetstone+Knife'
+        },
+        {
+          id: 'p1-2',
+          name: 'Lone Wolf Ashes',
+          tagline: 'Free spirit summon',
+          where: 'Church of Elleh — but earned at <strong>Stormhill Shack</strong>.',
+          how: 'First, visit Church of Elleh at night to meet <em>Renna</em> (the witch) and accept Torrent. After getting Torrent, ride to Stormhill Shack (north up the main road, hard left before the Stormveil bridge area). Talk to <em>Roderika</em> there. She gives you the Lone Wolf Ashes for free.',
+          gives: 'Three wolf spirits — they tank hits and distract bosses. Essential for early Margit.',
+          link: 'https://eldenring.wiki.fextralife.com/Lone+Wolf+Ashes'
+        },
+        {
+          id: 'p1-3',
+          name: 'Spirit Calling Bell',
+          tagline: 'Lets you USE spirit ashes',
+          where: 'Church of Elleh, given by Renna at night.',
+          how: 'Rest at Church of Elleh until nightfall (sit at grace, "Pass time"). Renna will be sitting on the broken wall. Talk to her — she gives you both <em>Torrent\'s whistle</em> AND the <strong>Spirit Calling Bell</strong>. Without the bell, your Lone Wolf Ashes are useless.',
+          gives: 'The bell that summons spirit ashes. You need this BEFORE Margit.',
+          link: 'https://eldenring.wiki.fextralife.com/Spirit+Calling+Bell'
+        },
+        {
+          id: 'p1-4',
+          name: 'Golden Halberd',
+          tagline: 'Your weapon until Rykard',
+          where: 'Dropped by the <strong>Tree Sentinel</strong> in Limgrave.',
+          how: 'The Tree Sentinel is the gold-armored knight on horseback patrolling the road between <em>The First Step</em> grace and the <em>Church of Elleh</em>. You literally see him from spawn. <strong>Cheese strategy:</strong> Get Torrent first (visit Church of Elleh at night). Mount up, lure him toward the cliff near the Church. Use Torrent\'s double jump + R1 spear charge attack to hit-and-run. Stay mobile, never trade. He\'s slow to turn — stay behind him.',
+          gives: 'Golden Halberd. Reqs: 16 STR / 14 DEX / 12 FAI (Confessor already meets DEX/FAI; bump STR to 16). Holy damage, scales C/D/D. Weapon Art: <em>Golden Vow</em> (self-buff, +20% damage, +10% defense for ~80s).',
+          link: 'https://eldenring.wiki.fextralife.com/Golden+Halberd'
+        },
+        {
+          id: 'p1-5',
+          name: "Margit's Shackle",
+          tagline: 'Stuns Margit twice in phase 1',
+          where: 'Murkwater Cave — purchased from <em>Patches</em> for 5,000 Runes.',
+          how: 'Murkwater Cave is in northern Limgrave. From <em>Agheel Lake North</em> grace, follow the river NORTH (not toward the dragon). Cave entrance is on the right bank. Inside, fight through bandits to a chest — Patches ambushes you as a "boss." <strong>When his health hits ~50%, he begs for mercy. ACCEPT IT.</strong> Don\'t kill him. He becomes a merchant. Buy Margit\'s Shackle from his inventory.',
+          gives: 'Consumable that staggers Margit twice during phase 1. Dramatically easier fight.',
+          link: 'https://eldenring.wiki.fextralife.com/Margit%27s+Shackle'
+        },
+        {
+          id: 'p1-6',
+          name: 'Smithing Stones 1–3',
+          tagline: 'Get the Halberd to +3',
+          where: '<strong>Limgrave Tunnels</strong> (mining dungeon, southern Limgrave).',
+          how: 'Entrance is on the east side of the Mistwood, near <em>Mistwood Outskirts</em> grace. Follow the river south. Tunnel entrance has a wood elevator. Inside: kill miners (they drop stones reliably), grab chests. Boss at the end is <em>Stonedigger Troll</em> — easy if you stay behind him. Drops <em>Roar Medallion</em> talisman.',
+          gives: 'Smithing Stones 1, 2, and 3. Take the Golden Halberd to +3 minimum before Margit.',
+          link: 'https://eldenring.wiki.fextralife.com/Limgrave+Tunnels'
+        },
+        {
+          id: 'p1-7',
+          name: 'Golden Seeds & Sacred Tears',
+          tagline: 'Flask upgrades',
+          where: 'Scattered across Limgrave.',
+          how: 'Golden Seeds drop from <em>Erdtree Saplings</em> (yellow glowing trees). Limgrave has at least 3: one near Stormhill Shack, one near Mistwood Ruins, one near Summonwater. Sacred Tears are in <em>Churches of Marika</em> — Limgrave has the <em>Church of Pilgrimage</em> (south, Weeping Peninsula side) and <em>Church of Dragon Communion</em>. Hand seeds/tears to <em>Finger Reader Enia</em> at the Roundtable Hold to upgrade flasks.',
+          gives: '+1 to flask charges (seeds) and +1 healing per flask (tears). Aim for 7 flasks before Margit.',
+          link: 'https://eldenring.wiki.fextralife.com/Golden+Seed'
+        }
+      ],
+      boss: {
+        name: 'Margit, the Fell Omen',
+        level: 'LV ~25',
+        weapon: 'Halberd +3',
+        location: '<strong>Castleward Tunnel</strong> grace (just outside Stormveil\'s gate). From Stormhill Shack, follow the path north past the Godrick Soldiers.',
+        tip: 'Summon <em>Sorcerer Rogier</em> (gold sign right outside fog gate). Equip <strong>Lone Wolf Ashes</strong> too — both summons + you. Use <strong>Margit\'s Shackle twice</strong> in phase 1 (won\'t work in phase 2). His tells: glowing yellow dagger = wait, then roll late. Big hammer overhead in phase 2 = roll TOWARD him, not away.',
+        link: 'https://eldenring.wiki.fextralife.com/Margit,+The+Fell+Omen',
+        mark: '☠'
+      }
+    },
+    {
+      id: 'p2',
+      title: 'Stormveil & Weeping Peninsula',
+      sub: 'The Grafted King',
+      levels: 'LV 25 → 40',
+      stats: 'Vigor → <strong>25</strong>, Strength → <strong>22</strong>, Faith → <strong>21</strong>. These are your <em>Blasphemous Blade</em> requirements — lock them in now so the swap is smooth at Phase 4.',
+      route: 'Enter Stormveil through the front door (or Gatekeeper Gostoc\'s side route — your call). Sweep the castle. THEN detour south to Weeping Peninsula for talismans before Godrick. Doing the Peninsula gets you 2-3 levels and a key talisman for free.',
+      pickups: [
+        {
+          id: 'p2-1',
+          name: "Erdtree's Favor",
+          tagline: 'Best generalist talisman',
+          where: 'Stormveil Castle, on a corpse hanging from a wooden balcony.',
+          how: 'From the <em>Liftside Chamber</em> grace, exit and look for the area where giant rats and a balcony stretch over a chasm. The corpse with the talisman dangles over the edge — drop carefully onto a beam to reach it. Many guides have video clips.',
+          gives: '+3% HP, +9.5% stamina, +5% equip load. <strong>Wear this every fight from now until you find the +1 version.</strong>',
+          link: 'https://eldenring.wiki.fextralife.com/Erdtree%27s+Favor'
+        },
+        {
+          id: 'p2-2',
+          name: "Radagon's Scarseal",
+          tagline: 'Free +3 to combat stats',
+          where: '<strong>Tombsward Catacombs</strong> (Weeping Peninsula).',
+          how: 'Travel to Weeping Peninsula via the Bridge of Sacrifice (south end of Limgrave). From <em>Castle Morne Rampart</em> grace, head to Tombsward Catacombs entrance (west side of the peninsula). Standard catacomb: pull lever, kill imps, fight the <em>Grave Warden Duelist</em> boss. Talisman is past the boss.',
+          gives: '+3 VIG, END, STR, DEX. Downside: take 10% more damage. Worth it on a melee build.',
+          link: 'https://eldenring.wiki.fextralife.com/Radagon%27s+Scarseal'
+        },
+        {
+          id: 'p2-3',
+          name: 'Smithing Stones 3–4',
+          tagline: 'Halberd to +6',
+          where: 'Stormveil Castle enemies + chests.',
+          how: 'Almost every soldier in Stormveil drops a stone. Specifically: the courtyard with all the eagles has multiple chests. The basement (rat tunnels) has merchants selling stones too. By the time you finish Stormveil naturally, you\'ll have plenty for +6.',
+          gives: 'Halberd +6 minimum before Godrick.',
+          link: 'https://eldenring.wiki.fextralife.com/Smithing+Stone+%5B3%5D'
+        },
+        {
+          id: 'p2-4',
+          name: 'Rogier (NPC summon)',
+          tagline: 'Recruit for Godrick fight',
+          where: 'Stormveil Castle, after defeating <em>Godrick</em>... wait, no — you find him BEFORE.',
+          how: 'After the courtyard, you\'ll cross a bridge into a chapel area. Rogier is sitting wounded inside — the room with the broken stained glass. Talk to him. His summon sign appears at the Godrick fog wall.',
+          gives: 'Talisman of Godrick fight. Also progresses Ranni questline later.',
+          link: 'https://eldenring.wiki.fextralife.com/Sorcerer+Rogier'
+        },
+        {
+          id: 'p2-5',
+          name: 'Stonesword Keys (×2)',
+          tagline: 'Open imp-statue doors',
+          where: 'Various — buy from Twin Maiden Husks at Roundtable Hold (2,000 runes each).',
+          how: 'Just buy 2-3 from the Twin Maiden Husks. You\'ll find imp-sealed fog gates throughout Stormveil that hide chests and shortcuts.',
+          gives: 'Access to optional Stormveil rewards including the <em>Banished Knight</em> chest with armor.',
+          link: 'https://eldenring.wiki.fextralife.com/Stonesword+Key'
+        },
+        {
+          id: 'p2-6',
+          name: 'Mistwood Ruins (Pickled Turtle Necks)',
+          tagline: 'Quick stamina recovery',
+          where: 'Mistwood Ruins, Limgrave (eastern Limgrave forest).',
+          how: 'Detour during Phase 1-2. From the central forest, ruins have a chest in the underground level. Pickled Turtle Necks heal stamina recovery.',
+          gives: 'Stockpile of stamina-recovery consumables. Cheap and useful for tough fights.',
+          link: 'https://eldenring.wiki.fextralife.com/Pickled+Turtle+Neck'
+        }
+      ],
+      boss: {
+        name: 'Godrick the Grafted',
+        level: 'LV ~35',
+        weapon: 'Halberd +6',
+        location: 'Top of Stormveil, past the throne room. Grace right outside the fog wall.',
+        tip: 'Talk to <em>Nepheli Loux</em> first — she\'s on the rampart before the throne room. Her summon sign appears at the boss. Phase 1: stay close, attack his left side (he favors right swings). Phase 2: he grafts a dragon head onto his arm. <strong>Roll UNDER the fire breath</strong>, not away. Use Lone Wolf Ashes + Nepheli + Rogier for max chaos.',
+        link: 'https://eldenring.wiki.fextralife.com/Godrick+the+Grafted',
+        mark: '☠'
+      }
+    },
+    {
+      id: 'p3',
+      title: 'Liurnia & Caelid',
+      sub: 'The Star-Slayer',
+      levels: 'LV 40 → 60',
+      stats: 'Vigor → <strong>35</strong>, Faith → <strong>30</strong>. Endurance to 18 if equip load is tight.',
+      route: 'After Godrick: drop down the elevator behind his throne (the wind path). You\'re now in Liurnia. Skip Raya Lucaria for now — head to <em>Caelid</em> for the seal and Flame Grant Me Strength, then come back to do Liurnia + Rennala. Then Nokron after Radahn.',
+      pickups: [
+        {
+          id: 'p3-1',
+          name: 'Dragon Communion Seal',
+          tagline: 'Best early STR/FAI seal',
+          where: '<strong>Church of Dragon Communion</strong>, southern Caelid.',
+          how: 'From Limgrave, ride east through the canyon (Dragon-Burnt Ruins → Caelid border). Stay south along the coast. The church is on a small island, accessible by a rocky land bridge. <strong>WARNING:</strong> Caelid is a high-level zone. Sprint past everything on Torrent — do NOT engage Crucible Knights or rot bugs. The seal is on a corpse on the altar.',
+          gives: 'Seal that scales with STR and FAI (instead of just FAI). Massive damage boost for Blasphemous Blade incantation casting later.',
+          link: 'https://eldenring.wiki.fextralife.com/Dragon+Communion+Seal'
+        },
+        {
+          id: 'p3-2',
+          name: 'Flame, Grant Me Strength',
+          tagline: 'Your main damage buff',
+          where: '<strong>Fort Gael</strong>, central Caelid.',
+          how: 'Fort Gael is a large fort in the middle of Caelid (north of the Church of Dragon Communion, west of Redmane Castle). Climb the walls (ladder on the south side), kill the soldiers on top, and grab the chest. The incantation tome is also nearby — give to a preacher.',
+          gives: '+20% physical AND fire damage for ~30s. Use this before every boss. Stacks with Golden Vow.',
+          link: 'https://eldenring.wiki.fextralife.com/Flame%2C+Grant+Me+Strength'
+        },
+        {
+          id: 'p3-3',
+          name: 'Golden Vow (Ash of War)',
+          tagline: 'Permanent buff option',
+          where: "Buy from <em>Knight Bernahl</em> at the Warmaster's Shack.",
+          how: 'Warmaster\'s Shack is in northern Limgrave (Stormhill area). Bernahl is the masked merchant inside. Sells Golden Vow Ash of War for 1,500 Runes. Apply to any compatible weapon at a Site of Grace.',
+          gives: 'Weapon art version: +15% damage, +10% defense to you AND allies for 80s. Replaces Halberd\'s default art if you want.',
+          link: 'https://eldenring.wiki.fextralife.com/Golden+Vow'
+        },
+        {
+          id: 'p3-4',
+          name: 'Mausoleum Knight Set',
+          tagline: 'Solid mid-game armor',
+          where: 'Wandering Mausoleum knights (Liurnia).',
+          how: 'Wandering Mausoleums are giant walking tombs in Liurnia. The knights guarding them drop the full set. <em>Black Knife Catacombs</em> also drops the set faster from farmable knights.',
+          gives: 'High physical + magical defense, medium-heavy armor. Wear with Erdtree\'s Favor for fat-roll-free bulk.',
+          link: 'https://eldenring.wiki.fextralife.com/Mausoleum+Knight+Set'
+        },
+        {
+          id: 'p3-5',
+          name: 'Rennala (boss → respec access)',
+          tagline: 'Easy fight, huge utility',
+          where: '<strong>Raya Lucaria Academy</strong>, Liurnia. Top of the academy.',
+          how: 'Enter Raya Lucaria via the seal in southern Liurnia (need <em>Academy Glintstone Key</em> from a corpse on a dragon north of the seal). Work through the academy. Rennala is at the top. Phase 1: kill the floating students to break her shield, then hit her. Phase 2: easy mage fight, just get close.',
+          gives: '<em>Great Rune of the Unborn</em> + ability to <em>respec</em> at her arena anytime (uses Larval Tears). Don\'t use that great rune — use Godrick\'s.',
+          link: 'https://eldenring.wiki.fextralife.com/Rennala%2C+Queen+of+the+Full+Moon'
+        },
+        {
+          id: 'p3-6',
+          name: 'Mimic Tear Ashes',
+          tagline: 'Best summon in the game',
+          where: '<strong>Night\'s Sacred Ground</strong>, Nokron (after Radahn).',
+          how: 'Beat Radahn first — that opens a crater in southern Limgrave. Drop into Nokron (the Eternal City). Work through Nokron northwest until you reach Night\'s Sacred Ground. The Mimic Tear is in a chest in the central building, locked behind a fog wall (no boss, just exploration).',
+          gives: 'Summon a perfect copy of yourself with all your gear. Insanely strong. Equip your tankiest setup before summoning.',
+          link: 'https://eldenring.wiki.fextralife.com/Mimic+Tear+Ashes'
+        }
+      ],
+      boss: {
+        name: 'Starscourge Radahn',
+        level: 'LV ~60',
+        weapon: 'Halberd +18 (Smithing Stone 6)',
+        location: '<strong>Redmane Castle</strong>, eastern Caelid. Activate the festival by talking to <em>Jerren</em> after first visiting + meeting Blaidd, Iron Fist Alexander, etc.',
+        tip: '◆ <em>DLC UNLOCK BOSS #1</em> ◆ This is a special arena fight — you can summon up to 5 NPCs. Yellow signs everywhere. Spam summon them all. Phase 1: stay on Torrent, charge in/out. Phase 2: he goes to space and slams down. Sprint AWAY on Torrent the second he leaps up — the impact crater is huge. Resummon NPCs after each death (signs respawn).',
+        link: 'https://eldenring.wiki.fextralife.com/Starscourge+Radahn',
+        mark: '☠'
+      }
+    },
+    {
+      id: 'p4',
+      title: 'Altus Plateau & Mt. Gelmir',
+      sub: 'Acquiring the Blade',
+      levels: 'LV 60 → 90',
+      stats: 'Faith → <strong>50</strong>, Vigor → <strong>40</strong>. This is the build coming online.',
+      route: 'After Radahn + Nokron, return to Altus Plateau via the <em>Grand Lift of Dectus</em> (need both halves: Caelid east + Liurnia west) OR through the <em>Ruin-Strewn Precipice</em> (boss: Magma Wyrm Makar). Once on Altus, head to <strong>Volcano Manor</strong> on Mt. Gelmir. Tanith\'s contracts are the fast track to Rykard.',
+      pickups: [
+        {
+          id: 'p4-1',
+          name: 'Ritual Sword Talisman',
+          tagline: '+10% dmg at full HP',
+          where: '<strong>Lux Ruins</strong>, Altus Plateau.',
+          how: 'Lux Ruins are in central Altus, south of <em>Altus Highway Junction</em> grace. The talisman is in a chest guarded by a <em>Guardian Golem</em> — easy fight, just dodge his slow swings. The chest is in the underground portion of the ruins.',
+          gives: '+10% damage when at full HP. Stacks with Blasphemous Blade\'s self-heal (which keeps you near full HP). Top-tier talisman.',
+          link: 'https://eldenring.wiki.fextralife.com/Ritual+Sword+Talisman'
+        },
+        {
+          id: 'p4-2',
+          name: "Ruler's Mask",
+          tagline: '+2 Faith helmet',
+          where: 'Near <em>Abandoned Coffin</em> grace, southwest Altus.',
+          how: 'From Abandoned Coffin grace, look for a corpse on a fallen Erdtree branch. The mask is on it. Cosmetic is hideous but +2 FAI is +2 FAI.',
+          gives: '+2 Faith. Lets you hit 50 FAI two levels earlier.',
+          link: 'https://eldenring.wiki.fextralife.com/Ruler%27s+Mask'
+        },
+        {
+          id: 'p4-3',
+          name: "Tanith's Contracts (×3)",
+          tagline: 'Volcano Manor questline',
+          where: '<strong>Volcano Manor</strong>, top of Mt. Gelmir.',
+          how: 'Mt. Gelmir is the volcano in northwest Altus. To reach Volcano Manor: either climb Gelmir from the west (slow, lots of fights) OR talk to <em>Rya</em> in northern Liurnia (she teleports you directly — much faster). At the manor, talk to <em>Tanith</em>, agree to her contracts. Each contract sends you to invade an NPC in another zone. After 3 contracts, you unlock the back door to Rykard.',
+          gives: 'Skips most of Volcano Manor dungeon. Fast track to Rykard.',
+          link: 'https://eldenring.wiki.fextralife.com/Volcano+Manor'
+        },
+        {
+          id: 'p4-4',
+          name: 'Somber Smithing Stones 6–8',
+          tagline: 'For the Blasphemous Blade',
+          where: 'Various — Altus Plateau, Mt. Gelmir, Capital Outskirts.',
+          how: 'The Blade uses sombers, NOT regular stones. Best sources: <em>Sealed Tunnel</em> (Capital Outskirts, hidden behind illusory wall), <em>Yelough Anix Tunnel</em> (Snowfields, later), and <em>Wandering Nobles</em> drops in Altus. Buy <em>Somber Smithing Stones 1-4</em> from <em>Smithing-Stone Miner\'s Bell Bearings</em> when you give them to Twin Maiden Husks.',
+          gives: 'Take Blasphemous Blade to +9 immediately after acquiring it. The +10 stone is in the Snowfields/Mountaintops.',
+          link: 'https://eldenring.wiki.fextralife.com/Somber+Smithing+Stone+%5B6%5D'
+        },
+        {
+          id: 'p4-5',
+          name: 'Erdtree Seal',
+          tagline: 'Endgame Faith seal',
+          where: '<strong>Leyndell, Royal Capital</strong> — after killing the Capital\'s Erdtree Avatar.',
+          how: 'After getting into Leyndell. From <em>Erdtree Sanctuary</em> grace, head outside to a balcony with a <em>Erdtree Avatar</em> boss fight. Beat it (fire damage works great with Flame Grant Me Strength). Seal is on the corpse it was guarding.',
+          gives: 'Best Faith-only scaling seal. Swap to this when FAI is 50+. Until then, keep using Dragon Communion.',
+          link: 'https://eldenring.wiki.fextralife.com/Erdtree+Seal'
+        }
+      ],
+      boss: {
+        name: 'Rykard, Lord of Blasphemy',
+        level: 'LV ~80',
+        weapon: 'Halberd +24',
+        location: 'Bottom of Volcano Manor, after the Tanith contracts unlock the back path.',
+        tip: 'Pick up the <strong>Serpent-Hunter</strong> spear in the lava arena before stepping onto the platform. It does massive damage to Rykard and ignores the lava. Just R1 spam + heavy attacks. Free win. After: take his <em>Remembrance of the Blasphemous</em> to Enia at Roundtable, choose <strong>Blasphemous Blade</strong>. Upgrade to +9 immediately with sombers.',
+        link: 'https://eldenring.wiki.fextralife.com/Rykard%2C+Lord+of+Blasphemy',
+        mark: '☠'
+      }
+    },
+    {
+      id: 'p5',
+      title: 'Capital → Mountaintops → Mohgwyn',
+      sub: 'The Bloodied Threshold',
+      levels: 'LV 90 → 125',
+      stats: 'Mind → <strong>20</strong>, Endurance → <strong>20</strong>. Final polishing.',
+      route: 'Beat Morgott (required for story). Then optionally do the Volcano Manor questline for <em>Magma Whip Candlestick</em> rewards. Then either: A) Mountaintops → Forge of the Giants → Snowfield → Mohgwyn (long path), or B) Use <em>White Mask Varré\'s</em> shortcut to teleport to Mohgwyn early. Path B is faster.',
+      pickups: [
+        {
+          id: 'p5-1',
+          name: 'Two-Headed Turtle Talisman',
+          tagline: 'Stamina regen',
+          where: '<strong>Hidden room in Stormveil</strong> (yes, Stormveil — backtrack).',
+          how: 'Return to Stormveil. From the <em>Liftside Chamber</em> grace, go to the rooftops where eagles spawn. There\'s a giant white turtle on a roof there. Kill it (one-shot with the Blade). Drops the talisman.',
+          gives: '+17% stamina recovery speed. Best stamina talisman in the game.',
+          link: 'https://eldenring.wiki.fextralife.com/Two+Headed+Turtle+Talisman'
+        },
+        {
+          id: 'p5-2',
+          name: "Mohg's Shackle",
+          tagline: 'Stuns Mohg in phase 1',
+          where: '<strong>Subterranean Shunning-Grounds</strong>, beneath Leyndell.',
+          how: 'In Leyndell, find the giant golden hand grasping a sewer entrance (Forsaken Depths). Drop down through the toilet (yes, really — there\'s a chair in a side room you sit on). Navigate the sewers. The shackle is on a corpse near the <em>Mohg, the Omen</em> mini-boss arena (lesser Mohg, not the Lord).',
+          gives: 'Same as Margit\'s shackle but for Mohg. Use twice in phase 1 to skip his combos.',
+          link: 'https://eldenring.wiki.fextralife.com/Mohg%27s+Shackle'
+        },
+        {
+          id: 'p5-3',
+          name: "Flock's Canvas Talisman",
+          tagline: '+8% incantation damage',
+          where: 'Volcano Manor — completing Tanith\'s questline.',
+          how: 'After completing Volcano Manor (killing Rykard), keep doing Tanith\'s remaining quests. Eventually you can either help her become Lord (eat Rykard) or kill her — either way you get the <em>Flock\'s Canvas Talisman</em>.',
+          gives: '+8% damage to incantations. Boosts Blasphemous Blade\'s weapon art (Taker\'s Flames) which is incantation-flagged.',
+          link: 'https://eldenring.wiki.fextralife.com/Flock%27s+Canvas+Talisman'
+        },
+        {
+          id: 'p5-4',
+          name: 'Purifying Crystal Tear',
+          tagline: '◆ CRITICAL for Mohg fight',
+          where: '<strong>Altus Plateau Erdtree Avatar</strong> (Minor Erdtree).',
+          how: 'In Altus there\'s a Minor Erdtree (small white tree, not the main one). Guarded by an <em>Erdtree Avatar</em>. Beat it. Drops the Purifying Crystal Tear. Mix it into your <em>Flask of Wondrous Physick</em> at any grace.',
+          gives: '◆ <strong>NEGATES MOHG\'S NIHIL</strong> ◆ Without this, Mohg\'s phase 2 attack drops you to 1 HP three times in a row and kills you. WITH it, the Nihil does nothing. Non-negotiable item.',
+          link: 'https://eldenring.wiki.fextralife.com/Purifying+Crystal+Tear'
+        },
+        {
+          id: 'p5-5',
+          name: 'Morgott (boss)',
+          tagline: 'Story progression',
+          where: 'Top of <strong>Leyndell, Royal Capital</strong> — Elden Throne.',
+          how: 'Push through Leyndell from the Capital Outskirts grace. Long zone — work through the streets, sewers (or skip them), then up the Erdtree Sanctuary. Morgott is at the top of the throne stairs. Required for Mountaintops access.',
+          gives: 'Great Rune of Morgott + access to Forbidden Lands → Mountaintops of the Giants.',
+          link: 'https://eldenring.wiki.fextralife.com/Morgott+the+Omen+King'
+        },
+        {
+          id: 'p5-6',
+          name: 'Blasphemous Blade → +10',
+          tagline: 'Final upgrade',
+          where: '<strong>Somber Ancient Dragon Smithing Stone</strong> in Mountaintops or Snowfield.',
+          how: 'The +10 stone (Somber Ancient Dragon) is in the <em>Consecrated Snowfield</em> hidden zone, in a chest near a Death Bird. Or in late Mountaintops. By the time you\'re there, you\'ll find one naturally.',
+          gives: 'Blasphemous Blade +10. Final form. ~700 AR with full investment.',
+          link: 'https://eldenring.wiki.fextralife.com/Somber+Ancient+Dragon+Smithing+Stone'
+        }
+      ],
+      boss: {
+        name: 'Mohg, Lord of Blood',
+        level: 'LV ~125',
+        weapon: 'Blasphemous Blade +10',
+        location: '<strong>Mohgwyn Palace</strong>, accessed via Varré\'s questline OR the Consecrated Snowfield portal.',
+        tip: '◆ <em>DLC UNLOCK BOSS #2</em> ◆ <strong>BEFORE THE FIGHT:</strong> mix <em>Purifying Crystal Tear</em> + any other tear into your Wondrous Physick at a Site of Grace. Drink it RIGHT before entering. Phase 1: use <em>Mohg\'s Shackle</em> twice to stun him. Phase 2: when he counts to 3 and curses you (Nihil), you take ZERO damage thanks to the tear. Hit him hard while he\'s recovering. Mimic Tear summon with Blasphemous Blade equipped will spam Taker\'s Flames — devastating.',
+        link: 'https://eldenring.wiki.fextralife.com/Mohg%2C+Lord+of+Blood',
+        mark: '☠'
+      }
+    }
+  ];
+
+  const STORAGE_KEY = 'elden_tracker_state_v2';
+
+  // ===== STATE =====
+  let state = {
+    completed: {},
+    bossesDefeated: {},
+    expanded: {},
+    openPhase: 'p1'
+  };
+
+  // ===== STORAGE =====
+  function loadState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        state = { ...state, ...parsed };
+        if (!state.expanded) state.expanded = {};
+      }
+    } catch (e) {}
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {}
+  }
+
+  // ===== RENDER =====
+  function render() {
+    const container = document.getElementById('phasesContainer');
+    container.innerHTML = '';
+
+    PHASES.forEach((phase, idx) => {
+      const allChecked = phase.pickups.every(p => state.completed[p.id]);
+      const bossDefeated = state.bossesDefeated[phase.id];
+      const phaseComplete = allChecked && bossDefeated;
+      const isOpen = state.openPhase === phase.id && !phaseComplete;
+
+      const phaseEl = document.createElement('div');
+      phaseEl.className = 'phase' + (isOpen ? ' open' : '') + (phaseComplete ? ' complete' : '');
+
+      phaseEl.innerHTML = `
+        <div class="phase-header" data-phase="${phase.id}">
+          <div class="phase-num">PHASE ${String(idx + 1).padStart(2, '0')} · ${phase.sub.toUpperCase()}</div>
+          <div class="phase-title">${phase.title}</div>
+          <div class="phase-meta">${phase.levels}</div>
+          <div class="phase-toggle">▾</div>
+        </div>
+        <div class="phase-body">
+          <div class="phase-body-inner">
+            <div class="route-intro"><strong>Route:</strong> ${phase.route}</div>
+
+            <div class="section">
+              <div class="section-title">Stat Priority</div>
+              <div class="stat-line">${phase.stats}</div>
+            </div>
+
+            <div class="section">
+              <div class="section-title">Pickups & Setup</div>
+              <ul class="checklist">
+                ${phase.pickups.map(p => `
+                  <li class="check-item ${state.completed[p.id] ? 'done' : ''} ${state.expanded[p.id] ? 'expanded' : ''}" data-id="${p.id}">
+                    <div class="check-head">
+                      <div class="checkbox" data-checkbox="${p.id}"></div>
+                      <div class="check-content" data-expand="${p.id}">
+                        <div class="check-name">${p.name}</div>
+                        <div class="check-tagline">${p.tagline}</div>
+                      </div>
+                      <div class="expand-toggle" data-expand="${p.id}">▾</div>
+                    </div>
+                    <div class="check-detail">
+                      <div class="detail-inner">
+                        <div class="detail-row"><div class="detail-label">Where</div><div class="detail-value">${p.where}</div></div>
+                        <div class="detail-row"><div class="detail-label">How</div><div class="detail-value">${p.how}</div></div>
+                        <div class="detail-row"><div class="detail-label">Gives</div><div class="detail-value">${p.gives}</div></div>
+                        <a href="${p.link}" target="_blank" rel="noopener" class="wiki-link">Open Wiki Page</a>
+                      </div>
+                    </div>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+
+            <div class="boss-card ${bossDefeated ? 'done' : ''}">
+              <div class="boss-emblem">
+                <div class="boss-emblem-mark">${phase.boss.mark}</div>
+              </div>
+              <div class="boss-content">
+                <div class="boss-label">◆ MILESTONE BOSS</div>
+                <div class="boss-name">${phase.boss.name}</div>
+                <div class="boss-targets">
+                  <span>${phase.boss.level}</span>
+                  <span>${phase.boss.weapon}</span>
+                </div>
+                <div class="boss-tip"><strong>Where:</strong> ${phase.boss.location}</div>
+                <div class="boss-tip">${phase.boss.tip}</div>
+                <div class="boss-actions">
+                  <a href="${phase.boss.link}" target="_blank" rel="noopener" class="wiki-link" style="flex:0; min-width:auto;">Wiki ↗</a>
+                  <button class="boss-defeat-btn" data-boss="${phase.id}">
+                    ${bossDefeated ? 'DEFEATED' : 'MARK DEFEATED'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      container.appendChild(phaseEl);
+    });
+
+    const allDone = PHASES.every(p =>
+      p.pickups.every(pk => state.completed[pk.id]) &&
+      state.bossesDefeated[p.id]
+    );
+
+    if (allDone) {
+      const banner = document.createElement('div');
+      banner.className = 'final-banner';
+      banner.innerHTML = `
+        <h2>Touch the Withered Arm</h2>
+        <p>The road is run. Step into the Realm of Shadow — and remember: <em style="color:var(--gold-bright); font-style:normal;">Scadutree Fragments matter more than levels here.</em></p>
+      `;
+      container.appendChild(banner);
+    }
+
+    updateProgress();
+    updateCurrentState();
+    attachListeners();
+  }
+
+  function updateProgress() {
+    const totalItems = PHASES.reduce((sum, p) => sum + p.pickups.length + 1, 0);
+    const doneItems = PHASES.reduce((sum, p) => {
+      const pickups = p.pickups.filter(pk => state.completed[pk.id]).length;
+      const boss = state.bossesDefeated[p.id] ? 1 : 0;
+      return sum + pickups + boss;
+    }, 0);
+    const pct = Math.round((doneItems / totalItems) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressText').textContent = pct + '%';
+  }
+
+  function updateCurrentState() {
+    let currentPhase = PHASES[PHASES.length - 1];
+    let currentDetail = '';
+
+    for (const p of PHASES) {
+      const pickupsLeft = p.pickups.filter(pk => !state.completed[pk.id]);
+      const bossLeft = !state.bossesDefeated[p.id];
+      if (pickupsLeft.length > 0 || bossLeft) {
+        currentPhase = p;
+        if (pickupsLeft.length > 0) {
+          currentDetail = `Next up: <em>${pickupsLeft[0].name}</em>. ${pickupsLeft[0].tagline}.`;
+        } else if (bossLeft) {
+          currentDetail = `All gear in hand. Time to face <em>${p.boss.name}</em> at <em>${p.boss.level}</em>.`;
+        }
+        break;
+      }
+    }
+
+    const allDone = PHASES.every(p =>
+      p.pickups.every(pk => state.completed[pk.id]) &&
+      state.bossesDefeated[p.id]
+    );
+
+    if (allDone) {
+      document.getElementById('currentTitle').textContent = 'The Shadow Awaits';
+      document.getElementById('currentDetail').innerHTML = 'You have done it, Tarnished. Step through.';
+    } else {
+      document.getElementById('currentTitle').textContent = `Phase ${PHASES.indexOf(currentPhase) + 1} — ${currentPhase.title}`;
+      document.getElementById('currentDetail').innerHTML = currentDetail;
+    }
+  }
+
+  function attachListeners() {
+    document.querySelectorAll('.phase-header').forEach(el => {
+      el.addEventListener('click', () => {
+        const id = el.dataset.phase;
+        state.openPhase = state.openPhase === id ? null : id;
+        saveState();
+        render();
+      });
+    });
+
+    // Checkbox toggle
+    document.querySelectorAll('[data-checkbox]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = el.dataset.checkbox;
+        state.completed[id] = !state.completed[id];
+        saveState();
+        render();
+      });
+    });
+
+    // Expand toggle (clicking on the name area or the chevron)
+    document.querySelectorAll('[data-expand]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = el.dataset.expand;
+        state.expanded[id] = !state.expanded[id];
+        saveState();
+        render();
+      });
+    });
+
+    document.querySelectorAll('.boss-defeat-btn').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = el.dataset.boss;
+        state.bossesDefeated[id] = !state.bossesDefeated[id];
+        if (state.bossesDefeated[id]) {
+          const phase = PHASES.find(p => p.id === id);
+          showToast(`◆ ${phase.boss.name.toUpperCase()} VANQUISHED ◆`);
+          const nextIdx = PHASES.indexOf(phase) + 1;
+          if (nextIdx < PHASES.length) {
+            state.openPhase = PHASES[nextIdx].id;
+          }
+        }
+        saveState();
+        render();
+      });
+    });
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2400);
+  }
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    if (confirm('Reset all progress? The Tarnished must begin again.')) {
+      state = { completed: {}, bossesDefeated: {}, expanded: {}, openPhase: 'p1' };
+      saveState();
+      render();
+      showToast('◆ RETURNED TO GRACE ◆');
+    }
+  });
+
+  loadState();
+  render();
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "tennotrove",
+    "title": "Tenno Trove",
+    "description": "Warframe loadout sharing platform.",
+    "date": "2026-05-03",
+    "tags": ["webapp", "warframe"],
+    "url": "https://tennotrove.com"
+  },
+  {
+    "slug": "rainier-tracker",
+    "title": "Rainier Tracker",
+    "description": "Workout planning and progress tracker.",
+    "date": "2026-05-03",
+    "tags": ["webapp", "fitness"],
+    "url": "https://ranier-tracker.netlify.app/"
+  },
+  {
+    "slug": "elden-ring",
+    "title": "Path of the Tarnished",
+    "description": "Elden Ring playthrough tracker — Confessor build route, pickups, and boss tips through Mohg.",
+    "date": "2026-05-03",
+    "tags": ["html", "tracker", "elden-ring"]
+  },
+  {
+    "slug": "games",
+    "title": "Game Library",
+    "description": "Cross-platform game library with playability tiers for my laptop's iGPU.",
+    "date": "2026-05-03",
+    "tags": ["html", "library", "personal"]
+  }
+]
