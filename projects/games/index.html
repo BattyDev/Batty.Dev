@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="brutalist">
 <head>
 <meta charset="UTF-8">
@@ -15,6 +15,28 @@
 html, body { min-height: 100vh; }
 body { transition: background 0.3s, color 0.3s; }
 .hidden { display: none !important; }
+
+/* Shared rating badge — themes may override. Pico-bands keyed by data-band. */
+.rating {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 10px;
+  padding: 1px 5px; letter-spacing: 0.04em;
+  background: #444; color: #fff; border-radius: 0;
+}
+.rating[data-band="hi"]  { background: #1ea84a; color: #fff; }
+.rating[data-band="ok"]  { background: #b3c12c; color: #000; }
+.rating[data-band="mid"] { background: #ffaa33; color: #000; }
+.rating[data-band="lo"]  { background: #c41e3a; color: #fff; }
+.rating[data-band="na"]  { background: #2a2a2a; color: #888; }
+
+/* Sort chip inherits .chip styling from each theme; the layout-flat modifier hides tier head + lifts grid out. */
+.tier.flat .tier-head { display: none; }
+.tier.flat { margin-bottom: 0; }
+.label-group {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.6;
+  padding-right: 4px;
+}
 
 /* ============================================================
    THEME 1: BRUTALIST / TERMINAL
@@ -826,17 +848,41 @@ body { transition: background 0.3s, color 0.3s; }
   <div class="controls">
     <input type="text" class="search" id="search" placeholder="Search games…" autocomplete="off">
     <div class="filter-group" id="src-filters">
-      <button class="chip active" data-src="all">All sources</button>
+      <span class="label-group">Source</span>
+      <button class="chip active" data-src="all">All</button>
       <button class="chip" data-src="steam">Steam</button>
       <button class="chip" data-src="gog">GOG</button>
       <button class="chip" data-src="epic">Epic</button>
       <button class="chip" data-src="gamepass">Game Pass</button>
     </div>
     <div class="filter-group" id="tier-filters">
-      <button class="chip tier-runs active" data-tier="all">All tiers</button>
+      <span class="label-group">Tier</span>
+      <button class="chip tier-runs active" data-tier="all">All</button>
       <button class="chip tier-runs" data-tier="runs">Runs great</button>
       <button class="chip tier-play" data-tier="play">Playable</button>
       <button class="chip tier-skip" data-tier="skip">Skip</button>
+    </div>
+    <div class="filter-group" id="rating-filters">
+      <span class="label-group">Rating</span>
+      <button class="chip active" data-rating="all">Any</button>
+      <button class="chip" data-rating="hi">90%+</button>
+      <button class="chip" data-rating="ok">80–89%</button>
+      <button class="chip" data-rating="mid">70–79%</button>
+      <button class="chip" data-rating="lo">&lt;70%</button>
+      <button class="chip" data-rating="na">No score</button>
+    </div>
+    <div class="filter-group" id="genre-filters">
+      <span class="label-group">Genre</span>
+      <button class="chip active" data-genre="all">All</button>
+      <!-- genre chips populated at runtime -->
+    </div>
+    <div class="filter-group" id="sort-filters">
+      <span class="label-group">Sort</span>
+      <button class="chip active" data-sort="tier">Tier</button>
+      <button class="chip" data-sort="name-asc">Name A→Z</button>
+      <button class="chip" data-sort="name-desc">Name Z→A</button>
+      <button class="chip" data-sort="rating-desc">Rating ↓</button>
+      <button class="chip" data-sort="shuffle">Shuffle</button>
     </div>
   </div>
 
@@ -845,401 +891,10 @@ body { transition: background 0.3s, color 0.3s; }
   <footer>Cover art served from Steam CDN · Categorization tuned for Radeon 660M iGPU at 1080p</footer>
 </div>
 
+<script src="games.js"></script>
 <script>
-// Each game: { name, sources: [...], tier: 'runs'|'play'|'skip', appid: number|null, note?: string }
-// appid is Steam appid for cover art (works even for Epic/GOG/GP titles since most exist on Steam)
-const games = [
-  // ============ STEAM (from prior conversation - 178 games, taste: MGS, Skyrim, SMITE, multiplayer) ============
-  { name: "Metal Gear Solid V: The Phantom Pain", sources: ["steam"], tier: "runs", appid: 287700, note: "Beautifully optimized — 60fps at 1080p medium-high" },
-  { name: "The Elder Scrolls V: Skyrim Special Edition", sources: ["steam"], tier: "runs", appid: 489830, note: "Runs fine; avoid 4K texture mods" },
-  { name: "SMITE", sources: ["steam"], tier: "runs", appid: 386360, note: "Scales down well" },
-  { name: "Metal Gear Rising: Revengeance", sources: ["steam"], tier: "runs", appid: 235460, note: "Top pick — runs perfect, ridiculous fun" },
-  { name: "NieR: Automata", sources: ["steam"], tier: "runs", appid: 524220, note: "Top pick — will run great" },
-  { name: "Titanfall 2", sources: ["steam"], tier: "runs", appid: 1237970, note: "Top pick — best campaign of the 2010s" },
-  { name: "DOOM Eternal", sources: ["steam"], tier: "runs", appid: 782330, note: "id Tech 7 is sorcery on weak hardware" },
-  { name: "Dishonored 2", sources: ["steam"], tier: "runs", appid: 403640, note: "Top pick" },
-  { name: "Hellblade: Senua's Sacrifice", sources: ["steam"], tier: "runs", appid: 414340, note: "Short, atmospheric, runs fine on UE4 low" },
-  { name: "Middle-earth: Shadow of Mordor", sources: ["steam"], tier: "runs", appid: 241930, note: "Ages well, runs great" },
-  { name: "Warframe", sources: ["steam"], tier: "runs", appid: 230410 },
-  { name: "Killing Floor 2", sources: ["steam"], tier: "runs", appid: 232090 },
-  { name: "Warhammer: Vermintide 2", sources: ["steam"], tier: "runs", appid: 552500 },
-  { name: "Borderlands 2", sources: ["steam", "epic"], tier: "runs", appid: 49520 },
-  { name: "Borderlands: The Pre-Sequel", sources: ["steam", "epic"], tier: "runs", appid: 261640 },
-  { name: "Portal 2", sources: ["steam"], tier: "runs", appid: 620 },
-  { name: "Half-Life 2", sources: ["steam"], tier: "runs", appid: 220 },
-  { name: "Counter-Strike 2", sources: ["steam"], tier: "runs", appid: 730 },
-  { name: "Team Fortress 2", sources: ["steam"], tier: "runs", appid: 440 },
-  { name: "Stardew Valley", sources: ["steam"], tier: "runs", appid: 413150 },
-  { name: "Hollow Knight", sources: ["steam"], tier: "runs", appid: 367520 },
-  { name: "Hades", sources: ["steam"], tier: "runs", appid: 1145360 },
-  { name: "Celeste", sources: ["steam", "epic"], tier: "runs", appid: 504230 },
-  { name: "Undertale", sources: ["steam"], tier: "runs", appid: 391540 },
-  { name: "Terraria", sources: ["steam"], tier: "runs", appid: 105600 },
-  { name: "Slay the Spire", sources: ["steam"], tier: "runs", appid: 646570 },
-  { name: "Dead Cells", sources: ["steam"], tier: "runs", appid: 588650 },
-  { name: "Cuphead", sources: ["steam"], tier: "runs", appid: 268910 },
-  { name: "Risk of Rain 2", sources: ["steam"], tier: "runs", appid: 632360 },
-  { name: "Don't Starve Together", sources: ["steam"], tier: "runs", appid: 322330 },
-  { name: "Left 4 Dead 2", sources: ["steam"], tier: "runs", appid: 550 },
-  { name: "Fallout: New Vegas", sources: ["steam"], tier: "runs", appid: 22380 },
-  { name: "Fallout 4", sources: ["steam"], tier: "runs", appid: 377160, note: "Runs at 1080p medium" },
-  { name: "Bioshock Infinite", sources: ["steam", "gog"], tier: "runs", appid: 8870 },
-  { name: "Bioshock Remastered", sources: ["steam"], tier: "runs", appid: 409710 },
-  { name: "Bioshock 2 Remastered", sources: ["steam"], tier: "runs", appid: 409720 },
-  { name: "Dishonored", sources: ["steam"], tier: "runs", appid: 205100 },
-  { name: "Dishonored: Death of the Outsider", sources: ["steam"], tier: "runs", appid: 614570 },
-  { name: "Deus Ex: Human Revolution", sources: ["steam"], tier: "runs", appid: 28050 },
-  { name: "Deus Ex: Mankind Divided", sources: ["steam", "gog"], tier: "runs", appid: 337000 },
-  { name: "Tomb Raider (2013)", sources: ["steam"], tier: "runs", appid: 203160 },
-  { name: "Rise of the Tomb Raider", sources: ["steam", "epic"], tier: "runs", appid: 391220 },
-  { name: "Skyrim Legendary Edition", sources: ["steam"], tier: "runs", appid: 72850 },
-  { name: "Mount & Blade: Warband", sources: ["steam"], tier: "runs", appid: 48700 },
-  { name: "Civilization V", sources: ["steam"], tier: "runs", appid: 8930 },
-  { name: "Civilization VI", sources: ["steam"], tier: "runs", appid: 289070 },
-  { name: "XCOM: Enemy Unknown", sources: ["steam", "gog"], tier: "runs", appid: 200510 },
-  { name: "XCOM 2", sources: ["steam", "gog"], tier: "runs", appid: 268500 },
-  { name: "Divinity: Original Sin 2", sources: ["steam"], tier: "runs", appid: 435150 },
-  { name: "Pillars of Eternity", sources: ["steam"], tier: "runs", appid: 291650 },
-  { name: "Tyranny", sources: ["steam"], tier: "runs", appid: 362960 },
-  { name: "Wasteland 2", sources: ["steam"], tier: "runs", appid: 240760 },
-  { name: "Mark of the Ninja", sources: ["steam"], tier: "runs", appid: 214560 },
-  { name: "Saints Row IV", sources: ["steam"], tier: "runs", appid: 206420 },
-  { name: "Saints Row: The Third", sources: ["steam"], tier: "runs", appid: 55230 },
-  { name: "Just Cause 3", sources: ["steam"], tier: "runs", appid: 225540 },
-  { name: "Mad Max", sources: ["steam"], tier: "runs", appid: 234140 },
-  { name: "Sniper Elite 4", sources: ["steam"], tier: "runs", appid: 312660 },
-  { name: "Wolfenstein: The New Order", sources: ["steam"], tier: "runs", appid: 201810 },
-  { name: "Wolfenstein II: The New Colossus", sources: ["steam"], tier: "runs", appid: 612880 },
-  { name: "DOOM (2016)", sources: ["steam"], tier: "runs", appid: 379720 },
-  { name: "Rocket League", sources: ["steam", "epic"], tier: "runs", appid: 252950 },
-  { name: "Among Us", sources: ["steam"], tier: "runs", appid: 945360 },
-  { name: "Garry's Mod", sources: ["steam"], tier: "runs", appid: 4000 },
-  { name: "Payday 2", sources: ["steam", "epic"], tier: "runs", appid: 218620 },
-  { name: "Borderlands GOTY Enhanced", sources: ["steam"], tier: "runs", appid: 729040 },
-  { name: "Tales from the Borderlands", sources: ["steam"], tier: "runs", appid: 261110 },
-  { name: "Brothers: A Tale of Two Sons", sources: ["steam"], tier: "runs", appid: 225080 },
-  { name: "Ori and the Blind Forest", sources: ["steam"], tier: "runs", appid: 261570 },
-  { name: "Ori and the Will of the Wisps", sources: ["steam"], tier: "runs", appid: 1057090 },
-  { name: "Inside", sources: ["steam", "epic"], tier: "runs", appid: 304430 },
-  { name: "Limbo", sources: ["steam", "epic"], tier: "runs", appid: 48000 },
-  { name: "What Remains of Edith Finch", sources: ["steam", "epic"], tier: "runs", appid: 501300 },
-  { name: "Firewatch", sources: ["steam"], tier: "runs", appid: 383870 },
-  { name: "Gone Home", sources: ["steam"], tier: "runs", appid: 232430 },
-  { name: "The Stanley Parable", sources: ["steam", "epic"], tier: "runs", appid: 221910 },
-  { name: "Outer Wilds", sources: ["steam"], tier: "runs", appid: 753640 },
-  { name: "Disco Elysium", sources: ["steam"], tier: "runs", appid: 632470 },
-  { name: "Pyre", sources: ["steam"], tier: "runs", appid: 462770 },
-  { name: "Bastion", sources: ["steam"], tier: "runs", appid: 107100 },
-  { name: "Transistor", sources: ["steam", "epic"], tier: "runs", appid: 237930 },
-
-  // STEAM - PLAYABLE
-  { name: "Grand Theft Auto V", sources: ["steam"], tier: "play", appid: 271590, note: "Original Legacy runs better than Enhanced" },
-  { name: "The Witcher 3: Wild Hunt", sources: ["steam", "gog"], tier: "play", appid: 292030, note: "1080p low ~30-45fps. Drop to 720p for smoother" },
-  { name: "Shadow of the Tomb Raider", sources: ["steam"], tier: "play", appid: 750920, note: "Low settings, ~30-40fps" },
-  { name: "Monster Hunter: World", sources: ["steam"], tier: "play", appid: 582010, note: "Low settings, 30fps target. CPU-heavy" },
-  { name: "Sea of Thieves", sources: ["steam", "gamepass"], tier: "play", appid: 1172620, note: "Playable at low — cartoony style helps" },
-  { name: "Kingdom Come: Deliverance", sources: ["steam", "epic"], tier: "play", appid: 379430, note: "Rough but doable on low" },
-  { name: "Insurgency: Sandstorm", sources: ["steam"], tier: "play", appid: 581320, note: "Low settings; competitive players need higher fps" },
-  { name: "GreedFall", sources: ["steam", "gog"], tier: "play", appid: 606880, note: "Low settings 1080p" },
-  { name: "Remnant: From the Ashes", sources: ["steam", "epic"], tier: "play", appid: 617290, note: "Low settings" },
-  { name: "Hunt: Showdown 1896", sources: ["steam"], tier: "play", appid: 594650, note: "Low settings 720p, still atmospheric" },
-  { name: "PUBG: BATTLEGROUNDS", sources: ["steam"], tier: "play", appid: 578080, note: "Runs but competitive shooters benefit from higher fps" },
-  { name: "Tom Clancy's Rainbow Six Siege", sources: ["steam"], tier: "play", appid: 359550, note: "Runs but competitive — needs higher fps" },
-  { name: "Splitgate", sources: ["steam"], tier: "play", appid: 677620, note: "Runs but competitive — needs higher fps" },
-  { name: "Black Desert", sources: ["steam"], tier: "play", appid: 582660, note: "CPU-heavy, uneven; playable in less crowded zones" },
-  { name: "The Elder Scrolls Online", sources: ["steam"], tier: "play", appid: 306130, note: "CPU-heavy, uneven" },
-
-  // STEAM - SKIP
-  { name: "Deadlock", sources: ["steam"], tier: "skip", appid: 1422450, note: "Source 2 demanding, competitive needs high fps" },
-  { name: "ARK: Survival Evolved", sources: ["steam", "epic"], tier: "skip", appid: 346110, note: "Chronically poorly optimized" },
-  { name: "Rust", sources: ["steam"], tier: "skip", appid: 252490, note: "Possible at very low, but expect a bad time" },
-  { name: "7 Days to Die", sources: ["steam"], tier: "skip", appid: 251570, note: "Playable but choppy" },
-  { name: "Beat Saber", sources: ["steam"], tier: "skip", appid: 620980, note: "VR — iGPU can't drive a headset" },
-  { name: "Pavlov VR", sources: ["steam"], tier: "skip", appid: 555160, note: "VR — iGPU can't drive a headset" },
-  { name: "GORN", sources: ["steam"], tier: "skip", appid: 578620, note: "VR — iGPU can't drive a headset" },
-  { name: "Arizona Sunshine", sources: ["steam"], tier: "skip", appid: 342180, note: "VR — iGPU can't drive a headset" },
-  { name: "Budget Cuts", sources: ["steam"], tier: "skip", appid: 400940, note: "VR — iGPU can't drive a headset" },
-  { name: "Space Pirate Trainer", sources: ["steam"], tier: "skip", appid: 418650, note: "VR — iGPU can't drive a headset" },
-  { name: "Zero Caliber VR", sources: ["steam"], tier: "skip", appid: 877200, note: "VR — iGPU can't drive a headset" },
-  { name: "VRChat", sources: ["steam"], tier: "skip", appid: 438100, note: "VR — iGPU can't drive a headset" },
-  { name: "Rec Room", sources: ["steam"], tier: "skip", appid: 471710, note: "VR-focused — iGPU can't drive a headset" },
-
-  // ============ GOG (from prior conversation - 63 games) ============
-  // GOG - RUNS GREAT
-  { name: "The Outer Worlds", sources: ["gog", "epic"], tier: "runs", appid: 578650, note: "1080p low/medium, runs great on iGPUs" },
-  { name: "Middle-earth: Shadow of War", sources: ["gog"], tier: "runs", appid: 356190, note: "1080p low ~40-50fps" },
-  { name: "Hard West 2", sources: ["gog"], tier: "runs", appid: 1282410, note: "Stylized turn-based, runs easily" },
-  { name: "Hitman: Absolution", sources: ["gog"], tier: "runs", appid: 203140 },
-  { name: "DREDGE", sources: ["gog"], tier: "runs", appid: 1562430, note: "Fishing horror, gorgeous, runs on a toaster" },
-  { name: "Stray Gods: The Roleplaying Musical", sources: ["gog"], tier: "runs", appid: 1715380, note: "Visual novel/musical, runs anywhere" },
-  { name: "En Garde!", sources: ["gog"], tier: "runs", appid: 1654660, note: "Swashbuckling action, lightweight" },
-  { name: "Cat Quest II", sources: ["gog"], tier: "runs", appid: 818470 },
-  { name: "Forager", sources: ["gog"], tier: "runs", appid: 751780 },
-  { name: "SteamWorld Quest: Hand of Gilgamech", sources: ["gog"], tier: "runs", appid: 945510 },
-  { name: "SteamWorld Heist", sources: ["gog"], tier: "runs", appid: 322190 },
-  { name: "Spelunky", sources: ["gog"], tier: "runs", appid: 239350 },
-  { name: "Overcooked! 2", sources: ["gog"], tier: "runs", appid: 728880 },
-  { name: "Midnight Fight Express", sources: ["gog"], tier: "runs", appid: 1493670 },
-  { name: "Spells & Secrets", sources: ["gog"], tier: "runs", appid: 1665230 },
-  { name: "Arcade Paradise", sources: ["gog"], tier: "runs", appid: 1413480 },
-  { name: "Thronebreaker: The Witcher Tales", sources: ["gog"], tier: "runs", appid: 909720, note: "Gorgeous CDPR card RPG, runs perfectly" },
-  { name: "Fallout", sources: ["gog"], tier: "runs", appid: 38400, note: "90s isometric, runs on anything" },
-  { name: "Fallout 2", sources: ["gog"], tier: "runs", appid: 38410 },
-  { name: "Fallout Tactics", sources: ["gog"], tier: "runs", appid: 38420 },
-  { name: "Baldur's Gate: Enhanced Edition", sources: ["gog"], tier: "runs", appid: 228280 },
-  { name: "Baldur's Gate II: Enhanced Edition", sources: ["gog"], tier: "runs", appid: 257350 },
-  { name: "Neverwinter Nights: Enhanced Edition", sources: ["gog"], tier: "runs", appid: 704450 },
-  { name: "Neverwinter Nights Diamond", sources: ["gog"], tier: "runs", appid: null },
-  { name: "The Witcher: Enhanced Edition", sources: ["gog"], tier: "runs", appid: 20900, note: "Runs great on your machine" },
-  { name: "The Witcher 2: Assassins of Kings", sources: ["gog"], tier: "runs", appid: 20920, note: "Runs at high settings even — top pick" },
-  { name: "Tomb Raider: Anniversary", sources: ["gog"], tier: "runs", appid: 8000 },
-  { name: "Tomb Raider: Legend", sources: ["gog"], tier: "runs", appid: 7820 },
-  { name: "Tomb Raider: Underworld", sources: ["gog"], tier: "runs", appid: 8140 },
-  { name: "Tomb Raider: The Last Revelation", sources: ["gog"], tier: "runs", appid: 224940 },
-  { name: "Tomb Raider: Chronicles", sources: ["gog"], tier: "runs", appid: 224960 },
-  { name: "Tomb Raider: The Angel of Darkness", sources: ["gog"], tier: "runs", appid: 224980 },
-  { name: "Star Wars: Bounty Hunter", sources: ["gog"], tier: "runs", appid: 803630 },
-  { name: "Call of Juarez: Bound in Blood", sources: ["gog"], tier: "runs", appid: 21810 },
-  { name: "Blade of Darkness", sources: ["gog"], tier: "runs", appid: 1710170 },
-  { name: "Chasm: The Rift", sources: ["gog"], tier: "runs", appid: 2061070 },
-  { name: "The Wheel of Time", sources: ["gog"], tier: "runs", appid: null },
-  { name: "Saints Row: The Third Remastered", sources: ["gog"], tier: "runs", appid: 1233570 },
-  { name: "LEGO The Hobbit", sources: ["gog"], tier: "runs", appid: 285160 },
-  { name: "LEGO Lord of the Rings", sources: ["gog"], tier: "runs", appid: 214510 },
-  { name: "LEGO Star Wars III: The Clone Wars", sources: ["gog"], tier: "runs", appid: 32440 },
-
-  // GOG - PLAYABLE
-  { name: "Cyberpunk 2077", sources: ["gog"], tier: "play", appid: 1091500, note: "720p Low + FSR Performance ~25-35fps. Playable, not enjoyable" },
-
-  // ============ EPIC (from your screenshot — only counting non-duplicates) ============
-  // EPIC - RUNS GREAT
-  { name: "Fortnite", sources: ["epic"], tier: "runs", appid: null, note: "Performance mode is great on iGPUs" },
-  { name: "Borderlands 3", sources: ["epic"], tier: "runs", appid: 397540, note: "1080p low" },
-  { name: "Dauntless", sources: ["epic"], tier: "runs", appid: 1334260 },
-  { name: "Far Cry 5", sources: ["epic"], tier: "runs", appid: 552520 },
-  { name: "Control", sources: ["epic"], tier: "runs", appid: 870780, note: "Low settings 1080p" },
-  { name: "Spellbreak", sources: ["epic"], tier: "runs", appid: null, note: "Servers may be offline as of 2024" },
-  { name: "For The King", sources: ["epic"], tier: "runs", appid: 527230 },
-  { name: "World War Z", sources: ["epic"], tier: "runs", appid: 699130 },
-  { name: "Totally Reliable Delivery Service", sources: ["epic"], tier: "runs", appid: 1011670 },
-  { name: "Subnautica", sources: ["epic"], tier: "runs", appid: 264710, note: "Underwater alien planet survival, runs well" },
-  { name: "RUINER", sources: ["epic"], tier: "runs", appid: 464060 },
-  { name: "Star Wars Jedi: Fallen Order", sources: ["epic"], tier: "runs", appid: 1172380, note: "Low settings 1080p ~40fps" },
-  { name: "Phantasy Star Online 2", sources: ["epic"], tier: "runs", appid: 1056640 },
-  { name: "Kingdom: New Lands", sources: ["epic"], tier: "runs", appid: 496300 },
-  { name: "DAEMON X MACHINA", sources: ["epic"], tier: "runs", appid: 1167450 },
-  { name: "Just Cause 4", sources: ["epic"], tier: "runs", appid: 517630, note: "Low settings 1080p" },
-  { name: "Axiom Verge", sources: ["epic"], tier: "runs", appid: 332200 },
-  { name: "City of Brass", sources: ["epic"], tier: "runs", appid: 446910 },
-  { name: "Alan Wake", sources: ["epic"], tier: "runs", appid: 108710 },
-  { name: "Dungeons 3", sources: ["epic"], tier: "runs", appid: 493900 },
-  { name: ">observer_", sources: ["epic"], tier: "runs", appid: 514900 },
-  { name: "20XX", sources: ["epic"], tier: "runs", appid: 322110 },
-  { name: "3 out of 10, EP 1", sources: ["epic"], tier: "runs", appid: 1273390 },
-  { name: "3 out of 10, EP 2", sources: ["epic"], tier: "runs", appid: 1314370 },
-  { name: "A Short Hike", sources: ["epic"], tier: "runs", appid: 1055540 },
-  { name: "ABZU", sources: ["epic"], tier: "runs", appid: 384190 },
-  { name: "AER Memories of Old", sources: ["epic"], tier: "runs", appid: 449000 },
-  { name: "Alan Wake's American Nightmare", sources: ["epic"], tier: "runs", appid: 202750 },
-  { name: "Alex Kidd in Miracle World DX", sources: ["epic"], tier: "runs", appid: 1357330 },
-  { name: "Alien: Isolation", sources: ["epic"], tier: "runs", appid: 214490, note: "Atmospheric horror, runs fine" },
-  { name: "Amnesia: The Dark Descent", sources: ["epic"], tier: "runs", appid: 57300 },
-  { name: "Amnesia: A Machine for Pigs", sources: ["epic"], tier: "runs", appid: 239200 },
-  { name: "Anodyne 2: Return to Dust", sources: ["epic"], tier: "runs", appid: 1011160 },
-  { name: "Ape Out", sources: ["epic"], tier: "runs", appid: 447150 },
-  { name: "Aztez", sources: ["epic"], tier: "runs", appid: 244910 },
-  { name: "Barony", sources: ["epic"], tier: "runs", appid: 371970 },
-  { name: "Batman: Arkham Asylum GOTY", sources: ["epic"], tier: "runs", appid: 35140 },
-  { name: "Batman: Arkham City GOTY", sources: ["epic"], tier: "runs", appid: 200260 },
-  { name: "Batman: Arkham Knight", sources: ["epic"], tier: "runs", appid: 208650, note: "Low settings 1080p" },
-  { name: "Carcassonne", sources: ["epic"], tier: "runs", appid: 598810 },
-  { name: "Cave Story+", sources: ["epic"], tier: "runs", appid: 200900 },
-  { name: "Cities: Skylines", sources: ["epic"], tier: "runs", appid: 255710, note: "Big cities will choke; medium cities fine" },
-  { name: "Close to the Sun", sources: ["epic"], tier: "runs", appid: 968870 },
-  { name: "Conarium", sources: ["epic"], tier: "runs", appid: 471950 },
-  { name: "Costume Quest", sources: ["epic"], tier: "runs", appid: 115100 },
-  { name: "Costume Quest 2", sources: ["epic"], tier: "runs", appid: 285030 },
-  { name: "Crashlands", sources: ["epic"], tier: "runs", appid: 391730 },
-  { name: "Creature in the Well", sources: ["epic"], tier: "runs", appid: 814820 },
-  { name: "Crying Suns", sources: ["epic"], tier: "runs", appid: 873940 },
-  { name: "Dandara: Trials of Fear Edition", sources: ["epic"], tier: "runs", appid: 612390 },
-  { name: "Darkest Dungeon", sources: ["epic"], tier: "runs", appid: 262060 },
-  { name: "Death Coming", sources: ["epic"], tier: "runs", appid: 705110 },
-  { name: "Deponia: The Complete Journey", sources: ["epic"], tier: "runs", appid: 270070 },
-  { name: "Drawful 2", sources: ["epic"], tier: "runs", appid: 442070 },
-  { name: "Elite Dangerous", sources: ["epic"], tier: "runs", appid: 359320, note: "Runs fine, but better with controller setup" },
-  { name: "ENDER LILIES: Quietus of the Knights", sources: ["epic"], tier: "runs", appid: 1369630 },
-  { name: "Enter the Gungeon", sources: ["epic"], tier: "runs", appid: 311690 },
-  { name: "Eternights", sources: ["epic"], tier: "runs", appid: 1763830 },
-  { name: "Everything", sources: ["epic"], tier: "runs", appid: 582270 },
-  { name: "Faeria", sources: ["epic"], tier: "runs", appid: 426530 },
-  { name: "Fallout (Classic)", sources: ["epic"], tier: "runs", appid: 38400 },
-  { name: "Fallout 2 (Classic)", sources: ["epic"], tier: "runs", appid: 38410 },
-  { name: "Fallout Tactics: Brotherhood of Steel", sources: ["epic"], tier: "runs", appid: 38420 },
-  { name: "Farming Simulator 19", sources: ["epic"], tier: "runs", appid: 787860 },
-  { name: "FTL: Faster Than Light", sources: ["epic"], tier: "runs", appid: 212680 },
-  { name: "Fez", sources: ["epic"], tier: "runs", appid: 224760 },
-  { name: "Figment", sources: ["epic"], tier: "runs", appid: 493540 },
-  { name: "For Honor", sources: ["epic"], tier: "runs", appid: 304390 },
-  { name: "Fort Triumph", sources: ["epic"], tier: "runs", appid: 731270 },
-  { name: "Genesis Alpha One", sources: ["epic"], tier: "runs", appid: 712190 },
-  { name: "Ghostbusters: The Video Game Remastered", sources: ["epic"], tier: "runs", appid: 1043220, note: "Spooky action, runs fine on iGPU" },
-  { name: "Ghostbusters: Spirits Unleashed", sources: ["epic"], tier: "runs", appid: 1183940 },
-  { name: "Gloomhaven", sources: ["epic"], tier: "runs", appid: 780290 },
-  { name: "God's Trigger", sources: ["epic"], tier: "runs", appid: 689920 },
-  { name: "Golf With Your Friends", sources: ["epic"], tier: "runs", appid: 431240 },
-  { name: "GoNNER", sources: ["epic"], tier: "runs", appid: 510780 },
-  { name: "Hand of Fate 2", sources: ["epic"], tier: "runs", appid: 456670 },
-  { name: "Hardspace: Shipbreaker", sources: ["epic"], tier: "runs", appid: 1161580 },
-  { name: "Hob", sources: ["epic"], tier: "runs", appid: 404680 },
-  { name: "Horace", sources: ["epic"], tier: "runs", appid: 953490 },
-  { name: "Hyper Light Drifter", sources: ["epic"], tier: "runs", appid: 257850 },
-  { name: "Idle Champions of the Forgotten Realms", sources: ["epic"], tier: "runs", appid: 627690 },
-  { name: "InnerSpace", sources: ["epic"], tier: "runs", appid: 408630 },
-  { name: "Into The Breach", sources: ["epic"], tier: "runs", appid: 590380 },
-  { name: "Jotun: Valhalla Edition", sources: ["epic"], tier: "runs", appid: 323580 },
-  { name: "Jurassic World Evolution", sources: ["epic"], tier: "runs", appid: 648350, note: "Large parks may chug" },
-  { name: "Ken Follett's The Pillars of the Earth", sources: ["epic"], tier: "runs", appid: 558320 },
-  { name: "KeyWe", sources: ["epic"], tier: "runs", appid: 1242980 },
-  { name: "Last Day of June", sources: ["epic"], tier: "runs", appid: 624090 },
-  { name: "Layers of Fear", sources: ["epic"], tier: "runs", appid: 391720 },
-  { name: "Layers of Fear 2", sources: ["epic"], tier: "runs", appid: 1029890 },
-  { name: "LEGO Batman 2: DC Super Heroes", sources: ["epic"], tier: "runs", appid: 502820 },
-  { name: "LEGO Batman 3: Beyond Gotham", sources: ["epic"], tier: "runs", appid: 267530 },
-  { name: "LEGO Batman: The Videogame", sources: ["epic"], tier: "runs", appid: 502810 },
-  { name: "Lifeless Planet: Premier Edition", sources: ["epic"], tier: "runs", appid: 261530 },
-  { name: "Loop Hero", sources: ["epic"], tier: "runs", appid: 1282730 },
-  { name: "Metro 2033 Redux", sources: ["epic"], tier: "runs", appid: 286690 },
-  { name: "Metro Exodus", sources: ["epic"], tier: "runs", appid: 412020, note: "Low settings 1080p ~30-40fps" },
-  { name: "Metro Exodus Enhanced Edition", sources: ["epic"], tier: "skip", appid: 1449560, note: "Requires RT-capable GPU — your iGPU can't run this" },
-  { name: "Minit", sources: ["epic"], tier: "runs", appid: 609490 },
-  { name: "Moonlighter", sources: ["epic"], tier: "runs", appid: 606150 },
-  { name: "MudRunner", sources: ["epic"], tier: "runs", appid: 675010 },
-  { name: "Mutant Year Zero: Road to Eden", sources: ["epic"], tier: "runs", appid: 760060 },
-  { name: "Mutazione", sources: ["epic"], tier: "runs", appid: 521470 },
-  { name: "Night in the Woods", sources: ["epic"], tier: "runs", appid: 481510 },
-  { name: "Nuclear Throne", sources: ["epic"], tier: "runs", appid: 242680 },
-  { name: "Offworld Trading Company", sources: ["epic"], tier: "runs", appid: 271240 },
-  { name: "Overcooked!", sources: ["epic"], tier: "runs", appid: 448510 },
-  { name: "Oxenfree", sources: ["epic"], tier: "runs", appid: 388880 },
-  { name: "Pathway", sources: ["epic"], tier: "runs", appid: 546430 },
-  { name: "Pikuniku", sources: ["epic"], tier: "runs", appid: 572890 },
-  { name: "Pine", sources: ["epic"], tier: "runs", appid: 768060 },
-  { name: "Q.U.B.E. 2", sources: ["epic"], tier: "runs", appid: 525740 },
-  { name: "RAGE 2", sources: ["epic"], tier: "runs", appid: 548570, note: "Low settings 1080p" },
-  { name: "Railway Empire", sources: ["epic"], tier: "runs", appid: 503940 },
-  { name: "Rayman Legends", sources: ["epic"], tier: "runs", appid: 242550 },
-  { name: "Rebel Galaxy", sources: ["epic"], tier: "runs", appid: 290300 },
-  { name: "RiME", sources: ["epic"], tier: "runs", appid: 493200 },
-  { name: "Rise of the Tomb Raider: 20 Year Celebration", sources: ["epic"], tier: "runs", appid: 391220 },
-  { name: "RollerCoaster Tycoon 3: Complete Edition", sources: ["epic"], tier: "runs", appid: 2197 },
-  { name: "RPG in a Box", sources: ["epic"], tier: "runs", appid: 745010 },
-  { name: "SAMURAI SHODOWN NEOGEO COLLECTION", sources: ["epic"], tier: "runs", appid: 1142950 },
-  { name: "Session: Skate Sim", sources: ["epic"], tier: "runs", appid: 861650 },
-  { name: "Shadow of the Tomb Raider: Definitive Edition", sources: ["epic"], tier: "play", appid: 750920, note: "Low settings ~30-40fps" },
-  { name: "Sherlock Holmes: Crimes and Punishments", sources: ["epic"], tier: "runs", appid: 246840 },
-  { name: "Slime Rancher", sources: ["epic"], tier: "runs", appid: 433340 },
-  { name: "SOMA", sources: ["epic"], tier: "runs", appid: 282140 },
-  { name: "Star Wars: Squadrons", sources: ["epic"], tier: "runs", appid: 1222730 },
-  { name: "Star Wars: Battlefront II", sources: ["epic"], tier: "runs", appid: null, note: "Low settings 1080p ~40fps" },
-  { name: "Stories Untold", sources: ["epic"], tier: "runs", appid: 558420 },
-  { name: "Stranger Things 3: The Game", sources: ["epic"], tier: "runs", appid: 1097760 },
-  { name: "Subnautica: Below Zero", sources: ["epic"], tier: "runs", appid: 848450 },
-  { name: "Suicide Squad: Kill the Justice League", sources: ["epic"], tier: "play", appid: 315210, note: "Demanding — low settings 720p only" },
-  { name: "Sundered: Eldritch Edition", sources: ["epic"], tier: "runs", appid: 535480 },
-  { name: "Sunless Sea", sources: ["epic"], tier: "runs", appid: 304650 },
-  { name: "Super Meat Boy", sources: ["epic"], tier: "runs", appid: 40800 },
-  { name: "Super Meat Boy Forever", sources: ["epic"], tier: "runs", appid: 1128920 },
-  { name: "Superbrothers: Sword & Sworcery EP", sources: ["epic"], tier: "runs", appid: 204060 },
-  { name: "Surviving Mars", sources: ["epic"], tier: "runs", appid: 464920 },
-  { name: "Tacoma", sources: ["epic"], tier: "runs", appid: 343860 },
-  { name: "Tales of the Neon Sea", sources: ["epic"], tier: "runs", appid: 706640 },
-  { name: "Teenage Mutant Ninja Turtles: Shredder's Revenge", sources: ["epic"], tier: "runs", appid: 1361510 },
-  { name: "The Alto Collection", sources: ["epic"], tier: "runs", appid: 1018430 },
-  { name: "The Bridge", sources: ["epic"], tier: "runs", appid: 232790 },
-  { name: "The End is Nigh", sources: ["epic"], tier: "runs", appid: 583470 },
-  { name: "The Escapists 2", sources: ["epic"], tier: "runs", appid: 641990 },
-  { name: "The First Tree", sources: ["epic"], tier: "runs", appid: 631620 },
-  { name: "The Jackbox Party Pack", sources: ["epic"], tier: "runs", appid: 331670 },
-  { name: "The Talos Principle", sources: ["epic"], tier: "runs", appid: 257510 },
-  { name: "The Walking Dead: The Final Season", sources: ["epic"], tier: "runs", appid: 1054620 },
-  { name: "The Witness", sources: ["epic"], tier: "runs", appid: 210970 },
-  { name: "The World Next Door", sources: ["epic"], tier: "runs", appid: 762160 },
-  { name: "Thimbleweed Park", sources: ["epic"], tier: "runs", appid: 569860 },
-  { name: "This War of Mine", sources: ["epic"], tier: "runs", appid: 282070 },
-  { name: "Ticket to Ride", sources: ["epic"], tier: "runs", appid: 108200 },
-  { name: "Torchlight", sources: ["epic"], tier: "runs", appid: 41500 },
-  { name: "Torchlight II", sources: ["epic"], tier: "runs", appid: 200710 },
-  { name: "Tormentor X Punisher", sources: ["epic"], tier: "runs", appid: 595770 },
-  { name: "Total War: WARHAMMER", sources: ["epic"], tier: "runs", appid: 364360, note: "Strategic battles fine; cinematic battles dip" },
-  { name: "Total War: WARHAMMER II", sources: ["epic"], tier: "play", appid: 594570, note: "Demanding — battles will stutter on low" },
-  { name: "Total War: WARHAMMER III", sources: ["epic"], tier: "skip", appid: 1142710, note: "Too demanding for the 660M" },
-  { name: "TowerFall Ascension", sources: ["epic"], tier: "runs", appid: 251470 },
-  { name: "Trek to Yomi", sources: ["epic"], tier: "runs", appid: 1772490 },
-  { name: "Watch Dogs", sources: ["epic"], tier: "play", appid: 243470, note: "Low settings 1080p — Ubisoft engine is uneven" },
-  { name: "Weird West: Definitive Edition", sources: ["epic"], tier: "runs", appid: 1097350 },
-  { name: "Wheels of Aurelia", sources: ["epic"], tier: "runs", appid: 471290 },
-  { name: "Where The Water Tastes Like Wine", sources: ["epic"], tier: "runs", appid: 447120 },
-  { name: "Wilmot's Warehouse", sources: ["epic"], tier: "runs", appid: 839870 },
-  { name: "Tom Clancy's Ghost Recon Breakpoint", sources: ["epic"], tier: "play", appid: 2231380, note: "Low settings 1080p — open world is demanding" },
-  { name: "Chivalry 2", sources: ["epic"], tier: "play", appid: 1824220, note: "Multiplayer FPS — playable but competitive needs higher fps" },
-
-  // Epic - SKIP
-  { name: "Unreal Tournament", sources: ["epic"], tier: "skip", appid: null, note: "Marked unavailable in your launcher" },
-
-  // ============ PC GAME PASS (current 2025/2026 highlights, accounting for what's also on other launchers) ============
-  // GAME PASS - RUNS GREAT
-  { name: "Forza Horizon 5", sources: ["gamepass"], tier: "runs", appid: 1551360, note: "Stunning optimization — runs at 1080p medium on iGPUs" },
-  { name: "Halo: The Master Chief Collection", sources: ["gamepass"], tier: "runs", appid: 976730 },
-  { name: "Halo Infinite", sources: ["gamepass"], tier: "runs", appid: 1240440, note: "Campaign runs at low; multiplayer benefits from higher fps" },
-  { name: "Gears 5", sources: ["gamepass"], tier: "runs", appid: 1097840, note: "Great optimization, 1080p low/medium" },
-  { name: "Pentiment", sources: ["gamepass"], tier: "runs", appid: 1205520 },
-  { name: "Grounded", sources: ["gamepass"], tier: "runs", appid: 962130 },
-  { name: "Persona 5 Royal", sources: ["gamepass"], tier: "runs", appid: 1687950 },
-  { name: "Persona 4 Golden", sources: ["gamepass"], tier: "runs", appid: 1113000 },
-  { name: "Persona 3 Reload", sources: ["gamepass"], tier: "runs", appid: 2161700 },
-  { name: "Like a Dragon: Infinite Wealth", sources: ["gamepass"], tier: "runs", appid: 2072450 },
-  { name: "Yakuza 0", sources: ["gamepass"], tier: "runs", appid: 638970 },
-  { name: "Octopath Traveler II", sources: ["gamepass"], tier: "runs", appid: 1850130 },
-  { name: "Sea of Stars", sources: ["gamepass"], tier: "runs", appid: 1244090 },
-  { name: "Pizza Tower", sources: ["gamepass"], tier: "runs", appid: 2231450 },
-  { name: "Lies of P", sources: ["gamepass"], tier: "runs", appid: 1627720, note: "Good optimization, 1080p low" },
-  { name: "Atomfall", sources: ["gamepass"], tier: "runs", appid: 2553870 },
-  { name: "Avowed", sources: ["gamepass"], tier: "play", appid: 2457220, note: "UE5 — low settings 1080p may dip below 30fps" },
-  { name: "South of Midnight", sources: ["gamepass"], tier: "play", appid: 3043470, note: "UE5 stylized — low settings" },
-  { name: "Indiana Jones and the Great Circle", sources: ["gamepass"], tier: "play", appid: 2677660, note: "id Tech engine helps, but RT requirements are an issue" },
-  { name: "Senua's Saga: Hellblade II", sources: ["gamepass"], tier: "skip", appid: 2461850, note: "UE5 with very high min specs — won't run well" },
-  { name: "Starfield", sources: ["gamepass", "steam"], tier: "skip", appid: 1716740, note: "Heavy CPU+GPU demands; your iGPU is below min spec" },
-  { name: "Microsoft Flight Simulator 2024", sources: ["gamepass"], tier: "skip", appid: 2537590, note: "Demanding even on high-end hardware" },
-  { name: "Assassin's Creed Shadows", sources: ["gamepass"], tier: "skip", appid: 3159330, note: "Modern AC engine too demanding for iGPU" },
-  { name: "Stalker 2: Heart of Chornobyl", sources: ["gamepass"], tier: "skip", appid: 1643320, note: "UE5 + open world — iGPU can't handle" },
-  { name: "Diablo IV", sources: ["gamepass"], tier: "play", appid: null, note: "Battle.net required; runs at low/medium 1080p" },
-  { name: "Hi-Fi Rush", sources: ["gamepass"], tier: "runs", appid: 1817230, note: "Stylized rhythm action, runs great" },
-  { name: "Plants vs. Zombies: Garden Warfare 2", sources: ["gamepass"], tier: "runs", appid: null },
-  { name: "Stray", sources: ["gamepass"], tier: "runs", appid: 1332010, note: "UE4 cat game — runs fine on low" },
-  { name: "Dredge", sources: ["gamepass"], tier: "runs", appid: 1562430, note: "Already in GOG library" },
-  { name: "Slay the Princess", sources: ["gamepass"], tier: "runs", appid: 1989270 },
-  { name: "Citizen Sleeper", sources: ["gamepass"], tier: "runs", appid: 1634840 },
-  { name: "Citizen Sleeper 2: Starward Vector", sources: ["gamepass"], tier: "runs", appid: 2378720 },
-  { name: "Tunic", sources: ["gamepass"], tier: "runs", appid: 553420 },
-  { name: "High on Life", sources: ["gamepass"], tier: "runs", appid: 1583230 },
-  { name: "Cocoon", sources: ["gamepass"], tier: "runs", appid: 1497440 },
-  { name: "Dave the Diver", sources: ["gamepass"], tier: "runs", appid: 1868140 },
-  { name: "Vampire Survivors", sources: ["gamepass"], tier: "runs", appid: 1794680 },
-  { name: "Brotato", sources: ["gamepass"], tier: "runs", appid: 1942280 },
-  { name: "Roboquest", sources: ["gamepass"], tier: "runs", appid: 692890 },
-  { name: "33 Immortals", sources: ["gamepass"], tier: "play", appid: 2399690, note: "30-player co-op may stutter on iGPU" },
-  { name: "The Outer Worlds 2", sources: ["gamepass"], tier: "play", appid: 2820370, note: "UE5 — expect 720p low/medium ~30fps" },
-  { name: "Clair Obscur: Expedition 33", sources: ["gamepass"], tier: "play", appid: 1903340, note: "UE5 — low settings 720p target" },
-  { name: "Towerborne", sources: ["gamepass"], tier: "runs", appid: 956580 },
-  { name: "Wuchang: Fallen Feathers", sources: ["gamepass"], tier: "play", appid: 2277560, note: "UE5 souls-like, demanding" },
-  { name: "Ninja Gaiden 4", sources: ["gamepass"], tier: "play", appid: null, note: "Action game — playable on low" },
-  { name: "Outriders", sources: ["gamepass"], tier: "play", appid: 680420, note: "UE4 looter shooter — low settings" },
-  { name: "Football Manager 25", sources: ["gamepass"], tier: "runs", appid: null, note: "Text/UI heavy, runs anywhere" },
-  { name: "Age of Mythology: Retold", sources: ["gamepass"], tier: "runs", appid: 1934680 },
-  { name: "Age of Empires II: Definitive Edition", sources: ["gamepass"], tier: "runs", appid: 813780 },
-  { name: "Age of Empires IV", sources: ["gamepass"], tier: "runs", appid: 1466860 },
-];
+// Game data is defined in games.js (window.GAMES). Run `node scripts/enrich-games.js` to refresh genres/ratings.
+const games = window.GAMES;
 
 
 const sourceLabels = { steam: "Steam", gog: "GOG", epic: "Epic", gamepass: "Game Pass" };
@@ -1254,6 +909,14 @@ function makeCover(g) {
   return null;
 }
 
+function ratingBand(r) {
+  if (r == null || isNaN(r)) return 'na';
+  if (r >= 90) return 'hi';
+  if (r >= 80) return 'ok';
+  if (r >= 70) return 'mid';
+  return 'lo';
+}
+
 function renderCard(g) {
   const cover = makeCover(g);
   const letter = g.name.replace(/^(The|A|An) /, '').charAt(0).toUpperCase();
@@ -1262,34 +925,57 @@ function renderCard(g) {
     ? `<div class="cover" style="background-image:url('${cover}')"></div>`
     : `<div class="cover no-img" data-letter="${letter}"></div>`;
   const sourceBadges = g.sources.map(s => `<span class="src src-${s}">${sourceLabels[s]}</span>`).join('');
+  const band = ratingBand(g.rating);
+  const ratingTitle = g.reviewDesc ? `${g.reviewDesc}${g.rating != null ? ` · ${Math.round(g.rating)}%` : ''}` : '';
+  const ratingHtml = g.rating != null
+    ? `<span class="rating" data-band="${band}" title="${ratingTitle}">${Math.round(g.rating)}%</span>`
+    : '';
   const note = g.note ? `<div class="note">${g.note}</div>` : '';
+  const genres = (g.genres || []).map(s => s.toLowerCase()).join('|');
   return `
-    <div class="card" data-tier="${g.tier}" data-sources="${g.sources.join(',')}" data-name="${g.name.toLowerCase()}">
+    <div class="card" data-tier="${g.tier}" data-sources="${g.sources.join(',')}" data-name="${g.name.toLowerCase()}" data-genres="${genres}" data-rating-band="${band}">
       <div class="badge-tier ${g.tier}" data-letter="${tierLetter}"></div>
       ${coverHtml}
       <div class="card-body">
         <div class="name">${g.name}</div>
-        <div class="meta">${sourceBadges}</div>
+        <div class="meta">${sourceBadges}${ratingHtml}</div>
         ${note}
       </div>
     </div>
   `;
 }
 
+const TIERS = ['runs', 'play', 'skip'];
+const SORTERS = {
+  'tier':         (a, b) => a.name.localeCompare(b.name),
+  'name-asc':     (a, b) => a.name.localeCompare(b.name),
+  'name-desc':    (a, b) => b.name.localeCompare(a.name),
+  'rating-desc':  (a, b) => (b.rating ?? -1) - (a.rating ?? -1) || a.name.localeCompare(b.name),
+  'shuffle':      () => Math.random() - 0.5,
+};
+
 function render() {
   const main = document.getElementById('main');
-  const tiers = ['runs', 'play', 'skip'];
   let html = '';
-  for (const t of tiers) {
-    const tierGames = games.filter(g => g.tier === t).sort((a, b) => a.name.localeCompare(b.name));
+  if (activeSort === 'tier') {
+    for (const t of TIERS) {
+      const tierGames = games.filter(g => g.tier === t).sort(SORTERS['name-asc']);
+      html += `
+        <section class="tier tier-${t}" data-tier-section="${t}">
+          <div class="tier-head">
+            <h2>${tierData[t].title}</h2>
+            <span class="desc">${tierData[t].desc}</span>
+            <span class="count" data-count="${t}">${tierGames.length}</span>
+          </div>
+          <div class="grid">${tierGames.map(renderCard).join('')}</div>
+        </section>
+      `;
+    }
+  } else {
+    const sorted = [...games].sort(SORTERS[activeSort]);
     html += `
-      <section class="tier tier-${t}" data-tier-section="${t}">
-        <div class="tier-head">
-          <h2>${tierData[t].title}</h2>
-          <span class="desc">${tierData[t].desc}</span>
-          <span class="count" data-count="${t}">${tierGames.length}</span>
-        </div>
-        <div class="grid">${tierGames.map(renderCard).join('')}</div>
+      <section class="tier flat" data-tier-section="flat">
+        <div class="grid">${sorted.map(renderCard).join('')}</div>
       </section>
     `;
   }
@@ -1318,7 +1004,31 @@ function render() {
 
 let activeSrc = 'all';
 let activeTier = 'all';
+let activeRating = 'all';
+let activeGenres = new Set();   // empty = all
+let activeSort = 'tier';
 let searchQuery = '';
+
+try {
+  const savedSort = localStorage.getItem('batty-games-sort');
+  if (savedSort && (savedSort === 'tier' || SORTERS[savedSort])) activeSort = savedSort;
+} catch(e) {}
+
+function buildGenreChips() {
+  const seen = new Set();
+  for (const g of games) (g.genres || []).forEach(x => seen.add(x));
+  const all = Array.from(seen).sort((a, b) => a.localeCompare(b));
+  const wrap = document.getElementById('genre-filters');
+  // wipe existing chips except the "All" chip and label
+  wrap.querySelectorAll('.chip:not([data-genre="all"])').forEach(c => c.remove());
+  for (const name of all) {
+    const btn = document.createElement('button');
+    btn.className = 'chip';
+    btn.dataset.genre = name.toLowerCase();
+    btn.textContent = name;
+    wrap.appendChild(btn);
+  }
+}
 
 function applyFilters() {
   const cards = document.querySelectorAll('.card');
@@ -1326,18 +1036,59 @@ function applyFilters() {
   cards.forEach(card => {
     const tier = card.dataset.tier;
     const sources = card.dataset.sources.split(',');
+    const cardGenres = card.dataset.genres ? card.dataset.genres.split('|') : [];
+    const band = card.dataset.ratingBand;
     const name = card.dataset.name;
     const matchesSrc = activeSrc === 'all' || sources.includes(activeSrc);
     const matchesTier = activeTier === 'all' || tier === activeTier;
+    const matchesRating = activeRating === 'all' || band === activeRating;
+    const matchesGenre = activeGenres.size === 0 || cardGenres.some(g => activeGenres.has(g));
     const matchesSearch = !searchQuery || name.includes(searchQuery);
-    const visible = matchesSrc && matchesTier && matchesSearch;
+    const visible = matchesSrc && matchesTier && matchesRating && matchesGenre && matchesSearch;
     card.classList.toggle('hidden', !visible);
-    if (visible) visibleByTier[tier]++;
+    if (visible && tier in visibleByTier) visibleByTier[tier]++;
   });
   document.querySelectorAll('[data-tier-section]').forEach(sec => {
     const t = sec.dataset.tierSection;
+    if (t === 'flat') return;
     sec.classList.toggle('hidden', visibleByTier[t] === 0);
     sec.querySelector(`[data-count="${t}"]`).textContent = visibleByTier[t];
+  });
+}
+
+function wireSingleSelect(groupId, onSelect) {
+  document.querySelectorAll(`#${groupId} .chip`).forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll(`#${groupId} .chip`).forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      onSelect(chip);
+    });
+  });
+}
+
+function wireGenreChips() {
+  document.querySelectorAll('#genre-filters .chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const g = chip.dataset.genre;
+      if (g === 'all') {
+        activeGenres.clear();
+        document.querySelectorAll('#genre-filters .chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+      } else {
+        document.querySelector('#genre-filters .chip[data-genre="all"]').classList.remove('active');
+        if (activeGenres.has(g)) {
+          activeGenres.delete(g);
+          chip.classList.remove('active');
+        } else {
+          activeGenres.add(g);
+          chip.classList.add('active');
+        }
+        if (activeGenres.size === 0) {
+          document.querySelector('#genre-filters .chip[data-genre="all"]').classList.add('active');
+        }
+      }
+      applyFilters();
+    });
   });
 }
 
@@ -1345,21 +1096,19 @@ document.getElementById('search').addEventListener('input', e => {
   searchQuery = e.target.value.trim().toLowerCase();
   applyFilters();
 });
-document.querySelectorAll('#src-filters .chip').forEach(chip => {
-  chip.addEventListener('click', () => {
-    document.querySelectorAll('#src-filters .chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    activeSrc = chip.dataset.src;
-    applyFilters();
-  });
+wireSingleSelect('src-filters',    chip => { activeSrc = chip.dataset.src; applyFilters(); });
+wireSingleSelect('tier-filters',   chip => { activeTier = chip.dataset.tier; applyFilters(); });
+wireSingleSelect('rating-filters', chip => { activeRating = chip.dataset.rating; applyFilters(); });
+wireSingleSelect('sort-filters',   chip => {
+  activeSort = chip.dataset.sort;
+  try { localStorage.setItem('batty-games-sort', activeSort); } catch(e) {}
+  render();
+  applyFilters();
 });
-document.querySelectorAll('#tier-filters .chip').forEach(chip => {
-  chip.addEventListener('click', () => {
-    document.querySelectorAll('#tier-filters .chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    activeTier = chip.dataset.tier;
-    applyFilters();
-  });
+
+// Reflect persisted sort in chip state
+document.querySelectorAll('#sort-filters .chip').forEach(c => {
+  c.classList.toggle('active', c.dataset.sort === activeSort);
 });
 
 // THEME SWITCHER
@@ -1383,7 +1132,10 @@ try {
   }
 } catch(e) {}
 
+buildGenreChips();
+wireGenreChips();
 render();
+applyFilters();
 </script>
 </body>
 </html>

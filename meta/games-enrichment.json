@@ -1,0 +1,8364 @@
+{
+  "220": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846228659,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "440": {
+    "genres": [
+      "Action",
+      "Free To Play"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846230186,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  "550": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846239025,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "620": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 99,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846227934,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "730": {
+    "genres": [
+      "Action",
+      "Free To Play"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846229424,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  "1700": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848991488,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "2197": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846964545
+  },
+  "2200": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850850879,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2210": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850844367,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2270": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856039639,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2280": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850468528,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2310": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850841052,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2320": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850847621,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "4000": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846263731,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "7820": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846802946
+  },
+  "8000": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846317961,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "8140": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846319589,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "8870": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846241269,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "8930": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846249261,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "9010": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850890516,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "9050": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850471772,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "20900": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846316406,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "20920": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846317129,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "21810": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846809386
+  },
+  "22300": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850497886,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "22320": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777851026727,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "22330": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777855881249,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "22380": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846239735,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "28050": {
+    "genres": null,
+    "rating": 99,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846244919
+  },
+  "32440": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846328188,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "33230": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848997935,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "35140": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846356657,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "38400": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846311700,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "38410": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846312423,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "38420": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846313148,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "40800": {
+    "genres": [
+      "Indie"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847010457,
+    "lastWrittenGenres": [
+      "Indie"
+    ]
+  },
+  "41500": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847076793,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "48000": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846269531,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "48190": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849001226,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "48700": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846248529,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "49520": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846226397,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "55150": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856008517,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "55230": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846257284,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "57300": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846351732,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "72850": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846247775,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "105600": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846234658,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "107100": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846275644,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "108200": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847073552,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "108710": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846342323,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "115100": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "RPG"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846363013,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "RPG"
+    ]
+  },
+  "200260": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846357380,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "200510": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846250770,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "200710": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847080067,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "200900": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846359841,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "201810": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846260132,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "201870": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849033982,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "202750": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846349394,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "203140": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846300733,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "203160": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846246348,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "204060": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847017040,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "205100": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846243518,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "206420": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846256584,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "208650": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846358194,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "210970": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847060191,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "212680": {
+    "genres": null,
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846375695
+  },
+  "213670": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850947147,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "214490": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846350922,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "214510": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846327371,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "214560": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846255787,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "218620": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846264435,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "220240": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850504394,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "220260": {
+    "genres": [
+      "Casual",
+      "Simulation"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850507620,
+    "lastWrittenGenres": [
+      "Casual",
+      "Simulation"
+    ]
+  },
+  "221100": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777849162401,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer"
+    ]
+  },
+  "221910": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846272522,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "224760": {
+    "genres": null,
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846376494
+  },
+  "224940": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 66,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846320303,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "224960": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846321106,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "224980": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846321817,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "225080": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846266593,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "225540": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846257986,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "227040": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850609155
+  },
+  "228280": {
+    "genres": [
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846313954,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "228380": {
+    "genres": [
+      "Action",
+      "Indie",
+      "Racing",
+      "Simulation",
+      "Sports"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856056439,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "Racing",
+      "Simulation",
+      "Sports"
+    ]
+  },
+  "230410": {
+    "genres": [
+      "Action",
+      "RPG",
+      "Free To Play"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846223800,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  "232090": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846224553,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "232430": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846271778,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "232790": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847036945,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "234140": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846258706,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "234650": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850913864,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "235460": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846218615,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "236390": {
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "Simulation",
+      "Free To Play"
+    ],
+    "rating": 73,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855998198,
+    "lastWrittenGenres": [
+      "Action",
+      "Massively Multiplayer",
+      "Simulation",
+      "Free To Play"
+    ]
+  },
+  "237930": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846276349,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "239120": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850533972,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "239200": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 70,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846352561,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "239350": {
+    "genres": [
+      "Indie"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846306996,
+    "lastWrittenGenres": [
+      "Indie"
+    ]
+  },
+  "240760": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846254977,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "241930": {
+    "genres": null,
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846223099
+  },
+  "242050": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849020905,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "242550": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846954555,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "242680": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846921751,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "243470": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847103217,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "244910": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846354925,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "245550": {
+    "genres": null,
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850834393
+  },
+  "246840": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846977754,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "251470": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847096554,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "251570": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846290709,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "252490": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846289890,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG"
+    ]
+  },
+  "252950": {
+    "genres": [
+      "Action",
+      "Indie",
+      "Racing",
+      "Sports"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846262279,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "Racing",
+      "Sports"
+    ]
+  },
+  "255710": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846360652,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "256290": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849119607,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "256330": {
+    "genres": [
+      "Racing"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850907316,
+    "lastWrittenGenres": [
+      "Racing"
+    ]
+  },
+  "257350": {
+    "genres": [
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846314784,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "257510": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847053544,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "257850": {
+    "genres": null,
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846387433
+  },
+  "260230": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777855981371,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "261030": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850665560,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "261110": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846265882,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "261530": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846885432,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "261550": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850738544,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "261570": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846267312,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "261640": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846227166,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "262060": {
+    "genres": [
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846367370,
+    "lastWrittenGenres": [
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "264710": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846335345,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "267530": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846878832,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "268050": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777855888000,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "268500": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846251595,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "268910": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846236871,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "270070": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 68,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846369042,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "271240": {
+    "genres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846925121,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "271590": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846277093,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "272270": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 70,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855944716,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "275850": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850781654,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "280680": {
+    "genres": [
+      "Indie",
+      "Animation & Modeling",
+      "Design & Illustration",
+      "Photo Editing"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777849014277,
+    "lastWrittenGenres": [
+      "Indie",
+      "Animation & Modeling",
+      "Design & Illustration",
+      "Photo Editing"
+    ]
+  },
+  "281990": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850973481,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "282070": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847070227,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "282140": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846984228,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "285030": {
+    "genres": null,
+    "rating": 50,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846363795
+  },
+  "285160": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846326584,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "285900": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850563529,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "286690": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846892010,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "287450": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850897188,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "287700": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846216319,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "289070": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846249984,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "289650": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777849043816,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "290300": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846957793,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "291550": {
+    "genres": [
+      "Action",
+      "Indie",
+      "Free To Play"
+    ],
+    "rating": 80,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849093231,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  "291650": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846253330,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "292030": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846277909,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "298110": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850510994,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "300550": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850917152,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "304390": {
+    "genres": null,
+    "rating": 69,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846378017
+  },
+  "304430": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846268793,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "304650": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847007174,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "305620": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777855901502,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "306130": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "RPG"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846287491,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "RPG"
+    ]
+  },
+  "311560": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849037290,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "311690": {
+    "genres": null,
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846371957
+  },
+  "312520": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850864199,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "312660": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846259409,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "315210": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 62,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777847000600,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "316790": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850592926,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "322110": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846344678,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "322190": {
+    "genres": [
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846306183,
+    "lastWrittenGenres": [
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "322330": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846238320,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "323580": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846852439,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "331670": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847050159,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "332200": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846340784,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "334440": {
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Massively Multiplayer"
+    ],
+    "rating": 71,
+    "reviewDesc": "7 user reviews",
+    "fetchedAt": 1777850612476,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play",
+      "Massively Multiplayer"
+    ]
+  },
+  "337000": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846245636,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "342180": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846293883,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "343860": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847023663,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "346110": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846289081,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG"
+    ]
+  },
+  "346940": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850920417,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "350080": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856042964,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "356190": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846299266,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "359060": {
+    "genres": [
+      "Action",
+      "Indie",
+      "Racing"
+    ],
+    "rating": 45,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777849007703,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "Racing"
+    ]
+  },
+  "359320": {
+    "genres": null,
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846370529
+  },
+  "359550": {
+    "genres": [
+      "Action",
+      "Free To Play"
+    ],
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846285338,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  "361420": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849050365,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "362960": {
+    "genres": [
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846254178,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "363970": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy",
+      "Free To Play"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849011002,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  "364360": {
+    "genres": [
+      "Action",
+      "Strategy"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847086622,
+    "lastWrittenGenres": [
+      "Action",
+      "Strategy"
+    ]
+  },
+  "365590": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 71,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855934864,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "367520": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846231723,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "368500": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 80,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849040532,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "371690": {
+    "genres": null,
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850517548
+  },
+  "371970": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846355841,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "376970": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 90,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777850867490,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "377160": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846240529,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "379430": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846280860,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "379720": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846261558,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "381210": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777849165690,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "383870": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846271057,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "384190": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846347884,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "386360": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Simulation",
+      "Strategy",
+      "Free To Play"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846217753,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Simulation",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  "386940": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777855971260,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "388210": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777849159122,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "388410": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777849004488,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "388880": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846931774,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "391220": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846247061,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "391540": {
+    "genres": [
+      "Indie",
+      "RPG"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846233883,
+    "lastWrittenGenres": [
+      "Indie",
+      "RPG"
+    ]
+  },
+  "391720": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846868793,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "391730": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846364515,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "397540": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846329831,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "400940": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 80,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846294703,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "403640": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846221645,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "404680": {
+    "genres": null,
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846386025
+  },
+  "408630": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846845958
+  },
+  "409710": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846242070,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "409720": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 72,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846242787,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "412020": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846895420,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "413150": {
+    "genres": [
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846230947,
+    "lastWrittenGenres": [
+      "Indie",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "414340": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846222385,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "418370": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850887243,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "418650": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846295520,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "424840": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850682118,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "425860": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 56,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777856059823,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "426530": {
+    "genres": [
+      "Movie"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846832700,
+    "lastWrittenGenres": [
+      "Movie"
+    ]
+  },
+  "427920": {
+    "genres": null,
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848952056
+  },
+  "431240": {
+    "genres": null,
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846383192
+  },
+  "433340": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846980994,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "435150": {
+    "genres": [
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846252408,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "437300": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855967955
+  },
+  "438100": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "Simulation",
+      "Sports",
+      "Free To Play",
+      "Early Access"
+    ],
+    "rating": 75,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846297148,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "Simulation",
+      "Sports",
+      "Free To Play",
+      "Early Access"
+    ]
+  },
+  "442070": {
+    "genres": null,
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846369757
+  },
+  "444640": {
+    "genres": [
+      "Action",
+      "Strategy",
+      "Free To Play"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850556978,
+    "lastWrittenGenres": [
+      "Action",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  "446910": {
+    "genres": [
+      "Indie"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846341605,
+    "lastWrittenGenres": [
+      "Indie"
+    ]
+  },
+  "447120": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847113262,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "447150": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846354120,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "448510": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846928498,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "449000": {
+    "genres": [
+      "Casual",
+      "Free To Play",
+      "Indie",
+      "Early Access"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846348661,
+    "lastWrittenGenres": [
+      "Casual",
+      "Free To Play",
+      "Indie",
+      "Early Access"
+    ]
+  },
+  "454650": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850481624,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer"
+    ]
+  },
+  "456670": {
+    "genres": null,
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846384614
+  },
+  "459220": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850605925,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "460120": {
+    "genres": [
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850910543,
+    "lastWrittenGenres": [
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "460920": {
+    "genres": [
+      "Action",
+      "Sports"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850970191,
+    "lastWrittenGenres": [
+      "Action",
+      "Sports"
+    ]
+  },
+  "460930": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 80,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855928215,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "462770": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846274899,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "464060": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846336162,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "464920": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 80,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847020356,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "470220": {
+    "genres": [
+      "Casual"
+    ],
+    "rating": 70,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855974692,
+    "lastWrittenGenres": [
+      "Casual"
+    ]
+  },
+  "471290": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847109961
+  },
+  "471710": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "Free To Play"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846297873,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "Free To Play"
+    ]
+  },
+  "471950": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846822610
+  },
+  "474960": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850854179,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "476600": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 70,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777849109761,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "477160": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850625792,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "480490": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850827748,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "481510": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846918471,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "488790": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850943879,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "489830": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846217047,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "493200": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846961092,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "493540": {
+    "genres": null,
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846377239
+  },
+  "493900": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846343149,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "495420": {
+    "genres": [
+      "Action",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850966938,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "496300": {
+    "genres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846338429,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "501300": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846270329,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "502810": {
+    "genres": [
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 55,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846882110,
+    "lastWrittenGenres": [
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "502820": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 65,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846875449,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "503940": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846951354,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "504230": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846233158,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "508440": {
+    "genres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777855951273,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "510780": {
+    "genres": null,
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846383902
+  },
+  "514900": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846343874,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "517630": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 62,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846339965,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "518790": {
+    "genres": [
+      "Adventure",
+      "Simulation",
+      "Sports"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777855918127,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Simulation",
+      "Sports"
+    ]
+  },
+  "521470": {
+    "genres": [
+      "Casual",
+      "Free To Play",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846915205,
+    "lastWrittenGenres": [
+      "Casual",
+      "Free To Play",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "524220": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846219437,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "525740": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual"
+    ],
+    "rating": 85,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777846944820,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual"
+    ]
+  },
+  "527230": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846333207,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "535480": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847003878,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "546430": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846935064,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "548430": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777849178873,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "548570": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 63,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846948062,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "552500": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846225362,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "552520": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846331577,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "552990": {
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "Simulation",
+      "Strategy",
+      "Free To Play"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777856049784,
+    "lastWrittenGenres": [
+      "Action",
+      "Massively Multiplayer",
+      "Simulation",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  "553420": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847221482,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "555160": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846292247,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "558320": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846858898,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "558420": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846990762,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "560130": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850811282,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "566090": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 67,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777851013400,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "569860": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847066810,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "572890": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846938287,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "578080": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "Free To Play"
+    ],
+    "rating": 60,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846284628,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "Free To Play"
+    ]
+  },
+  "578620": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846293068,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "578650": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846298569,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "581320": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846281581,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "581340": {
+    "genres": [
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 59,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777850652413,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "582010": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846279440,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "582160": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849030621,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "582270": {
+    "genres": null,
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846373400
+  },
+  "582660": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846286780,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "583470": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847040228,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "585420": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Racing",
+      "Simulation"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777855954598,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Racing",
+      "Simulation"
+    ]
+  },
+  "588650": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846236169,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "589360": {
+    "genres": [
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850765067,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "590380": {
+    "genres": [
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846849235,
+    "lastWrittenGenres": [
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "594570": {
+    "genres": [
+      "Action",
+      "Strategy"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847089964,
+    "lastWrittenGenres": [
+      "Action",
+      "Strategy"
+    ]
+  },
+  "594650": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846283903,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "595770": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 70,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847083336,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "597090": {
+    "genres": [
+      "Indie"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777856029093,
+    "lastWrittenGenres": [
+      "Indie"
+    ]
+  },
+  "597170": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777849126191,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "598810": {
+    "genres": [
+      "Casual",
+      "Strategy"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846359012,
+    "lastWrittenGenres": [
+      "Casual",
+      "Strategy"
+    ]
+  },
+  "601430": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777855891372,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "606150": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846905358,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "606880": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846282287,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "607080": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850837677,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "609490": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846901976,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "612390": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846366645,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "612880": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846260834,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "613100": {
+    "genres": [
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850622413,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "614570": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846244225,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "617290": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846283129,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "620980": {
+    "genres": [
+      "Indie"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846291458,
+    "lastWrittenGenres": [
+      "Indie"
+    ]
+  },
+  "624090": {
+    "genres": null,
+    "rating": 66,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846865456
+  },
+  "624670": {
+    "genres": [
+      "Movie"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850458792,
+    "lastWrittenGenres": [
+      "Movie"
+    ]
+  },
+  "627690": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Strategy",
+      "Free To Play"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846842576,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  "631620": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847046841
+  },
+  "632360": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846237574,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "632470": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846274120,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "637090": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Strategy"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849073418,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Strategy"
+    ]
+  },
+  "638970": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847159091,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "641320": {
+    "genres": [
+      "Casual",
+      "Simulation"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849135991,
+    "lastWrittenGenres": [
+      "Casual",
+      "Simulation"
+    ]
+  },
+  "641990": {
+    "genres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847043498,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "646570": {
+    "genres": [
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846235411,
+    "lastWrittenGenres": [
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "646910": {
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "Racing"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777851019971,
+    "lastWrittenGenres": [
+      "Action",
+      "Massively Multiplayer",
+      "Racing"
+    ]
+  },
+  "648350": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846855679,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "675010": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846908640,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "677620": {
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Indie"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846286063,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play",
+      "Indie"
+    ]
+  },
+  "680420": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 67,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777847260909,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "681280": {
+    "genres": [
+      "Action",
+      "Racing",
+      "Sports"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849185515,
+    "lastWrittenGenres": [
+      "Action",
+      "Racing",
+      "Sports"
+    ]
+  },
+  "689920": {
+    "genres": null,
+    "rating": 65,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846382484
+  },
+  "690980": {
+    "genres": [
+      "Action",
+      "Indie",
+      "Free To Play",
+      "Early Access"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850976712,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "Free To Play",
+      "Early Access"
+    ]
+  },
+  "692890": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847241145,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "699130": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846333912,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "701160": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850658976,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "702670": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850465322,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "704270": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 72,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850573257,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "704450": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846315593,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "705110": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846829270
+  },
+  "706640": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847027021
+  },
+  "707110": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 68,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777850576534,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "712190": {
+    "genres": null,
+    "rating": 68,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846379438
+  },
+  "719040": {
+    "genres": [
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856018748,
+    "lastWrittenGenres": [
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "728880": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846307777,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "729040": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846265173,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "731270": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846836023
+  },
+  "731490": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849142625,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "736100": {
+    "genres": [
+      "Indie"
+    ],
+    "rating": 98,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856063304,
+    "lastWrittenGenres": [
+      "Indie"
+    ]
+  },
+  "745010": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 58,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846967821,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "750920": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846278717,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "751780": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846304606,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "753640": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846273301,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "759450": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850874129
+  },
+  "760060": {
+    "genres": [
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846911906,
+    "lastWrittenGenres": [
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "761890": {
+    "genres": [
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777848965048,
+    "lastWrittenGenres": [
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  "762160": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847063520
+  },
+  "766820": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850963632
+  },
+  "768060": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 62,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846941508,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "780290": {
+    "genres": null,
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846381781
+  },
+  "782330": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846220931,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "784080": {
+    "genres": [
+      "Action",
+      "Simulation"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850705465,
+    "lastWrittenGenres": [
+      "Action",
+      "Simulation"
+    ]
+  },
+  "787860": {
+    "genres": null,
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846374892
+  },
+  "803630": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846806156
+  },
+  "812140": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849027351,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "813780": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847267392,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "814370": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850728692,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "814820": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846825900
+  },
+  "818470": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846789979
+  },
+  "835960": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777855911502,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "839770": {
+    "genres": [
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 73,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850804812,
+    "lastWrittenGenres": [
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "839870": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847116496,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "847370": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849017595,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "848450": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846997309,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "860510": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850685496,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "861650": {
+    "genres": [
+      "Indie",
+      "Simulation",
+      "Sports",
+      "Strategy"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846974379,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation",
+      "Sports",
+      "Strategy"
+    ]
+  },
+  "870780": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846332418,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "873940": {
+    "genres": [
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846365935,
+    "lastWrittenGenres": [
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "877200": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846296329,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "883710": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850880683,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "909720": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846310947,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "916440": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848978184,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "920210": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850672286,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "933110": {
+    "genres": [
+      "Strategy",
+      "Free To Play"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848961833,
+    "lastWrittenGenres": [
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  "939030": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 100,
+    "reviewDesc": "9 user reviews",
+    "fetchedAt": 1777850452274,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "945360": {
+    "genres": [
+      "Casual"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846263011,
+    "lastWrittenGenres": [
+      "Casual"
+    ]
+  },
+  "945510": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846793223
+  },
+  "947180": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850893849
+  },
+  "949230": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 54,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777849122966,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "952060": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850883961,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "953490": {
+    "genres": null,
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846386745
+  },
+  "956580": {
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Indie",
+      "Massively Multiplayer",
+      "Early Access"
+    ],
+    "rating": 66,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777847254295,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play",
+      "Indie",
+      "Massively Multiplayer",
+      "Early Access"
+    ]
+  },
+  "962130": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847142837,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "968870": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846361381,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "972660": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850950422,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "976730": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847129688,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "990080": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850615755,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "996580": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850957086,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "997010": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850820983,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "1011160": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846819342
+  },
+  "1011670": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Racing",
+      "Simulation"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846334627,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Racing",
+      "Simulation"
+    ]
+  },
+  "1017900": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848958573,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "1018430": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847033667
+  },
+  "1029890": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 72,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846872070,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "1030300": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850619036,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1043220": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846839312
+  },
+  "1049410": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850980120,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1054620": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 63,
+    "reviewDesc": "8 user reviews",
+    "fetchedAt": 1777847056859,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1055540": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 99,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846347032,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1056640": {
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ],
+    "rating": 69,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846337672,
+    "lastWrittenGenres": [
+      "Action",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  "1056960": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 43,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777856046406,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1057090": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846268016,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1091500": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846329016,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1092790": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850642382,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "1097350": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847106461,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "1097760": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 92,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777846994046,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "1097840": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 71,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847136277,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1099510": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850761666,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "1113000": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847149291,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1128920": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847013803,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "1129580": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850708956,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "1130520": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850758419
+  },
+  "1132410": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Racing"
+    ],
+    "rating": 33,
+    "reviewDesc": "Mostly Negative",
+    "fetchedAt": 1777850768342,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Racing"
+    ]
+  },
+  "1135690": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777855978002,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "1142710": {
+    "genres": [
+      "Action",
+      "Strategy"
+    ],
+    "rating": 70,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847093278,
+    "lastWrittenGenres": [
+      "Action",
+      "Strategy"
+    ]
+  },
+  "1142950": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846971032
+  },
+  "1145350": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850599379,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1145360": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846232450,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1148590": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850475052,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1151340": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 72,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850501164,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1158310": {
+    "genres": [
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849152524,
+    "lastWrittenGenres": [
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "1161580": {
+    "genres": null,
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846385321
+  },
+  "1167450": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846339242,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1172380": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846336895,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1172620": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846280160,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1173770": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850527481,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1173780": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850530763,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1173800": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850537179,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1177980": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850678845,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "1182900": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848948776,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1183940": {
+    "genres": null,
+    "rating": 60,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846381039
+  },
+  "1184050": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 75,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850570045,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "1190000": {
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777849116324,
+    "lastWrittenGenres": [
+      "Racing",
+      "Simulation"
+    ]
+  },
+  "1190460": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849172332,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1190560": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 67,
+    "reviewDesc": "3 user reviews",
+    "fetchedAt": 1777849079963,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1191660": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 75,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850540419,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1196590": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850877406,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1203220": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "Free To Play"
+    ],
+    "rating": 73,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850751753,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "Free To Play"
+    ]
+  },
+  "1205520": {
+    "genres": [
+      "Adventure",
+      "Casual"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847139566,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual"
+    ]
+  },
+  "1209080": {
+    "genres": [
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 71,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777856022033,
+    "lastWrittenGenres": [
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "1211020": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777856036260,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "1222730": {
+    "genres": [
+      "Action",
+      "Simulation"
+    ],
+    "rating": 65,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846987492,
+    "lastWrittenGenres": [
+      "Action",
+      "Simulation"
+    ]
+  },
+  "1224680": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850808050,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "1233570": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 80,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777846325821,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1237970": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846220221,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1240440": {
+    "genres": [
+      "Action",
+      "Free To Play"
+    ],
+    "rating": 69,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777847133019,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  "1242980": {
+    "genres": [
+      "Casual",
+      "Indie"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846862262,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie"
+    ]
+  },
+  "1244090": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847165839,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1244360": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850645763
+  },
+  "1244540": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Sports"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849076693,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Sports"
+    ]
+  },
+  "1250410": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850715488,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "1252330": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777849175608,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1268550": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777856053143,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "1271330": {
+    "genres": [
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 100,
+    "reviewDesc": "8 user reviews",
+    "fetchedAt": 1777851000191,
+    "lastWrittenGenres": [
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "1273390": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual"
+    ],
+    "rating": 68,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846345404,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual"
+    ]
+  },
+  "1273400": {
+    "genres": [
+      "Casual",
+      "Simulation"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849132718,
+    "lastWrittenGenres": [
+      "Casual",
+      "Simulation"
+    ]
+  },
+  "1276620": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855964653
+  },
+  "1282410": {
+    "genres": [
+      "Action",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 82,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846299986,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "1282730": {
+    "genres": [
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 93,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846888665,
+    "lastWrittenGenres": [
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "1290000": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850824261,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "1294810": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 38,
+    "reviewDesc": "Mostly Negative",
+    "fetchedAt": 1777850870749,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1314370": {
+    "genres": [
+      "Adventure",
+      "Free To Play",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 100,
+    "reviewDesc": "1 user reviews",
+    "fetchedAt": 1777846346205,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Free To Play",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1322920": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849053606
+  },
+  "1332010": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847208493,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1334260": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846815959
+  },
+  "1336490": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848955332,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "1346940": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855961273
+  },
+  "1357170": {
+    "genres": [
+      "Action",
+      "Racing",
+      "Simulation",
+      "Sports"
+    ],
+    "rating": 67,
+    "reviewDesc": "3 user reviews",
+    "fetchedAt": 1777855991627,
+    "lastWrittenGenres": [
+      "Action",
+      "Racing",
+      "Simulation",
+      "Sports"
+    ]
+  },
+  "1357330": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 56,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846350132,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "1361210": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 71,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777856001540,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "1361510": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847030290,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "1363080": {
+    "genres": [
+      "Simulation",
+      "Strategy",
+      "Early Access"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850695662,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy",
+      "Early Access"
+    ]
+  },
+  "1368030": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848974903,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1369010": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850668905
+  },
+  "1369630": {
+    "genres": null,
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846371245
+  },
+  "1391540": {
+    "genres": [
+      "Action",
+      "Indie",
+      "Early Access"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850494636,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "Early Access"
+    ]
+  },
+  "1401590": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850455529,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "1408610": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Simulation",
+      "Sports"
+    ],
+    "rating": 63,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777849112989,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Simulation",
+      "Sports"
+    ]
+  },
+  "1413480": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846310067,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1422450": {
+    "genres": [
+      "Action"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846288251,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1426780": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777848971638
+  },
+  "1430110": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850632449
+  },
+  "1449560": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846898696,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1457320": {
+    "genres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 65,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777850996917,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "1458140": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Racing",
+      "Simulation"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850795006,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Racing",
+      "Simulation"
+    ]
+  },
+  "1462120": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849139304,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "1465360": {
+    "genres": [
+      "Adventure",
+      "Simulation"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850937211,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Simulation"
+    ]
+  },
+  "1466860": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847270639,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "1475810": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850579760,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1493670": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846796480
+  },
+  "1497440": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847228143,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1527950": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856015371,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "1531660": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849169057
+  },
+  "1545290": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850960361,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1551360": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Racing",
+      "Simulation",
+      "Sports"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847126454,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Racing",
+      "Simulation",
+      "Sports"
+    ]
+  },
+  "1562430": {
+    "genres": [
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777846301461,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "1583230": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 89,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847224769,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1583640": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855908091
+  },
+  "1583690": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 100,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777855898121,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1599600": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850817736,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "1601570": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777851010163,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "1601580": {
+    "genres": [
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 75,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850553709,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "1623730": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850798248,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ]
+  },
+  "1627720": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847172396,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "1634840": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847214950
+  },
+  "1637320": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850462016,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "1643320": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 80,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847201939,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "1654660": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846303115,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1655660": {
+    "genres": [
+      "Casual",
+      "Free To Play",
+      "Massively Multiplayer",
+      "Strategy"
+    ],
+    "rating": 81,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777848994695,
+    "lastWrittenGenres": [
+      "Casual",
+      "Free To Play",
+      "Massively Multiplayer",
+      "Strategy"
+    ]
+  },
+  "1665230": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846799730
+  },
+  "1680740": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849089961
+  },
+  "1681430": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850904032,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "1687950": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847146048,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1710170": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846324247,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "1715380": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Early Access"
+    ],
+    "rating": 48,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777846302281,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Free To Play",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Early Access"
+    ]
+  },
+  "1716740": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 57,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777847192096,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "1721180": {
+    "genres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 87,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777850560219,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "1730740": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850788417
+  },
+  "1735700": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849060199,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  "1763830": {
+    "genres": null,
+    "rating": 83,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777846372685
+  },
+  "1771300": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850655645,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "1772490": {
+    "genres": [
+      "Casual"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847099876,
+    "lastWrittenGenres": [
+      "Casual"
+    ]
+  },
+  "1794680": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847234635,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1809540": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 95,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850775118,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1809590": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855931599
+  },
+  "1813690": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 97,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777850860829,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "1817230": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847205252,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1824220": {
+    "genres": [
+      "Action",
+      "Massively Multiplayer"
+    ],
+    "rating": 80,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847123075,
+    "lastWrittenGenres": [
+      "Action",
+      "Massively Multiplayer"
+    ]
+  },
+  "1837350": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849066829
+  },
+  "1850130": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847162505
+  },
+  "1857180": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850722069
+  },
+  "1862810": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850543764
+  },
+  "1868140": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847231405,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "1875830": {
+    "genres": [
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850993642,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "1898840": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850748327,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "1903340": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 95,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847251051,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "1908410": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850940541
+  },
+  "1924850": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777848968282,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1928980": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Early Access"
+    ],
+    "rating": 67,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777850801529,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Early Access"
+    ]
+  },
+  "1934680": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847264176,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "1938090": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 59,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777849103207,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1942280": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847237875,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "1971870": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 72,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850735269,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "1980690": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849129433
+  },
+  "1989270": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 97,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847211732,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "2000270": {
+    "genres": [
+      "Massively Multiplayer",
+      "RPG",
+      "Simulation"
+    ],
+    "rating": 50,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777850702197,
+    "lastWrittenGenres": [
+      "Massively Multiplayer",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  "2008500": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850927278
+  },
+  "2009270": {
+    "genres": [
+      "Casual",
+      "RPG",
+      "Sports",
+      "Strategy"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777856025511,
+    "lastWrittenGenres": [
+      "Casual",
+      "RPG",
+      "Sports",
+      "Strategy"
+    ]
+  },
+  "2019060": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850484907
+  },
+  "2021880": {
+    "genres": [
+      "Strategy"
+    ],
+    "rating": 69,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777848984917,
+    "lastWrittenGenres": [
+      "Strategy"
+    ]
+  },
+  "2034690": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850785036
+  },
+  "2051620": {
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "Free To Play"
+    ],
+    "rating": 80,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850488158,
+    "lastWrittenGenres": [
+      "Action",
+      "Massively Multiplayer",
+      "Free To Play"
+    ]
+  },
+  "2055810": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855948012
+  },
+  "2061070": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777846812685
+  },
+  "2061470": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850771816
+  },
+  "2072450": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 91,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847155855,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "2073850": {
+    "genres": [
+      "Action",
+      "Free To Play"
+    ],
+    "rating": 78,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855894770,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  "2074920": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Free To Play"
+    ],
+    "rating": 57,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777848981558,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  "2095320": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855988332
+  },
+  "2096330": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850649087
+  },
+  "2104410": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850635730
+  },
+  "2122450": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850741803
+  },
+  "2128410": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 100,
+    "reviewDesc": "2 user reviews",
+    "fetchedAt": 1777855994908,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "2138710": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 92,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850923899,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "2146470": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Strategy"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855914876,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "2152370": {
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "RPG"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855984870,
+    "lastWrittenGenres": [
+      "Action",
+      "Massively Multiplayer",
+      "RPG"
+    ]
+  },
+  "2161700": {
+    "genres": [
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847152583,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "2174850": {
+    "genres": [
+      "Indie",
+      "Sports",
+      "Strategy"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777848942169,
+    "lastWrittenGenres": [
+      "Indie",
+      "Sports",
+      "Strategy"
+    ]
+  },
+  "2183900": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 84,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856011978,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "2185380": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850589691
+  },
+  "2186680": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777856004826,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "2197170": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ],
+    "rating": 67,
+    "reviewDesc": "3 user reviews",
+    "fetchedAt": 1777849145914,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  "2197590": {
+    "genres": [
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850582997,
+    "lastWrittenGenres": [
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  "2208920": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 70,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777849047052,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "2218750": {
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850602648,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ]
+  },
+  "2221490": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855938162,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "2229870": {
+    "genres": [
+      "Action",
+      "Strategy"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849099828,
+    "lastWrittenGenres": [
+      "Action",
+      "Strategy"
+    ]
+  },
+  "2231380": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847119701,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "2231450": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777847169055,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "2247760": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Strategy",
+      "Early Access"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850692357,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Strategy",
+      "Early Access"
+    ]
+  },
+  "2261450": {
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "Simulation",
+      "Free To Play"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850933910,
+    "lastWrittenGenres": [
+      "Action",
+      "Massively Multiplayer",
+      "Simulation",
+      "Free To Play"
+    ]
+  },
+  "2273430": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 94,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850586320,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "2277560": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 55,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777847257588,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "2278760": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850814526,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Free To Play"
+    ]
+  },
+  "2294000": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849086618
+  },
+  "2300320": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850520826,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "2304610": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850639005
+  },
+  "2308130": {
+    "genres": [
+      "Simulation",
+      "Sports",
+      "Strategy"
+    ],
+    "rating": 63,
+    "reviewDesc": "8 user reviews",
+    "fetchedAt": 1777849024138,
+    "lastWrittenGenres": [
+      "Simulation",
+      "Sports",
+      "Strategy"
+    ]
+  },
+  "2308420": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777851003571
+  },
+  "2316430": {
+    "genres": [
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 81,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777849056912,
+    "lastWrittenGenres": [
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "2321470": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777849182163,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2330090": {
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "rating": 100,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777851016679,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie"
+    ]
+  },
+  "2357570": {
+    "genres": [
+      "Action",
+      "Free To Play"
+    ],
+    "rating": 30,
+    "reviewDesc": "Mostly Negative",
+    "fetchedAt": 1777850791787,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  "2369390": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 71,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850514248,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "2378720": {
+    "genres": [
+      "Action",
+      "Indie",
+      "Early Access"
+    ],
+    "rating": 100,
+    "reviewDesc": "7 user reviews",
+    "fetchedAt": 1777847218217,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie",
+      "Early Access"
+    ]
+  },
+  "2378900": {
+    "genres": [
+      "Adventure",
+      "RPG",
+      "Early Access"
+    ],
+    "rating": 96,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777850629074,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG",
+      "Early Access"
+    ]
+  },
+  "2379780": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "rating": 98,
+    "reviewDesc": "Overwhelmingly Positive",
+    "fetchedAt": 1777849063474,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  "2380470": {
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Massively Multiplayer",
+      "RPG"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850900551,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play",
+      "Massively Multiplayer",
+      "RPG"
+    ]
+  },
+  "2390480": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": 80,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850491435,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "2399690": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847244360
+  },
+  "2399830": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Early Access"
+    ],
+    "rating": 60,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777848988212,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Early Access"
+    ]
+  },
+  "2408390": {
+    "genres": [
+      "Adventure",
+      "RPG",
+      "Design & Illustration",
+      "Education",
+      "Web Publishing",
+      "Game Development"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850986878,
+    "lastWrittenGenres": [
+      "Adventure",
+      "RPG",
+      "Design & Illustration",
+      "Education",
+      "Web Publishing",
+      "Game Development"
+    ]
+  },
+  "2417110": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850831122
+  },
+  "2440510": {
+    "genres": [
+      "Racing"
+    ],
+    "rating": 51,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777850547048,
+    "lastWrittenGenres": [
+      "Racing"
+    ]
+  },
+  "2454850": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Early Access"
+    ],
+    "rating": 100,
+    "reviewDesc": "1 user reviews",
+    "fetchedAt": 1777849149244,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Early Access"
+    ]
+  },
+  "2457220": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847178919,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "2461700": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850662311
+  },
+  "2461850": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847188714,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "2467920": {
+    "genres": [
+      "Adventure"
+    ],
+    "rating": 33,
+    "reviewDesc": "6 user reviews",
+    "fetchedAt": 1777855957920,
+    "lastWrittenGenres": [
+      "Adventure"
+    ]
+  },
+  "2480900": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850524172
+  },
+  "2486940": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850990267
+  },
+  "2497440": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850698908
+  },
+  "2519060": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 100,
+    "reviewDesc": "1 user reviews",
+    "fetchedAt": 1777849106493,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2523720": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 59,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777850566743,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2537590": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 56,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777847195371,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "2538510": {
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849083290,
+    "lastWrittenGenres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  "2553870": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 87,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847175658,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "2569860": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777849155751
+  },
+  "2570810": {
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "rating": 70,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855921565,
+    "lastWrittenGenres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  "2603920": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 0,
+    "reviewDesc": "1 user reviews",
+    "fetchedAt": 1777850725326,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "2613750": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850930649
+  },
+  "2623190": {
+    "genres": [
+      "RPG"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855884600,
+    "lastWrittenGenres": [
+      "RPG"
+    ]
+  },
+  "2640190": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850745116
+  },
+  "2649640": {
+    "genres": [
+      "Adventure",
+      "Casual"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850953804,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual"
+    ]
+  },
+  "2670400": {
+    "genres": [
+      "Casual",
+      "Indie"
+    ],
+    "rating": 100,
+    "reviewDesc": "Positive",
+    "fetchedAt": 1777850983499,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie"
+    ]
+  },
+  "2677660": {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847185390,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "2679460": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 90,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850712223,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "2698380": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777851023336
+  },
+  "2717490": {
+    "genres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy",
+      "Accounting"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777855904751,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Strategy",
+      "Accounting"
+    ]
+  },
+  "2730020": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855924888,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2731210": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850718737
+  },
+  "2742980": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850731996
+  },
+  "2786660": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual"
+    ],
+    "rating": 64,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777849070138,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual"
+    ]
+  },
+  "2820370": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777847247767
+  },
+  "2823090": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850688980,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "2848330": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 86,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850675568,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "2867160": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850857499
+  },
+  "2920400": {
+    "genres": null,
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777856032677
+  },
+  "2933620": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 43,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777849096551,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "2943650": {
+    "genres": [
+      "Action",
+      "Free To Play"
+    ],
+    "rating": 74,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850550435,
+    "lastWrittenGenres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  "2987080": {
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Free To Play"
+    ],
+    "rating": 77,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777855941453,
+    "lastWrittenGenres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  "3017860": {
+    "genres": [
+      "Action"
+    ],
+    "rating": 88,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777850478326,
+    "lastWrittenGenres": [
+      "Action"
+    ]
+  },
+  "3038080": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Sports"
+    ],
+    "rating": 79,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777850778383,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Sports"
+    ]
+  },
+  "3043470": {
+    "genres": [
+      "Simulation"
+    ],
+    "rating": 85,
+    "reviewDesc": "Very Positive",
+    "fetchedAt": 1777847182141,
+    "lastWrittenGenres": [
+      "Simulation"
+    ]
+  },
+  "3104410": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Free To Play"
+    ],
+    "rating": 52,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777851006855,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  "3159330": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "rating": 76,
+    "reviewDesc": "Mostly Positive",
+    "fetchedAt": 1777847198648,
+    "lastWrittenGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  "3164370": {
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ],
+    "rating": null,
+    "reviewDesc": null,
+    "fetchedAt": 1777850596135,
+    "lastWrittenGenres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  "3398990": {
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "rating": 100,
+    "reviewDesc": "1 user reviews",
+    "fetchedAt": 1777848945501,
+    "lastWrittenGenres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ]
+  },
+  "3472040": {
+    "genres": [
+      "Sports"
+    ],
+    "rating": 66,
+    "reviewDesc": "Mixed",
+    "fetchedAt": 1777850755142,
+    "lastWrittenGenres": [
+      "Sports"
+    ]
+  }
+}
